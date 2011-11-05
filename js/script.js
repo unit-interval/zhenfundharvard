@@ -35,8 +35,8 @@ var Votes = {
                 s.push((sum / (Param.judges -1) + data.score[15]) / 2);
                 V.cache[id] = s;
                 if (id == V.currentChart)
-                    this.refreshChart(s);
-        //        this.refreshRanking();
+                    V.refreshChart(s);
+        //      V.refreshRanking();
             }
         });
     },

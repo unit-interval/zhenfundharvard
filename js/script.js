@@ -28,7 +28,6 @@ var Votes = {
                 s.push(data.score[15]);
                 s.push((sum / (Param.judges -1) + data.score[15]) / 2);
                 V.cache[id] = s;
-                }
             }
         });
     }

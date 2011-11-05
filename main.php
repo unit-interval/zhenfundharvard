@@ -30,7 +30,7 @@ if($_SESSION['id'])
 <?php if($id) {
 ?>
 								<li class="logout">
-                                <a href="index.php?logout">Log Out(<?php echo($id); ?>)</a>
+                                <a href="index.php?logout">Log Out ( #<?php echo($id); ?> )</a>
                                 </li>
 <?php } else {
 ?>
@@ -38,12 +38,6 @@ if($_SESSION['id'])
 									<a href="index.php">Log In</a>
 								</li>
 <?php } ?>
-								<li class="login">
-									<a href="/login">Log In</a>
-								</li>
-								<li class="logout">
-									<a href="/logout">Log Out</a>
-								</li>
 							</ul>
 						</nav>
 					</div>

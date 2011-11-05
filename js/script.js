@@ -5,14 +5,14 @@ var Votes = {
         this.update();
     },
     "update": function() {
-        this.fetch();
+        this.fetch(0);
 //        this.refreshRanking();
     },
     "fetch": function(id) {
         var V = this;
         $.ajax({
             type: "get",
-            data: 'id' + id,
+            data: 'id=' + id,
             url: 'fetch-score.php',
             cache: false,
             dataType: 'json',

@@ -6,10 +6,11 @@ include './database.php';
 session_name(SESSNAME);
 session_start();
 
-exit('abc');
 
 $return = array('success' => false, 'score' => array());
 
+var_dump($return);
+exit('abc');
 $id = intval($_GET['id']);
 
 exit($id);

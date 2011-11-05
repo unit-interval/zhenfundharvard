@@ -1,7 +1,7 @@
 <html>
     <body>
         <form action='admin.php' method='post'>
-            <input type='text' name='passphrase' /><br />
+            <input type='password' name='passphrase' /><br />
             <input type='submit' name='do' value='show' />
             <input type='submit' name='do' value='reset' />
         </form>

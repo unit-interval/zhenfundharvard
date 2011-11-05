@@ -3,7 +3,7 @@
 include './config.php';
 include './database.php';
 
-$return = array('success' => false,);
+$return = array('success' => false, 'id' => 0);
 
 if($_POST['passwd']) {
     $query = "select `id` from `judges` 
@@ -12,6 +12,7 @@ if($_POST['passwd']) {
     if($row = $result->fetch_row()) {
         $_SESSION['id'] = $row[0];
         $return['success'] = true;
+        $return['id'] = $row[0];
     }
     $result->free();
 }

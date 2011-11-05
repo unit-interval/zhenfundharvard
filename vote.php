@@ -8,13 +8,13 @@ session_start();
 
 $return = array('success' => false);
 
-//if(! $_SESSION['id'] || ! isset($_GET['team_id']) || ! isset($_GET['score'])) {
-//    echo json_encode($return);
-//    exit;
-//}
-//
-//$j_id = $_SESSION['id'];
-$j_id = intval($_GET['j_id']);
+if(! $_SESSION['id'] || ! isset($_GET['team_id']) || ! isset($_GET['score'])) {
+    echo json_encode($return);
+    exit;
+}
+
+$j_id = $_SESSION['id'];
+//$j_id = intval($_GET['j_id']);
 $t_id = intval($_GET['team_id']);
 $score = intval($_GET['score']);
 

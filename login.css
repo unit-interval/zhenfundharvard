@@ -1,0 +1,832 @@
+.ir {
+	display: block;
+	text-indent: -999px;
+	overflow: hidden;
+	background-repeat: none;
+}
+.hidden {
+	display: none;
+}
+.visuallyhidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+}
+.invisible {
+	visibility: hidden;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+}
+* html .clearfix {
+	height: 1%;
+}/* Hides from IE-mac \*/
+.clearfix {
+	display: block;
+}
+/* Primary Styles */
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+.wrapper {
+	margin: 0 auto -150px;
+}
+div.header #logo-login {
+	float: left;
+	position: relative;
+	width: 138px;
+	margin-right: 55px;
+	font-size: 11px;
+}
+div.header #logo-login.normal {
+	margin-top: -30px;
+}
+div.header #logo-login.large {
+	margin-top: -80px;
+}
+div.header #logo-login p#login-call {
+	padding-top: 10px;
+	text-align: center;
+}
+div.header h1 {
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	z-index: 99;
+	position: relative;
+}
+div.header h1 a {
+	height: 137px;
+	width: 138px;
+	background: url(/images/switch/posterous_logo.png) center center;
+}
+div#login-box {
+	position: absolute;
+	text-align: left;
+	background: #D0C9BE;
+	width: 118px;
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	padding: 20px 10px;
+	padding-bottom: 15px;
+	margin-top: -3px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+}
+div#login-box form label {
+	position: absolute;
+	margin-left: 7px;
+	margin-top: 5px;
+	font-size: 12px;
+	color: #ccc;
+}
+div#login-box form input {
+	width: 104px;
+	border: 1px solid #bb9;
+	font-size: 12px;
+	height: 14px;
+	padding: 4px 6px;
+}
+div#login-box form div.form-field {
+	margin-bottom: 10px;
+}
+div#login-box form button {
+	margin-right: 10px;
+	display: block;
+	float: left;
+	background: #eee;
+	border: 1px solid #aaa;
+	padding: 2px 5px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	color: #3e342b;
+	background: -moz-linear-gradient(top, rgba(255,255,255,0.6), rgba(200,200,200,0.6));
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.6)), to(rgba(200,200,200,0.6)));
+}
+div#login-box div.form-button a {
+	color: #3e342b;
+	padding-top: 5px;
+	display: block;
+	margin-left: 60px;
+}
+div#main_login {
+	margin-top: -25px;
+	vertical-align: top;
+}
+#wrap_main {
+	min-height: 100%;
+	width: 100%;
+}
+div#signup {
+	color: #666;
+	position: relative;
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+div#signup.normal {
+	background: #F9F4B8 url(images/bg-signup.jpg) center bottom repeat-x;
+	width: 230px;
+	float: left;
+	padding: 20px;
+	height: 345px;
+	margin-top: -37px;
+}
+div#signup.large {
+	background: #F9F4B8 url(images/bg-signup.jpg) center bottom repeat-x;
+	position: relative;
+	width: 470px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 60px;
+	padding: 25px;
+	min-height: 435px;
+	height: 100%;
+}
+div#signup h1 {
+	font-size: 56px;
+	text-align: center;
+	color: #3E342B;
+	margin: 15px 0 20px;
+}
+div#signup h2 {
+	font-size: 36px;
+	text-align: center;
+	color: #3E342B;
+}
+div#signup p {
+	font-size: 11px;
+	text-align: center;
+	margin-top: 10px;
+}
+div#signup p.large {
+	font-size: 26px;
+	text-align: right;
+	margin-top: 10px;
+}
+div#signup form {
+	margin: 20px 0;
+	text-align: left;
+}
+div#signup h3 {
+	text-align: center;
+}
+div#signup form div.form-field {
+	margin-top: 12px;
+	position: relative;
+}
+div#signup form div.form-field-large {
+	margin-top: 20px;
+	position: relative;
+}
+div#signup form input.form-text, div#signup form input.form-password {
+	font-size: 14px;
+	border: 1px solid #CBBE79;
+}
+div#signup form label {
+	position: absolute;
+	margin-left: 8px;
+	font-size: 14px;
+	color: #aaa;
+}
+div#signup form label.normal {
+	margin-top: 8px;
+}
+div#signup form label.large {
+	margin-top: 14px;
+	margin-left: 9px;
+	cursor: text;
+}
+div#signup form button {
+	background: url(/images/homepage3/btn-arrow.png) no-repeat 95% 50%, -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 0.898438)), to(rgba(200, 200, 200, 0.898438))), #EEE;
+	border: 1px solid #CBBE79;
+	border-bottom-left-radius: 4px 4px;
+	border-bottom-right-radius: 4px 4px;
+	border-top-left-radius: 4px 4px;
+	border-top-right-radius: 4px 4px;
+	color: #777;
+	display: block;
+	font-size: 12px;
+	margin-top: 12px;
+	padding: 7px 6px;
+	text-align: left;
+	width: 232px;
+}
+div#signup form button.active {
+	padding: 7px 6px;
+	font-size: 12px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	display: block;
+	text-align: left;
+	border: 1px solid #CBBE79;
+	font-weight: bold;
+	color: #fff;
+	background: #390 url(/images/homepage3/btn-arrow-active.png) 95% center no-repeat;
+	background: url(/images/homepage3/btn-arrow-active.png) 95% center no-repeat, -moz-linear-gradient(top, rgba(255,255,255,0.6), rgba(200,200,200,0.0)), #390;
+	background: url(/images/homepage3/btn-arrow-active.png) 95% center no-repeat, -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.6)), to(rgba(200,200,200,0.0))), #390;
+	filter: progid
+	: DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80FFFFFF', endColorstr='#00FFFFFF');
+}
+div#signup form div.form-popup {
+	position: absolute;
+	width: 160px;
+	padding: 10px 10px 0 10px;
+	border: 2px solid #999;
+	background: #faefb1;
+	font-size: 11px;
+	margin-top: -55px;
+	border-right: 0;
+}
+div#signup form div.normal-popup {
+	margin-left: -202px;
+}
+div#signup form div.large-popup {
+	margin-left: -212px;
+}
+div#signup form div.form-popup p {
+	margin: 0;
+	margin-bottom: 10px;
+	text-align: left;
+}
+div#signup form div.form-popup p.status span.no {
+	color: #d00;
+}
+div#signup form div.form-popup p.status span.ok {
+	color: #080;
+	font-weight: strong;
+}
+div#signup form #signup-password div.form-popup {
+	background: #f9eca8;
+}
+div#signup form #signup-url div.form-popup {
+	background: #f8eaa3;
+}
+div#signup form #signup-url.normal_bg input {
+	background: #fff url(/images/homepage3/form-domain.png) 95% center no-repeat;
+}
+div#signup #signup-url-fields input.large_bg {
+	background: #fff url(/images/form-domain-large.png) 95% center no-repeat;
+}
+div#signup #signup-url-fields.no_address input.large_bg {
+	background: #fff;
+}
+div#signup form input.error {
+	border-color: #c66;
+	background-color: #fee;
+}
+div#signup form input.normal {
+	width: 220px;
+	height: 16px;
+	padding: 7px 5px;
+}
+div#signup form input.large {
+	width: 255px;
+	height: 26px;
+	padding: 9px 7px;
+}
+div#signup div#email_text {
+	width: 270px;
+	float: left;
+	border-top: 1px solid #999;
+	padding-top: 20px;
+	margin-top: 10px;
+}
+div#signup div#email_text h3 {
+	text-align: left;
+}
+div#signup div#email_text p {
+	font-size: 12px;
+	text-align: left;
+	margin-top: 10px;
+	line-height: 1.35em;
+}
+div#signup div#facebook_signup {
+	padding: 5px 0px 0px 5px;
+}
+div#signup div#facebook_signup .text {
+	font-size: 1em;
+	text-align: left;
+	line-height: 1.2em;
+	margin-top: 5px;
+}
+div#signup div#facebook_signup #connect_fb {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+div#main_login {
+	background: #F9F4B8 url(images/bg-signup.jpg) center bottom repeat-x;
+	color: #666;
+	position: relative;
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+div#main_login.normal {
+	width: 230px;
+	float: left;
+	padding: 20px;
+	height: 345px;
+	margin-top: -37px;
+}
+div#main_login.large {
+	clear: both;
+	position: relative;
+	width: 440px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 70px;
+	padding: 25px;
+	min-height: 350px;
+	height: 100%;
+}
+div#main_login h1 {
+	font-size: 56px;
+	text-align: left;
+	color: #3E342B;
+	margin: 15px 0 20px;
+}
+div#main_login h2 {
+	font-size: 36px;
+	text-align: center;
+	color: #3E342B;
+}
+div#main_login p {
+	font-size: 11px;
+	text-align: center;
+	margin-top: 10px;
+}
+div#main_login p.large {
+	font-size: 26px;
+	text-align: right;
+	margin-top: 10px;
+}
+div#main_login form {
+	margin: 20px 0;
+	text-align: left;
+}
+div#main_login h3 {
+	text-align: center;
+}
+div#main_login form div.form-field {
+	margin-top: 12px;
+	position: relative;
+}
+div#main_login form div.form-field-large {
+	margin-top: 20px;
+	position: relative;
+}
+div#main_login form input.form-text, div#main_login form input.form-password {
+	font-size: 14px;
+	border: 1px solid #CBBE79;
+}
+div#main_login form label {
+	position: absolute;
+	margin-left: 8px;
+	font-size: 14px;
+	color: #aaa;
+}
+div#main_login form label.normal {
+	margin-top: 8px;
+}
+div#main_login form label.large {
+	margin-top: 14px;
+	margin-left: 9px;
+	cursor: text;
+}
+div#main_login form button {
+	background: url(/images/homepage3/btn-arrow.png) no-repeat 95% 50%, -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 0.898438)), to(rgba(200, 200, 200, 0.898438))), #EEE;
+	border: 1px solid #CBBE79;
+	border-bottom-left-radius: 4px 4px;
+	border-bottom-right-radius: 4px 4px;
+	border-top-left-radius: 4px 4px;
+	border-top-right-radius: 4px 4px;
+	color: #777;
+	display: block;
+	font-size: 12px;
+	margin-top: 12px;
+	padding: 7px 6px;
+	text-align: left;
+	width: 232px;
+}
+div#main_login form button.active {
+	padding: 7px 6px;
+	font-size: 12px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	display: block;
+	text-align: left;
+	border: 1px solid #CBBE79;
+	font-weight: bold;
+	color: #fff;
+	background: #390 url(/images/homepage3/btn-arrow-active.png) 95% center no-repeat;
+	background: url(/images/homepage3/btn-arrow-active.png) 95% center no-repeat, -moz-linear-gradient(top, rgba(255,255,255,0.6), rgba(200,200,200,0.0)), #390;
+	background: url(/images/homepage3/btn-arrow-active.png) 95% center no-repeat, -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.6)), to(rgba(200,200,200,0.0))), #390;
+	filter: progid
+	: DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80FFFFFF', endColorstr='#00FFFFFF');
+}
+div#main_login form #main_login-password div.form-popup {
+	background: #f9eca8;
+}
+div#main_login form input.error {
+	border-color: #c66;
+	background-color: #fee;
+}
+div#main_login form input.normal {
+	width: 220px;
+	height: 16px;
+	padding: 7px 5px;
+}
+div#main_login form input.large {
+	width: 425px;
+	height: 26px;
+	padding: 9px 7px;
+}
+div#main_login div#extra_text {
+	width: 500px;
+	float: left;
+}
+div#main_login div#extra_text h3 {
+	text-align: left;
+}
+div#main_login div#extra_text p {
+	font-size: 12px;
+	text-align: left;
+	margin-top: 10px;
+}
+div#main_login div.extra_options {
+	font-size: 13px;
+	float: left;
+	width: 100%;
+	text-align: left;
+	margin-top: 20px;
+	padding-top: 15px;
+	font-size: 12px;
+	border-top: 1px solid #999;
+}
+div#main_login div.extra_options a {
+	color: #b60;
+}
+div#main_login div.extra_options #facebook_signup {
+	text-align: left;
+	float: left;
+}
+div#main_login div.extra_options #facebook_signup .text {
+	margin-right: 10px;
+}
+div#main_login div.extra_options #no_account {
+	margin-top: 5px;
+	float: right;
+}
+div#main_login #remember_me {
+	float: left;
+	margin-bottom: 15px;
+	width: 100%;
+}
+div#main_login #forgot_password a {
+	color: #b60;
+}
+div#forgot, div#reset, div#logout {
+	background: #F9F4B8 url(/images/main/bg-signup.jpg) center bottom repeat-x;
+	color: #666;
+	position: relative;
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+div#forgot h1, div#reset {
+	font-size: 36px;
+	text-align: left;
+	color: #3E342B;
+}
+div#forgot p, div#reset {
+	font-size: 12px;
+	text-align: left;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+div#forgot.large, div#reset.large {
+	position: relative;
+	width: 390px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 70px;
+	padding: 25px;
+	min-height: 215px;
+}
+div#forgot form input.form-text, div#reset form input.form-text {
+	font-size: 14px;
+	border: 1px solid #CBBE79;
+}
+div#forgot form label, div#reset form label {
+	position: absolute;
+	margin-left: 8px;
+	font-size: 14px;
+	color: #aaa;
+}
+div#forgot form label.large, div#reset form label.large {
+	margin-top: 14px;
+	margin-left: 9px;
+	cursor: text;
+}
+div#forgot form input.large, div#reset form input.large {
+	width: 375px;
+	height: 26px;
+	padding: 9px 7px;
+}
+div#forgot .text, div#reset .text {
+	font-size: 13px;
+	line-height: 1.35em;
+}
+div#logout.large {
+	text-align: left;
+	position: relative;
+	width: 390px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 70px;
+	padding: 25px;
+	min-height: 90px;
+}
+div#logout h2 {
+	font-size: 28px;
+}
+div#logout p {
+	font-size: 14px;
+	margin-top: 10px;
+}
+div#logout a {
+	color: #D39900;
+}
+#footer_main {
+	position: relative;
+}
+div.footer {
+	clear: both;
+	background: #3B342C;
+	height: 150px;
+	border-top: 5px solid #D2C9BF;
+	margin-top: 40px;
+}
+div.footer a:link, footer a:visited {
+	color: #D39900;
+}
+#footer-content {
+	padding-top: 30px;
+}
+div.footer div#footer_logo {
+	float: left;
+	width: 104px;
+	height: 60px;
+	margin-right: 25px;
+}
+div.footer div#footer_mainnav {
+	float: left;
+	margin-right: 25px;
+}
+div.footer div#footer_mainnav ul {
+	list-style-type: none;
+	font-size: 16px;
+	padding-top: 3px;
+	margin-left: 0;
+}
+div.footer div#footer_mainnav ul li {
+	float: left;
+	margin-right: 20px;
+}
+div.footer div#footer_mainnav > a {
+	float: left;
+	display: block;
+	padding-top: 10px;
+}
+div.footer div#footer_subnav {
+	float: right;
+}
+div.footer div#footer_subnav ul {
+	list-style-type: none;
+	padding-top: 5px;
+	margin-left: 0;
+}
+div.footer div#footer_subnav ul li {
+	float: left;
+	margin-right: 10px;
+}
+div.footer div#footer_subnav ul li.last {
+	margin: 0;
+}
+div.footer div#footer_subnav a:link, footer div#footer_subnav a:visited {
+	color: #6C6352;
+	text-shadow: 0 1px 1px #000;
+}
+div.footer div#footer_feedback {
+	clear: right;
+	float: right;
+	text-align: right;
+	margin-top: 10px;
+}
+div.footer div#sponsors {
+	clear: left;
+	padding-top: 10px;
+}
+#modal_container h2 {
+	margin-bottom: 0.5em;
+	letter-spacing: -1px;
+	font-size: 23px;
+	font-weight: bold;
+	line-height: 0.8em;
+}
+#modal_container p {
+	margin-top: 15px;
+	font-size: 12px;
+	line-height: 1.6em;
+}
+#modal_container label {
+	color: #999;
+	font-size: 11px;
+	font-weight: normal;
+}
+#modal_container input[type="text"], #modal_container input[type="password"], #modal_container select, #modal_container textarea {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	color: #444;
+	font-size: 1.6em;
+	padding: 5px;
+	line-height: 1.3em;
+}
+#modal_container input[type="button"], #modal_container input[type="submit"] {
+	color: #444;
+	font-size: 1.4em;
+	height: 2em;
+	margin-top: 10px;
+}
+.notifications_grouping {
+	overflow: hidden;
+	margin-top: 10px;
+}
+.notifications_grouping:first-child {
+	margin-top: 0;
+}
+.notifications_label {
+	float: left;
+	width: 320px;
+	font-size: 14px;
+	line-height: 30px;
+}
+.notifications_value {
+	float: left;
+}
+ul.main_field {
+	list-style-type: none;
+	float: left;
+	margin-bottom: 16px;
+	margin-left: 0;
+}
+ul.main_field li {
+	display: inline;
+	margin: 0;
+	float: left;
+}
+ul.main_field li.label_box {
+	background-color: #f0ecda;
+	border: 1px solid #DBDBDB;
+	border-bottom-right-radius: 5px 5px;
+	border-left: 1px solid #DBDBDB;
+	border-top-right-radius: 5px 5px;
+	color: #666;
+	font-size: 12px;
+	line-height: 1em;
+	padding: 15px 10px 6px 15px;
+	width: 168px;
+	height: 23px;
+	background: -moz-linear-gradient(top, rgba(255,255,255,0.4), rgba(200,200,200,0.4)), #eee;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.4)), to(rgba(200,200,200,0.4))), #eee;
+	filter: progid
+	: DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80FFFFFF', endColorstr='#00FFFFFF');
+	filter: progid
+	: DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80FFFFFF', endColorstr='#00FFFFFF');
+}
+ul.main_field li .subtext {
+	line-height: 22px;
+	text-align: left;
+	margin-left: 20px;
+	display: block;
+	width: 220px;
+	font-size: 27px;
+	word-wrap: break-word;
+	margin-top: 10px;
+}
+ul.main_field li #login_text.subtext {
+	vertical-align: text-bottom;
+	margin-left: 20px;
+	display: block;
+	width: 100%;
+	font-size: 30px;
+	word-wrap: break-word;
+	margin-top: 32px;
+}
+ul.main_field li.good {
+	background-color: #c5e3b8;
+	color: #666;
+	font-size: 12px;
+}
+ul.main_field li.bad {
+	background-color: #FFCFCF;
+	color: #801B1B;
+	font-size: 12px;
+}
+span#remember_me_text {
+	color: #3E342B;
+}
+div#signup div.main_button a {
+	color: #3e342b;
+	padding-top: 5px;
+	display: block;
+	margin-left: 60px;
+}
+div#signup div#valid_hostname {
+	clear: both;
+	margin-bottom: 16px;
+	margin-left: 0;
+}
+div#main_login form input[type='submit'], div#forgot form input[type='submit'], div#reset form input[type='submit'] {
+	float: left;
+	height: 100%;
+	margin: 0;
+	padding: 10px 16px 10px 16px;
+	font-size: 20px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	display: block;
+	text-align: left;
+	border: 1px solid #CBBE79;
+	color: #777;
+	background: -moz-linear-gradient(top, rgba(255,255,255,0.9), rgba(200,200,200,0.9)), #eee;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.9)), to(rgba(200,200,200,0.9))), #eee;
+	filter: progid
+	: DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80FFFFFF', endColorstr='#00FFFFFF');
+	filter: progid
+	: DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80FFFFFF', endColorstr='#00FFFFFF');
+}
+div#main_login div.main_button, div#forgot div.main_button, div#signup div.main_button, div#reset div.main_button {
+	float: left;
+	width: 100%;
+}
+div#main_login div.main_button a, div#forgot div.main_button a, div#reset div.main_button a {
+	display: block;
+	margin-left: 60px;
+}
+div#main_login div#forgot_password {
+	float: right;
+	vertical-align: middle;
+	padding-top: 15px;
+}
+div#error_messages_div, div#signup div.errorExplanation {
+	float: left;
+}
+div#error_messages_div div.errorExplanation, div#signup div.errorExplanation {
+	background: #FFCFCF;
+	border: 1px solid #801B1B;
+	color: #801B1B;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	padding: 10px;
+	width: 450px;
+	border-radius: 4px 4px;
+	font-size: 12px;
+	line-height: 1.45em;
+	position: relative;
+	float: left;
+	text-align: left;
+}
+#topnav.mainpage {
+	margin: -23px 10px 0px 0px;
+	font-size: 10px;
+}
+#topnav.mainpage a, a:active, a:visited {
+	color: #3E342B;
+	text-decoration: none;
+}
+#topnav.mainpage a:hover {
+	color: #b60;
+	text-decoration: none;
+}
+#container_main {
+	margin-top: 100px;
+}

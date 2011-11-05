@@ -14,7 +14,7 @@ $id = intval($_GET['id']);
 if($id > 0) {
     $query = "select * from `votes` where `team_id` = $id";
     $result = $db->query($query);
-    if($result->num_rows = 0)
+    if($result->num_rows == 0)
         exit(json_encode($return));
 
     $return['score'][$id] = array();
@@ -35,7 +35,7 @@ if($id > 0) {
 
     $result = $db->query($query);
 
-    if($result->num_rows = 0) {
+    if($result->num_rows == 0) {
         echo(json_encode($return));
         exit;
     }

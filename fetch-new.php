@@ -28,7 +28,7 @@ if($id > 0) {
         } else
             $return['score'][$id][] = 0;
     }
-    $return['score'][$id][] = intval(array_sum($score) / count($score));
+    $return['score'][$id][] = floatval(array_sum($score) / count($score));
 } else {
     $query = "select * from `votes`";
 
@@ -56,7 +56,7 @@ if($id > 0) {
             } else
                 $return['score'][$k][] = 0;
         }
-        $return['score'][$k][] = intval(array_sum($v) / count($v));
+        $return['score'][$k][] = floatval(array_sum($v) / count($v));
     }
 }
 

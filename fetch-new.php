@@ -11,13 +11,6 @@ $return = array('success' => false, 'score' => array());
 
 $id = intval($_GET['id']);
 
-var_dump($_GET);
-var_dump(intval(123));
-var_dump(intval('123'));
-var_dump($id);
-exit($id);
-exit('abc');
-
 if($id > 0) {
     $query = "select * from `votes` where `team_id` = $id";
     $result = $db->query($query);
@@ -39,6 +32,11 @@ if($id > 0) {
     }
 } else {
     $query = "select * from `votes`";
+var_dump($_GET);
+var_dump($query);
+var_dump($id);
+exit('abc');
+
     $result = $db->query($query);
 
     if($result->num_rows = 0)

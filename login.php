@@ -3,7 +3,7 @@
 include './config.php';
 include './database.php';
 
-$return = array('success' = false,);
+$return = array('success' => false,);
 
 if($_POST['passwd']) {
     $stmt = $db->prepare("select `id` from `judges` where `passwd` = ?");

@@ -13,8 +13,10 @@ $id = intval($_GET['id']);
 if($id > 0) {
     $query = "select * from `votes` where `team_id` = $id";
     $result = $db->query($query);
-    if($result->num_rows == 0)
-        exit(json_encode($return));
+    if($result->num_rows == 0) {
+        echo(json_encode($return));
+        exit;
+    }
 
     $return['score'][$id] = array();
     $score = array();
@@ -31,10 +33,9 @@ if($id > 0) {
     $return['score'][$id][] = floatval(array_sum($score) / count($score));
 } else {
     $query = "select * from `votes`";
-
     $result = $db->query($query);
-
-    if($result->num_rows == 0) {
+//    if($result->num_rows == 0) {
+    if(true) {
         echo(json_encode($return));
         exit;
     }

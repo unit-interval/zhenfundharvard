@@ -20,8 +20,8 @@ if($id > 0) {
     $score = array();
 
     while($row = $result->fetch_assoc())
-        $score[$row['judge_id']] = $row['score'];
-    for ($i = 1; $i++ <= 15; ){
+        $score[$row['judge_id']] = intval($row['score']);
+    for ($i = 0; $i++ < 15; ){
         if(isset($score[$i])) {
             $return['score'][$id][] = $score[$i];
             unset($score[$i]);
@@ -44,12 +44,12 @@ if($id > 0) {
     while($row = $result->fetch_assoc()) {
         if(! isset($score[$row['team_id']]))
             $score[$row['team_id']] = array();
-        $score[$row['team_id']]['judge_id'] = $row['score'];
+        $score[$row['team_id']]['judge_id'] = intval($row['score']);
     }
 
     foreach($score as $k => $v) {
         $return['score'][$k] = array();
-        for ($i = 1; $i++ <= 15; ) {
+        for ($i = 0; $i++ < 15; ) {
             if(isset($v[$i])) {
                 $return['score'][$k][] = $v[$i];
                 unset($v[$i]);

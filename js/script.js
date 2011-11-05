@@ -5,7 +5,8 @@ var Votes = {
         this.update();
     },
     "update": function() {
-        this.fetch(0);
+        for (var i = 1; i++ <= Param.teams; )
+            this.fetch(i);
 //        this.refreshRanking();
     },
     "fetch": function(id) {
@@ -18,18 +19,15 @@ var Votes = {
             dataType: 'json',
             success: function(data){
                 if(data.success != true) return;
-                var avg;
-                var s;
-                for (var team in data.score) {
-                    sum = 0;
-                    s = []
-                    for (var i = 0; i++ < Param.judges - 1; ) {
-                        s.push(data.score[team][i]);
-                        sum += data.score[team][i];
-                    }
-                    s.push(data.score[team][15]);
-                    s.push((sum / (Param.judges - 1) + data.score[team][15]) / 2); 
-                    V.cache[team] = s;
+                var sum = 0;
+                var s = [];
+                for (var i = 0; i++ < Param.judges -1; ) {
+                    s.push(data.score[i]);
+                    sum += data.score[i];
+                }
+                s.push(data.score[15]);
+                s.push((sum / (Param.judges -1) + data.score[15]) / 2);
+                V.cache[id] = s;
                 }
             }
         });

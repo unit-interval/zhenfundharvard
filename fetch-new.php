@@ -12,6 +12,8 @@ $return = array('success' => false, 'score' => array());
 $id = intval($_GET['id']);
 
 var_dump($_GET);
+var_dump(intval(123));
+var_dump(intval('123'));
 exit($id);
 exit('abc');
 

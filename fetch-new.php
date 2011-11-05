@@ -10,6 +10,8 @@ $return = array('success' => false, 'score' => array());
 
 $id = intval($_GET['id']);
 
+exit($id);
+
 if($id > 0) {
     $query = "select * from `votes` where `team_id` = $id";
     $result = $db->query($query);

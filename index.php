@@ -1,5 +1,7 @@
 <?php
 
+include './config.php';
+
 /** turn on output buffering */
 //ob_start();
 
@@ -7,10 +9,9 @@
 session_name(SESSNAME);
 session_start();
 
-if($_SESSION['id']) {
-    header('Location: /main.php');
-    exit;
-}
+/** redirect logged in users to main page. */
+if($_SESSION['id'])
+    err();
 
 ?>
 <!DOCTYPE html>
@@ -19,8 +20,8 @@ if($_SESSION['id']) {
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<title>templates</title>
-		<link href="style.css" rel="stylesheet">
-		<link href="login.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/login.css" rel="stylesheet">
 	</head>
 	<body>
 		<div id='app'>
@@ -44,12 +45,11 @@ if($_SESSION['id']) {
 							<form action="login.php" id="login" method="post">
 								<ul id="login-password-fields" class="main_field">
 									<li>
-										<input class="form-text large" id="user_password"  placeholder="Password" maxlength="20" name="user[password]" size="20" type="password">
+										<input class="form-text large" id="user_password"  placeholder="Password" maxlength="20" name="passwd" size="8" type="password">
 									</li>
 								</ul>
 								<div class="main_button">
-									<input id="secret" name="secret" type="hidden">
-									<input id="save_button_login" name="commit" type="submit" value="Login">
+									<input id="save_button_login" type="submit" />
 								</div>
 							</form>
 						</div>

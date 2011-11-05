@@ -28,7 +28,7 @@ define('DB_NAME', 'pb612-phpfogapp-com');
 error_reporting(0);
 
 /** simply redirect users to main page if error occurs */
-function err(msg) {
+function err($msg) {
     header('Location: /main.php#' . $msg);
     exit;
 }

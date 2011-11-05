@@ -6,6 +6,8 @@ include './database.php';
 session_name(SESSNAME);
 session_start();
 
+exit('abc');
+
 $return = array('success' => false, 'score' => array());
 
 $id = intval($_GET['id']);

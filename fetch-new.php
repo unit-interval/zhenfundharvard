@@ -9,11 +9,11 @@ session_start();
 
 $return = array('success' => false, 'score' => array());
 
-var_dump($return);
-exit('abc');
 $id = intval($_GET['id']);
 
+var_dump($return);
 exit($id);
+exit('abc');
 
 if($id > 0) {
     $query = "select * from `votes` where `team_id` = $id";

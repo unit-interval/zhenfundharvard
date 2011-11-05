@@ -137,7 +137,7 @@ div#signup {
 	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 div#signup.normal {
-	background: #F9F4B8 url(images/bg-signup.jpg) center bottom repeat-x;
+	background: #F9F4B8 url(/images/bg-signup.jpg) center bottom repeat-x;
 	width: 230px;
 	float: left;
 	padding: 20px;
@@ -145,7 +145,7 @@ div#signup.normal {
 	margin-top: -37px;
 }
 div#signup.large {
-	background: #F9F4B8 url(images/bg-signup.jpg) center bottom repeat-x;
+	background: #F9F4B8 url(/images/bg-signup.jpg) center bottom repeat-x;
 	position: relative;
 	width: 470px;
 	margin-left: auto;
@@ -329,7 +329,7 @@ div#signup div#facebook_signup #connect_fb {
 	margin-bottom: 10px;
 }
 div#main_login {
-	background: #F9F4B8 url(images/bg-signup.jpg) center bottom repeat-x;
+	background: #F9F4B8 url(/images/bg-signup.jpg) center bottom repeat-x;
 	color: #666;
 	position: relative;
 	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.2);

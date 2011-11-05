@@ -17,10 +17,7 @@ if($id > 0) {
         echo(json_encode($return));
         exit;
     }
-
-    $return['score'][$id] = array();
     $score = array();
-
     while($row = $result->fetch_assoc())
         $score[$row['judge_id']] = intval($row['score']);
     for ($i = 0; $i++ < 15; ){

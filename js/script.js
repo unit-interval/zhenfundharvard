@@ -24,7 +24,7 @@ var Votes = {
             cache: false,
             dataType: 'json',
             success: function(data){
-                if(data.success != true) return;
+                if(data.success != true) return false;
                 var sum = 0;
                 var s = [];
                 for (var i = 0; i++ < Param.judges -1; ) {
@@ -37,6 +37,7 @@ var Votes = {
                 if (id == V.currentTeam)
                     V.refreshChart(s);
         //      V.refreshRanking();
+                return s;
             }
         });
     },
@@ -49,8 +50,9 @@ var Votes = {
             cache: false,
             dataType: 'json',
             success: function(data) {
-                if(data.success != true) return;
+                if(data.success != true) return false;
                 V.fetch(V.currentTeam);
+            return data;
             }
         }); 
     },

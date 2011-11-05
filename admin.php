@@ -20,7 +20,7 @@ if($_POST['passphrase'] == 'top-down') {
         $query = "select * from `votes` order by `judge_id`";
         $result = $db->query($query);
         while($row = $result->fetch_assoc())
-            echo "<tr><td>{$row['team_id']}</td><td>{$row['judge_id']}</td><td>{$row['score']}</td></tr>";
+            echo "<tr><td>{$row['judge_id']}</td><td>{$row['team_id']}</td><td>{$row['score']}</td></tr>";
         $result->free();
         echo "</tbody></table>";
 

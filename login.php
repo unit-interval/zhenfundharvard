@@ -6,15 +6,14 @@ include './database.php';
 $return = array('success' => false,);
 
 if($_POST['passwd']) {
-    $stmt = $db->prepare("select `id` from `judges` where `passwd` = ?");
-    $stmt->bind_param('s', $_POST['passwd']);
-    $stmt->execute();
-    $stmt->bind_result($id);
-    if($stmt->fetch()) {
-        $_SESSION['id'] = $id;
+    $query = "select `id` from `judges` 
+        where `passwd` = '{$db->real_escape_string($_POST['passwd'])}'";
+    $result = $db->query($query);
+    if($row = $result->fetch_row()) {
+        $_SESSION['id'] = $row[0];
         $return['success'] = true;
     }
-    $stmt->close();
+    $result->free();
 }
 
 //header('content-type: application/json');

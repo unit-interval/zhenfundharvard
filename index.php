@@ -9,6 +9,10 @@ include './config.php';
 session_name(SESSNAME);
 session_start();
 
+/** logout */
+if(isset($_GET['logout']))
+    $_SESSION['id'] = false;
+
 /** redirect logged in users to main page. */
 if($_SESSION['id'])
     err();

@@ -8,7 +8,7 @@ session_start();
 
 $return = array('success' => false);
 
-if(! $_SESSION['id']) {
+if(! $_SESSION['id'] || ! isset($_GET['team_id']) || ! isset($_GET['score'])) {
     echo json_encode($return);
     exit;
 }
@@ -17,7 +17,7 @@ $j_id = $_SESSION['id'];
 $t_id = intval($_GET['team_id']);
 $score = intval($_GET['score']);
 
-if($score > 10 || $score < 1) {
+if($score > 10 || $score < 1 || $t_id < 1 || $t_id > 99) {
     echo json_encode($return);
     exit;
 }

@@ -3,6 +3,9 @@
 include './config.php';
 include './database.php';
 
+session_name(SESSNAME);
+session_start();
+
 $return = array('success' => false, 'id' => 0);
 
 if($_POST['passwd']) {

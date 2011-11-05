@@ -35,8 +35,10 @@ if($id > 0) {
 
     $result = $db->query($query);
 
-    if($result->num_rows = 0)
-        exit(json_encode($return));
+    if($result->num_rows = 0) {
+        echo(json_encode($return));
+        exit;
+    }
 
     $score = array();
 

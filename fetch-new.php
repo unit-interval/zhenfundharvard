@@ -14,6 +14,7 @@ $id = intval($_GET['id']);
 var_dump($_GET);
 var_dump(intval(123));
 var_dump(intval('123'));
+var_dump($id);
 exit($id);
 exit('abc');
 

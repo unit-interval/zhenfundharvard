@@ -18,7 +18,7 @@ if($_SESSION['id'])
 		<title>templates</title>
 		<link href="css/style.css" rel="stylesheet">
 		<script src="js/jquery.js" type="text/javascript"></script>
-		<script src="js/main.js" type="text/javascript"></script>
+		<script src="js/script.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<div id='app'>

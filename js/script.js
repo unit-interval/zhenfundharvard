@@ -59,7 +59,7 @@ var Votes = {
     "refreshChart": function(scores) {
         var V = this;
         $('div.agenda-item', V.$chart).each(function(i) {
-            $(this).animate({width: scores[i]*40-7}, 1000);
+            $(this).animate({width: scores[i-1]*40-7}, 1000);
         });
     }
 };

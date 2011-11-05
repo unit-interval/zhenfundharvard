@@ -25,12 +25,12 @@ if($id > 0) {
         $score[$row['judge_id']] = intval($row['score']);
     for ($i = 0; $i++ < 15; ){
         if(isset($score[$i])) {
-            $return['score'][$id][] = $score[$i];
+            $return['score'][] = $score[$i];
             unset($score[$i]);
         } else
-            $return['score'][$id][] = 0;
+            $return['score'][] = 0;
     }
-    $return['score'][$id][] = floatval(array_sum($score) / count($score));
+    $return['score'][] = floatval(array_sum($score) / count($score));
 } else {
     $query = "select * from `votes`";
     $result = $db->query($query);

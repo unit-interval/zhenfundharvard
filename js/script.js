@@ -12,8 +12,6 @@ var Votes = {
 //        this.fetch_all();
         for (var i = 1; i++ <= Param.teams; )
             this.fetch(i);
-        this.refreshChart();
-//        this.refreshRanking();
     },
     "fetch_all": function() {
     },
@@ -36,13 +34,16 @@ var Votes = {
                 s.push(data.score[15]);
                 s.push((sum / (Param.judges -1) + data.score[15]) / 2);
                 V.cache[id] = s;
+                if (id == V.currentChart)
+                    this.refreshChart(s);
+        //        this.refreshRanking();
             }
         });
     },
-    "refreshChart": function() {
+    "refreshChart": function(scores) {
         var V = this;
         $('div.agenda-item', V.$chart).each(function(i) {
-            $(this).animate({width: V.cache[V.currentChart][i]*40-7}, 1000);
+            $(this).animate({width: scores[i]*40-7}, 1000);
         });
     }
 }

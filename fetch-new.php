@@ -32,13 +32,13 @@ if($id > 0) {
     }
 } else {
     $query = "select * from `votes`";
-var_dump($_GET);
-var_dump($query);
-var_dump($id);
-exit('abc');
 
     $result = $db->query($query);
 
+var_dump($return);
+var_dump(json_encode($return));
+var_dump($id);
+exit('abc');
     if($result->num_rows = 0)
         exit(json_encode($return));
 

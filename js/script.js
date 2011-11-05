@@ -1,13 +1,21 @@
-var Param = { "teams": "30", "judges": "5" };
+var Param = { "teams": "10", "judges": "5" };
 var Votes = {
     "init": function() {
         this.cache = {};
+        this.currentChart = 1;
+
+        this.$chart = $('#spaces_section div.left_col');
+
         this.update();
     },
     "update": function() {
+//        this.fetch_all();
         for (var i = 1; i++ <= Param.teams; )
             this.fetch(i);
+        this.refreshChart();
 //        this.refreshRanking();
+    },
+    "fetch_all": function() {
     },
     "fetch": function(id) {
         var V = this;
@@ -29,6 +37,12 @@ var Votes = {
                 s.push((sum / (Param.judges -1) + data.score[15]) / 2);
                 V.cache[id] = s;
             }
+        });
+    },
+    "refreshChart": function() {
+        var V = this;
+        $('div.agenda-item', V.$chart).each(function(i) {
+            $(this).animate({width: V.cache[V.currentChart][i]*40-7}, 1000);
         });
     }
 }

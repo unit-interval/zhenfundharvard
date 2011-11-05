@@ -209,31 +209,31 @@ if($_SESSION['id'])
 								</div>
 								<div class="agenda-row">
 									<label>J1</label>
-									<div class="agenda-item" style="width: 313px; ">
+									<div class="agenda-item" style="width: 30px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row alt">
 									<label>J2</label>
-									<div class="agenda-item" style="width: 193px; ">
+									<div class="agenda-item" style="width: 30px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row">
 									<label>J3</label>
-									<div class="agenda-item" style="width: 233px; ">
+									<div class="agenda-item" style="width: 30px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row alt">
 									<label>J4</label>
-									<div class="agenda-item" style="width: 193px; ">
+									<div class="agenda-item" style="width: 30px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row">
 									<label>J5</label>
-									<div class="agenda-item" style="width: 73px; ">
+									<div class="agenda-item" style="width: 30px; ">
 										<span>•</span>
 									</div>
 								</div>

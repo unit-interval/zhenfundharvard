@@ -86,7 +86,7 @@ var Votes = {
 			scores = V.cache[V.currentTeam]; 
 		else
 			for (var i = 0; i < n + 2; i++) scores.push(0);
-		var total = scores[n+1] * 100;
+		var total = scores[n+1] * 10;
 		$('div.agenda-item', V.$chart).each(function(i) {
 			$(this).animate({ width : Math.max(scores[i] * 40 - 7, 33) });
 		});

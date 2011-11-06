@@ -5,11 +5,14 @@ var Param = {
 var Votes = {
 	"init" : function() {
 		this.cache = {};
+		for (var i = 0; i <= 40; i++) this.cache[0][i]=0;
+		for (var i = 0; i <= Param.teams; i++) 
+			for (var j = 0; j <= 15; j++) this.cache[i][j]=0;
+			
 		this.currentTeam = 1;
 
 		this.$chart = $('#spaces_section div.left_col');
 		this.$list = $('#spaces_section div.rank-list ul');
-		$('li', this.$list).hide();
 
 		this.fetch();
 	},
@@ -84,7 +87,10 @@ var Votes = {
 			var b = a
 			var bj = ai
 			var vb = va
-			if (va > 0) a.fadeIn();
+			if (va > 0) {
+				
+				a.fadeIn();
+			}
 			for( j = 0; j < i; j++) {
 				b = $('li:eq(' + j + ')', l);
 				bj = parseInt(b.data('team'));

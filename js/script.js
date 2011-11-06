@@ -199,6 +199,6 @@ $(function() {
 		$('#filter').removeClass('selected')
 		Votes.vote($(this).data('score'))
 	})
-	setInterval(Votes.fetch(0), 2000);
-	setInterval(Votes.refreshRanking(), 2000);
+	setInterval("Votes.fetch(0)", 2000);
+	setInterval("Votes.refreshRanking()", 2000);
 });

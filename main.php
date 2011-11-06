@@ -27,6 +27,10 @@ if($_SESSION['id'])
 					<div class="make_hcenter">
 						<nav id="top_nav">
                             <ul>
+                            	<li class="logo">
+									<a href="http://www.zhenfund.com/"><span id="Zhen">Zhen</span><span id="Fund">Fund</span> @ Harvard</a>
+								</li>
+
 <?php if($id) {
 ?>
 								<li class="logout">
@@ -248,6 +252,9 @@ if($_SESSION['id'])
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
+								</div>
+								<div id="info-balloon">
+									<h4>10.0</h4>
 								</div>
 							</div>
 							<div class="right_col">

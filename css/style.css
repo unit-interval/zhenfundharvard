@@ -78,7 +78,7 @@ body {
 	margin-top: 7px
 }
 #bottom_panel {
-	background: url(/images/lower_bg.png) #f2eee6 repeat-x 0px -1px;
+	background: url(images/lower_bg.png) #f2eee6 repeat-x 0px -1px;
 	padding-bottom: 50px
 }
 #section_tabs_container {
@@ -1281,7 +1281,7 @@ div.agenda-row {
     position: relative;
     height: 30px;
     margin: 0;
-    background: transparent url(/images/agenda-row-bg.png) repeat-x 200px bottom;
+    background: transparent url(images/agenda-row-bg.png) repeat-x 200px bottom;
     border-top: 1px solid #FFF;
     width: 521px;
     color: #343434;
@@ -1289,7 +1289,7 @@ div.agenda-row {
 	margin-top: 10px;
 }
 div.alt {
-    background: transparent url(/images/agenda-row-alt-bg.png) repeat-x 200px bottom;
+    background: transparent url(images/agenda-row-alt-bg.png) repeat-x 200px bottom;
 }
 div.agenda-row label {
     line-height: 30px;
@@ -1387,17 +1387,17 @@ div.rank-list li > span.rank-score {
 }
 .arrow.left {
 	left: 0;
-	background: url(/images/left-arrow.png) no-repeat;
+	background: url(images/left-arrow.png) no-repeat;
 }
 .arrow.left:hover {
-	background: url(/images/left-arrow-hover.png) no-repeat;
+	background: url(images/left-arrow-hover.png) no-repeat;
 }
 .arrow.right {
 	right: 0;
-	background: url(/images/right-arrow.png) no-repeat;
+	background: url(images/right-arrow.png) no-repeat;
 }
 .arrow.right:hover {
-	background: url(/images/right-arrow-hover.png) no-repeat;
+	background: url(images/right-arrow-hover.png) no-repeat;
 }
 button#submit-vote {
 	height: 100%;
@@ -1418,7 +1418,7 @@ button#submit-vote {
 	filter: progid : DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80FFFFFF', endColorstr='#00FFFFFF');
 }
 #current-track {
-    background: transparent url(/images/filter-sprite.png) no-repeat top right;
+    background: transparent url(images/filter-sprite.png) no-repeat top right;
     color: #205aaf;
     cursor: pointer;
     display: inline-block;
@@ -1431,7 +1431,7 @@ button#submit-vote {
 	top: 55px;
 }
 #current-track span {
-    background: #FFF url(/images/filter-sprite.png) no-repeat top left;
+    background: #FFF url(images/filter-sprite.png) no-repeat top left;
     display: block;
     height: 31px;
     line-height: 31px;
@@ -1471,4 +1471,35 @@ button#submit-vote {
 }
 #current-track.selected span {
     background-position: left -31px;
+}
+li.logo span{
+	font-size: 36px;
+}
+#Zhen {
+	color: #cbbc9f
+}
+#Fund {
+	color: #999
+}
+div.agenda-row.sum {
+	margin-top: 110px;
+}
+#info-balloon {
+	background: transparent url(images/agenda-info-balloon.png) no-repeat top left;
+	position: absolute;
+	width: 220px;
+	height: 79px;
+	padding: 10px;
+	z-index: 99;
+	bottom: 80px;
+	left: 277px;
+}
+#info-balloon h4 {
+	font-family: 'Droid Sans', Arial;
+	font-size: 60px;
+	font-weight: normal;
+	color: #5B4F31;
+	margin: 0 0 3px 0;
+	padding: 0;
+	text-align: center;
 }

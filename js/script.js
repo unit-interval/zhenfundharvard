@@ -93,12 +93,12 @@ var Votes = {
 		$('#info-balloon').animate({ left : 157 + total / 100 * (340 - 157) })
 		var rand = $('#info-balloon>h4').html() * 1.0;
 		( inloop = function() {
-			if(rand > total) $('#info-balloon>h4').html((rand -= 1.1).toFixed(1));
-			else $('#info-balloon>h4').html((rand += 1.1).toFixed(1));
-			if(Math.abs(rand - total) < 2) {
+			if(Math.abs(rand - total) < 1) {
 				$('#info-balloon>h4').html(total.toFixed(1));
 				return 0;
 			}
+			if(rand > total) $('#info-balloon>h4').html((rand -= 1.1).toFixed(1));
+			else $('#info-balloon>h4').html((rand += 1.1).toFixed(1));
 			setTimeout(inloop, 20);
 		})();
 	},

@@ -133,14 +133,15 @@ var Votes = {
 	"refreshRanking" : function() {
 		var V = this;
 		var n = Param.judges + 1;
-		var l = $('#spaces_section div.rank-list ul');
+		var l = V.$list;
 		for (var i = 0; i < Param.teams; i++) {
 			var a = $('li:eq(' + i + ')', l);
 			var ai = a.data('team')
 			if (ai in V.cache) {
-				if (Math.abs(V.cache[ai][n].toFixed(1)*10 - $('span.rank-score', a).html()) > 0.05) {
-					a.fadeTo(0.2, function(){
-						$('span.rank-score', a).html((10*V.cache[ai][n]).toFixed(1))
+				var ts = (V.cache[ai][n]*10).toFixed(1);
+				if (Math.abs(ts - $('span.rank-score', a).html()) > 0.05) {
+					a.fadeTo('normal', 0.2, function(){
+						$('span.rank-score', a).html(ts)
 						a.fadeIn();
 					})
 				}

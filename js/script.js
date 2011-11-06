@@ -9,18 +9,19 @@ var Votes = {
 
 		this.$chart = $('#spaces_section div.left_col');
 		this.$list = $('#spaces_section div.rank-list ul');
+		$('li', this.$list).hide();
 
 		this.update();
 	},
 	"update" : function() {
-		var V = this;
-		//this.fetch_all();
-		for(var i = 0; i < Param.teams; i++) this.fetch(i);
+		var V=this;
+		V.fetch();
+		V.refreshChart();
+		V.refreshRanking();
 	},
-	"fetch_all" : function() {
-	},
-	"fetch" : function(id) {
+	"fetch" : function() {
 		var V = this;
+		var id=V.currentTeam
 		$.ajax({
 			type : "get",
 			data : 'id=' + id,
@@ -29,22 +30,11 @@ var Votes = {
 			dataType : 'json',
 			success : function(data) {
 				if(data.success != true) {
-					data.score = []
-					for(var i = 0; i <= 15; i++)
-					data.score.push(0)
+					return false
 				}
-				var sum = 0;
-				var s = [];
-				for(var i = 0; i < Param.judges; i++) {
-					s.push(data.score[i]);
-					sum += data.score[i];
-				}
-				s.push(data.score[15]);
-				s.push((sum / Param.judges + data.score[15]) / 2);
-				V.cache[id] = s;
-				if(id == V.currentTeam)
-					V.refreshChart(id);
-				return s;
+				V.cache[0] = [0].concat(data.total);
+				V.cache[id] = data.score;
+				return true;
 			}
 		});
 	},
@@ -64,16 +54,16 @@ var Votes = {
 			}
 		});
 	},
-	"refreshChart" : function(id) {
+	"refreshChart" : function() {
 		var V = this;
+		var id = V.currentTeam;
 		var scores = V.cache[id];
+		var total = V.cache[0][id];
 		$('div.agenda-item', V.$chart).each(function(i) {
-			var score = scores[i]
 			$(this).animate({
-				width : Math.max(score * 40 - 7, 33)
+				width : Math.max(scores[i] * 40 - 7, 33)
 			});
 		});
-		total = scores[scores.length - 1] * 10
 		$('#info-balloon').animate({
 			left : 157 + total / 100 * (340 - 157)
 		})
@@ -91,35 +81,29 @@ var Votes = {
 		})();
 	},
 	"refreshRanking" : function(i) {
-		var V = this
-		var a = $('li:eq(' + i + ')', V.$list);
-		var b = a;
-		if(parseInt(a.data('team')) >= Param.teams) {
-			a.hide();
-			V.refreshRanking(i + 1)
+		if(i >= 40) return false;
+		var l = $('#spaces_section div.rank-list ul');
+		var a = $('li:eq(' + i + ')', l);
+		var ai = parseInt(a.data('team'))
+		var va = V.cache[0][ai];
+		var b = a
+		var bj = ai
+		var vb = va
+		if (va > 0) a.fadeIn();
+		for( j = 0; j < i; j++) {
+			b = $('li:eq(' + j + ')', l);
+			bj = parseInt(b.data('team'));
+			vb = V.cache[0][bj];
+			if(va > vb) break;
 		}
-		var va = V.cache[a.data('team')][Param.judges+1];
-		if(va == 0) {
-			a.hide();
+		if(j == i)
 			V.refreshRanking(i + 1)
-		} else {
-			for( j = 0; j < i; j++) {
-				b = $('li:eq(' + j + ')', V.$list);
-				vb = V.cache[b.data('team')][Param.judges+1];
-				if(va > vb)
-					break
-			}
-			if(j == i)
-				V.refreshRanking(i + 1)
-			else {
-				var a = $('li:eq(' + i + ')', V.$list);
-				var b = $('li:eq(' + j + ')', V.$list);
-				a.slideUp(function() {
-					$(this).remove().insertBefore(b).slideDown(function() {
-						V.refreshRanking(i + 1)
-					});
-				})
-			}
+		else {
+			a.slideUp(function() {
+				$(this).remove().insertBefore(b).slideDown(function() {
+					V.refreshRanking(i + 1)
+				});
+			})
 		}
 		return false;
 	}
@@ -151,7 +135,7 @@ $(function() {
 		$(this).addClass('selected').siblings().removeClass('selected');
 		$('#left_col_team_name').html(teamName).data('team', teamID)
 		Votes.currentTeam = teamID
-		Votes.fetch(teamID)
+		Votes.update()
 	})
 	$('#current-track').click(function() {
 		$('#filter').toggleClass('selected')
@@ -162,6 +146,5 @@ $(function() {
 		var score = $(this).data('score')
 		Votes.vote(score)
 	})
-	setTimeout(Votes.refreshRanking(0), 5000);
-	setTimeout(Votes.refreshChart(Votes.currentTeam), 1000);
+	setTimeout(Votes.update(), 2000);
 });

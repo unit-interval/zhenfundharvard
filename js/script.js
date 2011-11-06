@@ -43,7 +43,7 @@ var Votes = {
 				s.push((sum / Param.judges + data.score[15]) / 2);
 				V.cache[id] = s;
 				if(id == V.currentTeam)
-					V.refreshChart(s);
+					V.refreshChart(id);
 				return s;
 			}
 		});
@@ -64,8 +64,9 @@ var Votes = {
 			}
 		});
 	},
-	"refreshChart" : function(scores) {
+	"refreshChart" : function(id) {
 		var V = this;
+		var scores = V.cache[id];
 		$('div.agenda-item', V.$chart).each(function(i) {
 			var score = scores[i]
 			$(this).animate({
@@ -93,7 +94,7 @@ var Votes = {
 		var V = this
 		var a = $('li:eq(' + i + ')', V.$list);
 		var b = a;
-		var va = V.cache[a.data('team')];
+		var va = V.cache[a.data('team')][Param.teams+1];
 		if(i >= Param.teams)
 			return false;
 		if(va == 0) {
@@ -102,7 +103,7 @@ var Votes = {
 		} else {
 			for( j = 0; j < i; j++) {
 				b = $('li:eq(' + j + ')', V.$list);
-				vb = V.cache[b.data('team')]
+				vb = V.cache[b.data('team')][Param.teams+1];
 				if(va > vb)
 					break
 			}
@@ -159,6 +160,6 @@ $(function() {
 		var score = $(this).data('score')
 		Votes.vote(score)
 	})
-	setTimeout(Votes.refreshRanking, 5000);
-	setTimeout(Votes.refreshChart, 5000);
+	setTimeout(Votes.refreshRanking(0), 5000);
+	setTimeout(Votes.refreshChart(Votes.currentTeam), 1000);
 });

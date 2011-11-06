@@ -8,16 +8,15 @@ var Votes = {
 		this.currentTeam = 1;
 
 		this.$chart = $('#spaces_section div.left_col');
-		this.$list = $('#spaces_section div.rank_list ul')
+		this.$list = $('#spaces_section div.rank-list ul');
 
 		this.update();
 	},
 	"update" : function() {
-		var V = this
+		var V = this;
 		//this.fetch_all();
-		for(var i = 1; i <= Param.teams; i++)
-		this.fetch(i);
-		V.refreshRanking(0)
+		for(var i = 0; i < Param.teams; i++) this.fetch(i);
+		V.refreshRanking(0);
 	},
 	"fetch_all" : function() {
 	},
@@ -114,7 +113,7 @@ var Votes = {
 				var a = $('li:eq(' + i + ')', V.$list);
 				var b = $('li:eq(' + j + ')', V.$list);
 				a.slideUp(function() {
-					$(this).remove().insertBefore(b).slideDown(function(){
+					$(this).remove().insertBefore(b).slideDown(function() {
 						V.refreshRanking(i + 1)
 					});
 				})

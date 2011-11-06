@@ -33,9 +33,11 @@ if($_SESSION['id'])
 				<div id="header_wrap">
 					<div class="make_hcenter">
 						<div id="top_nav">
-						    <li class="logo">
-								<a href="http://www.zhenfund.com/"><span id="Zhen">Zhen</span><span id="Fund">Fund</span> @ Harvard</a>
-							</li>
+							<ul>
+							    <li class="logo">
+									<a href="http://www.zhenfund.com/"><span id="Zhen">Zhen</span><span id="Fund">Fund</span> @ Harvard</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>

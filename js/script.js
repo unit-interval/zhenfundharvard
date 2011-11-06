@@ -13,7 +13,7 @@ var Votes = {
 		this.update();
 	},
 	"update" : function() {
-		var V =this
+		var V = this
 		//this.fetch_all();
 		for(var i = 1; i <= Param.teams; i++)
 		this.fetch(i);
@@ -31,9 +31,9 @@ var Votes = {
 			dataType : 'json',
 			success : function(data) {
 				if(data.success != true) {
-					data.score=[]
+					data.score = []
 					for(var i = 0; i <= 15; i++)
-						data.score.push(0)
+					data.score.push(0)
 				}
 				var sum = 0;
 				var s = [];
@@ -71,12 +71,12 @@ var Votes = {
 		$('div.agenda-item', V.$chart).each(function(i) {
 			var score = scores[i]
 			$(this).animate({
-				width : Math.max(score * 40 - 7,33)
+				width : Math.max(score * 40 - 7, 33)
 			});
 		});
 		total = scores[scores.length - 1] * 10
 		$('#info-balloon').animate({
-			left : 157+total/100*(340-157)
+			left : 157 + total / 100 * (340 - 157)
 		})
 		var rand = $('#info-balloon>h4').html() * 1; ( inloop = function() {
 			if(rand > total) {
@@ -91,19 +91,35 @@ var Votes = {
 			clr = setTimeout(inloop, 20);
 		})();
 	},
-	"refreshRanking": function(i) {
-		if (i>=Param.teams) return false;
-		for (j=0; j<i; j++)
-			if 
-		if (j==i) return false;
-		var V = this;
-		var l=$('div.rank-list')
-		var a=$('li:eq('+i+')', l);
-		var b=$('li:eq('+j+')', l);
-		a.slideUp(function(){
-			$(this).remove().insertBefore(b).slideDown();
-			V.refreshRanking(i+1)
-		})
+	"refreshRanking" : function(i) {
+		var V = this
+		var a = $('li:eq(' + i + ')', V.$list);
+		var b = a;
+		var va = V.cache[a.data('team')];
+		if(i >= Param.teams)
+			return false;
+		if(va == 0) {
+			a.hide();
+			V.refreshRanking(i + 1)
+		} else {
+			for( j = 0; j < i; j++) {
+				b = $('li:eq(' + j + ')', V.$list);
+				vb = V.cache[b.data('team')]
+				if(va > vb)
+					break
+			}
+			if(j == i)
+				V.refreshRanking(i + 1)
+			else {
+				var a = $('li:eq(' + i + ')', V.$list);
+				var b = $('li:eq(' + j + ')', V.$list);
+				a.slideUp(function() {
+					$(this).remove().insertBefore(b).slideDown(function(){
+						V.refreshRanking(i + 1)
+					});
+				})
+			}
+		}
 		return false;
 	}
 };

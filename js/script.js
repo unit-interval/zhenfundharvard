@@ -106,15 +106,34 @@ var Votes = {
 //		})();
 	},
     "refreshRanking": function() {
+        var V = this;
         var rank = [];
-        for (team in this.cache)
+        var $li;
+        var idx;
+        for (var team in V.cache)
             rank.push(team);
         var len = rank.length;
-        rank.sort(this.sortByScore);
+        rank.sort(V.sortByScore);
         for (var i = 0; i++ < len; ) {
-            if(this.rank.len <= len) {
-                this.rank.push(rank[i]);
-
+            team = rank[i];
+            if(V.rank.len <= i) {
+                V.rank.push(team);
+                $li = $('li:eq(' + i + ')', V.$list);
+                $('.rank-list-' + team, V.$list).insertBefore($li).slideDown()
+                    .find('span.rank-score').html(V.cache[team][Param.judges + 1]);
+            } else if(team != V.rank[i]) {
+                idx = V.rank.indexOf(team);
+                if(idx >= 0) {
+                    V.rank.splice(idx, 1);
+                    $('.rank-list-' + team, V.$list).slideUp();
+                }
+                V.rank.splice(i, 0, team);
+                $li = $('li:eq(' + i + ')', V.$list);
+                $('.rank-list-' + team, V.$list).insertBefore($li).slideDown()
+                    .find('span.rank-score').html(V.cache[team][Param.judges + 1]);
+            } else if(team == V.rank[i]) {
+                $('.rank-list-' + team, V.$list)
+                    .find('span.rank-score').html(V.cache[team][Param.judges + 1]);
             }
         }
     },

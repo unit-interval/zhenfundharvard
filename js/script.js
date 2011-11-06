@@ -77,6 +77,7 @@ var Votes = {
 		})();
 	},
 	"refreshRanking" : function(i) {
+		V=this;
 		if(i >= 40) return false;
 		var l = $('#spaces_section div.rank-list ul');
 		var a = $('li:eq(' + i + ')', l);
@@ -131,7 +132,7 @@ $(function() {
 		$(this).addClass('selected').siblings().removeClass('selected');
 		$('#left_col_team_name').html(teamName).data('team', teamID)
 		Votes.currentTeam = teamID
-		Votes.update()
+		Votes.fetch()
 	})
 	$('#current-track').click(function() {
 		$('#filter').toggleClass('selected')

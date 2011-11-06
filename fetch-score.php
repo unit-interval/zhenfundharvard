@@ -42,7 +42,7 @@ if($id > 0) {
 
     echo '<pre>';
     while($row = $result->fetch_assoc()) {
-        if(! isset($score[$row['team_id']]))
+        if(! isset($scores[$row['team_id']]))
             $scores[$row['team_id']] = array();
         $scores[$row['team_id']][$row['judge_id']] = intval($row['score']);
         print_r($row);

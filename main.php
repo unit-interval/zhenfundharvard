@@ -261,125 +261,125 @@ if($_SESSION['id'])
 								<h3>TOP TEN</h3>
 								<div class="rank-list">
 									<ul>
-										<li>
-											<span>•</span><label>TEAM 1</label><span class='rank-score'>9.13</span>
+										<li data-team='1'>
+											<span>•</span><label>TEAM 1</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 2</label><span class='rank-score'>7.23</span>
+										<li data-team='2'>
+											<span>•</span><label>TEAM 2</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 3</label><span class='rank-score'>6.23</span>
+										<li data-team='3'>
+											<span>•</span><label>TEAM 3</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 4</label><span class='rank-score'>4.23</span>
+										<li data-team='4'>
+											<span>•</span><label>TEAM 4</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 5</label><span class='rank-score'>4.23</span>
+										<li data-team='5'>
+											<span>•</span><label>TEAM 5</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 6</label><span class='rank-score'>3.23</span>
+										<li data-team='6'>
+											<span>•</span><label>TEAM 6</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 7</label><span class='rank-score'>3.23</span>
+										<li data-team='7'>
+											<span>•</span><label>TEAM 7</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 8</label><span class='rank-score'>2.23</span>
+										<li data-team='8'>
+											<span>•</span><label>TEAM 8</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 9</label><span class='rank-score'>2.23</span>
+										<li data-team='9'>
+											<span>•</span><label>TEAM 9</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 10</label><span class='rank-score'>1.23</span>
+										<li data-team='10'>
+											<span>•</span><label>TEAM 10</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 11</label><span class='rank-score'>9.13</span>
+										<li data-team='11'>
+											<span>•</span><label>TEAM 11</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 12</label><span class='rank-score'>7.23</span>
+										<li data-team='12'>
+											<span>•</span><label>TEAM 12</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 13</label><span class='rank-score'>6.23</span>
+										<li data-team='13'>
+											<span>•</span><label>TEAM 13</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 14</label><span class='rank-score'>4.23</span>
+										<li data-team='14'>
+											<span>•</span><label>TEAM 14</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 15</label><span class='rank-score'>4.23</span>
+										<li data-team='15'>
+											<span>•</span><label>TEAM 15</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 16</label><span class='rank-score'>3.23</span>
+										<li data-team='16'>
+											<span>•</span><label>TEAM 16</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 17</label><span class='rank-score'>3.23</span>
+										<li data-team='17'>
+											<span>•</span><label>TEAM 17</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 18</label><span class='rank-score'>2.23</span>
+										<li data-team='18'>
+											<span>•</span><label>TEAM 18</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 19</label><span class='rank-score'>2.23</span>
+										<li data-team='19'>
+											<span>•</span><label>TEAM 19</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 20</label><span class='rank-score'>1.23</span>
+										<li data-team='20'>
+											<span>•</span><label>TEAM 20</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 21</label><span class='rank-score'>9.13</span>
+										<li data-team='21'>
+											<span>•</span><label>TEAM 21</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 22</label><span class='rank-score'>7.23</span>
+										<li data-team='22'>
+											<span>•</span><label>TEAM 22</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 23</label><span class='rank-score'>6.23</span>
+										<li data-team='23'>
+											<span>•</span><label>TEAM 23</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 24</label><span class='rank-score'>4.23</span>
+										<li data-team='24'>
+											<span>•</span><label>TEAM 24</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 25</label><span class='rank-score'>4.23</span>
+										<li data-team='25'>
+											<span>•</span><label>TEAM 25</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 26</label><span class='rank-score'>3.23</span>
+										<li data-team='26'>
+											<span>•</span><label>TEAM 26</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 27</label><span class='rank-score'>3.23</span>
+										<li data-team='27'>
+											<span>•</span><label>TEAM 27</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 28</label><span class='rank-score'>2.23</span>
+										<li data-team='28'>
+											<span>•</span><label>TEAM 28</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 29</label><span class='rank-score'>2.23</span>
+										<li data-team='29'>
+											<span>•</span><label>TEAM 29</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 30</label><span class='rank-score'>1.23</span>
+										<li data-team='30'>
+											<span>•</span><label>TEAM 30</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 31</label><span class='rank-score'>9.13</span>
+										<li data-team='31'>
+											<span>•</span><label>TEAM 31</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 32</label><span class='rank-score'>7.23</span>
+										<li data-team='32'>
+											<span>•</span><label>TEAM 32</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 33</label><span class='rank-score'>6.23</span>
+										<li data-team='33'>
+											<span>•</span><label>TEAM 33</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 34</label><span class='rank-score'>4.23</span>
+										<li data-team='34'>
+											<span>•</span><label>TEAM 34</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 35</label><span class='rank-score'>4.23</span>
+										<li data-team='35'>
+											<span>•</span><label>TEAM 35</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 36</label><span class='rank-score'>3.23</span>
+										<li data-team='36'>
+											<span>•</span><label>TEAM 36</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 37</label><span class='rank-score'>3.23</span>
+										<li data-team='37'>
+											<span>•</span><label>TEAM 37</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 38</label><span class='rank-score'>2.23</span>
+										<li data-team='38'>
+											<span>•</span><label>TEAM 38</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 39</label><span class='rank-score'>2.23</span>
+										<li data-team='39'>
+											<span>•</span><label>TEAM 39</label><span class='rank-score'>0.0</span>
 										</li>
-										<li>
-											<span>•</span><label>TEAM 40</label><span class='rank-score'>1.23</span>
+										<li data-team='40'>
+											<span>•</span><label>TEAM 40</label><span class='rank-score'>0.0</span>
 										</li>
 									</ul>
 								</div>

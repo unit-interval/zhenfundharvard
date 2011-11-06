@@ -32,7 +32,7 @@ var Votes = {
 				if(data.success != true) {
 					return false
 				}
-				V.cache[0] = [0].concat(data.total);
+				V.cache[0] = [0].concat([1,2,1,2,3,4,5,6,77,87,1,2,1,2,3,4,5,6,77,87,1,2,1,2,3,4,5,6,77,87,1,2,1,2,3,4,5,6,77,87]); // V.cache[0] = [0].concat(data.total);
 				V.cache[id] = data.score;
 				return true;
 			}

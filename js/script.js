@@ -68,7 +68,7 @@ var Votes = {
 
 
 $(function() {
-//    Votes.init();
+    Votes.init();
 	var tabs = $('ul.section_tabs')
 	tabi = 0;
 	$('.arrow.left').click(function(){

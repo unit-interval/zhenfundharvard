@@ -53,7 +53,7 @@ if($_SESSION['id'])
 									</li>
 								</ul>
 								<div class="main_button">
-									<input id="save_button_login" type="submit" />
+									<input id="save_button_login" type="submit" value="Login"/>
 								</div>
 							</form>
 						</div>

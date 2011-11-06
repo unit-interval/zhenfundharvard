@@ -45,7 +45,8 @@ if($id > 0) {
             $scores[$row['team_id']] = array();
         $scores[$row['team_id']][$row['judge_id']] = intval($row['score']);
     }
-
+    var_dump($scores);
+    exit;
     foreach($scores as $team => $score) {
         $return['scores'][$team] = array();
         for ($i = 0; $i++ < 15; ) {

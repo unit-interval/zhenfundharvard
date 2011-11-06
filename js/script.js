@@ -65,9 +65,7 @@ var Votes = {
 	"refreshChart" : function(scores) {
 		var V = this;
 		$('div.agenda-item', V.$chart).each(function(i) {
-			var score = scores[i - 1]
-			if(score == 0)
-				score = 1;
+			var score = scores[i]
 			$(this).animate({
 				width : Math.max(score * 40 - 7,33)
 			});

@@ -68,12 +68,12 @@ var Votes = {
 			if(score == 0)
 				score = 1;
 			$(this).animate({
-				width : score * 40 - 7
+				width : Math.min(score * 40 - 7,33)
 			});
 		});
 		total = scores[scores.length - 1] * 10
 		$('#info-balloon').animate({
-			left : Math.min(total * 4 + 117, 340)
+			left : 117+total/100*(340-117)
 		})
 		var rand = $('#info-balloon>h4').html() * 1; ( inloop = function() {
 			if(rand > total) {

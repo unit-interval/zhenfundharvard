@@ -23,7 +23,7 @@ if($_SESSION['id'])
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<title>templates</title>
+		<title>ZhenFund @ Harvard</title>
 		<link href="css/style.css" rel="stylesheet">
 		<link href="css/login.css" rel="stylesheet">
 	</head>
@@ -33,6 +33,9 @@ if($_SESSION['id'])
 				<div id="header_wrap">
 					<div class="make_hcenter">
 						<div id="top_nav">
+						    <li class="logo">
+								<a href="http://www.zhenfund.com/"><span id="Zhen">Zhen</span><span id="Fund">Fund</span> @ Harvard</a>
+							</li>
 						</div>
 					</div>
 				</div>
@@ -65,7 +68,7 @@ if($_SESSION['id'])
 					<div class="top_row">
 						<div class="links_container">
 							<div class="small_links">
-								&copy; Proudely Powered <a href='https://www.facebook.com/huangtao.me'>Tao Huang</a>, <a href='https://www.facebook.com/zilinj'>Zilin Jiang</a>, 2011
+								&copy; Proudely Powered by <a href='https://www.facebook.com/huangtao.me'>Tao Huang</a>, <a href='https://www.facebook.com/zilinj'>Zilin Jiang</a>, 2011
 							</div>
 						</div>
 						<div class="feedback_link_container">

@@ -138,7 +138,7 @@ var Votes = {
 			var a = $('li:eq(' + i + ')', l);
 			var ai = a.data('team')
 			if (ai in V.cache) {
-				if (abs(V.cache[ai][n].toFixed(1)*10 - $('span.rank-score', a).html()) > 0.05) {
+				if (Math.abs(V.cache[ai][n].toFixed(1)*10 - $('span.rank-score', a).html()) > 0.05) {
 					a.fadeTo(0.2, function(){
 						$('span.rank-score', a).html((10*V.cache[ai][n]).toFixed(1))
 						a.fadeIn();

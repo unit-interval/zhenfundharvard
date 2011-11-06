@@ -6,7 +6,7 @@ include './database.php';
 session_name(SESSNAME);
 session_start();
 
-$return = array('success' => false, 'score' => array());
+$return = array('success' => false);
 
 $id = intval($_GET['id']);
 
@@ -18,6 +18,7 @@ if($id > 0) {
         exit;
     }
     $score = array();
+    $return['score'] = array();
     while($row = $result->fetch_assoc())
         $score[$row['judge_id']] = intval($row['score']);
     for ($i = 0; $i++ < 15; ){
@@ -28,37 +29,36 @@ if($id > 0) {
             $return['score'][] = 0;
     }
     $return['score'][] = floatval(array_sum($score) / count($score));
-} else {
+    $return['success'] = true;
+} elseif($id == 0) {
     $query = "select * from `votes`";
     $result = $db->query($query);
-//    if($result->num_rows == 0) {
-    if(true) {
+    if($result->num_rows == 0) {
         echo(json_encode($return));
         exit;
     }
-
-    $score = array();
+    $scores = array();
+    $return['scores'] = array();
 
     while($row = $result->fetch_assoc()) {
         if(! isset($score[$row['team_id']]))
-            $score[$row['team_id']] = array();
-        $score[$row['team_id']]['judge_id'] = intval($row['score']);
+            $scores[$row['team_id']] = array();
+        $scores[$row['team_id']][$row['judge_id']] = intval($row['score']);
     }
 
-    foreach($score as $k => $v) {
-        $return['score'][$k] = array();
+    foreach($scores as $team => $score) {
+        $return['scores'][$team] = array();
         for ($i = 0; $i++ < 15; ) {
-            if(isset($v[$i])) {
-                $return['score'][$k][] = $v[$i];
-                unset($v[$i]);
+            if(isset($score[$i])) {
+                $return['scores'][$team][] = $score[$i];
+                unset($score[$i]);
             } else
-                $return['score'][$k][] = 0;
+                $return['scores'][$team][] = 0;
         }
-        $return['score'][$k][] = floatval(array_sum($v) / count($v));
+        $return['scores'][$team][] = floatval(array_sum($score) / count($score));
     }
+    $return['success'] = true;
 }
-
-$return['success'] = true;
 
 echo json_encode($return);
 

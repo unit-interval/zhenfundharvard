@@ -40,10 +40,12 @@ if($id > 0) {
     $scores = array();
     $return['scores'] = array();
 
+    echo '<pre>';
     while($row = $result->fetch_assoc()) {
         if(! isset($score[$row['team_id']]))
             $scores[$row['team_id']] = array();
         $scores[$row['team_id']][$row['judge_id']] = intval($row['score']);
+        print_r($row);
     }
     var_dump($scores);
     exit;

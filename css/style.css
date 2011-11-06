@@ -1450,7 +1450,8 @@ button#submit-vote {
     position: absolute;
     right: 400px;
     top: 87px;
-    z-index: 10;
+    z-index: 100;
+    opacity: 0.95
 }
 #filter.selected table { display: block; }
 #filter-table td {

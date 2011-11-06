@@ -27,9 +27,11 @@ var Votes = {
 			cache : false,
 			dataType : 'json',
 			success : function(data) {
-				if(data.success != true)
+				if(data.success != true) {
+					data.score=[]
 					for(var i = 0; i <= 15; i++)
-						data.score[i]=0
+						data.score.push(0)
+				}
 				var sum = 0;
 				var s = [];
 				for(var i = 0; i < Param.judges; i++) {
@@ -41,7 +43,6 @@ var Votes = {
 				V.cache[id] = s;
 				if(id == V.currentTeam)
 					V.refreshChart(s);
-				    V.refreshRanking();
 				return s;
 			}
 		});

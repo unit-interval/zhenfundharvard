@@ -81,8 +81,11 @@ var Votes = {
 	"refreshChart" : function() {
 		var V = this;
 		var n = Param.judges;
-		var scores = V.cache[V.currentTeam];
-//		if (scores) { for (var i = 0; i < n + 2; i++) scores[i] = 0; }
+		var scores = []
+		if (V.currentTeam in V.cache)
+			scores = V.cache[V.currentTeam]; 
+		else
+			for (var i = 0; i < n + 2; i++) scores.push(0);
 		var total = scores[n+1] * 100;
 		$('div.agenda-item', V.$chart).each(function(i) {
 			$(this).animate({ width : Math.max(scores[i] * 40 - 7, 33) });

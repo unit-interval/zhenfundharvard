@@ -11,13 +11,7 @@ var Votes = {
 		this.$list = $('#spaces_section div.rank-list ul');
 		$('li', this.$list).hide();
 
-		this.update();
-	},
-	"update" : function() {
-		var V=this;
-		V.fetch();
-		V.refreshChart();
-		V.refreshRanking();
+		this.fetch();
 	},
 	"fetch" : function() {
 		var V = this;
@@ -34,6 +28,8 @@ var Votes = {
 				}
 				V.cache[0] = [0].concat([1,2,1,2,3,4,5,6,77,87,1,2,1,2,3,4,5,6,77,87,1,2,1,2,3,4,5,6,77,87,1,2,1,2,3,4,5,6,77,87]); // V.cache[0] = [0].concat(data.total);
 				V.cache[id] = data.score;
+				V.refreshChart();
+				V.refreshRanking();
 				return true;
 			}
 		});
@@ -146,5 +142,5 @@ $(function() {
 		var score = $(this).data('score')
 		Votes.vote(score)
 	})
-	setTimeout(Votes.update(), 2000);
+	setTimeout(Votes.fetch(), 2000);
 });

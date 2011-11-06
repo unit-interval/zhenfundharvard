@@ -28,8 +28,6 @@ var Votes = {
 				}
 				V.cache[0] = [0].concat([1,2,1,2,3,4,5,6,77,87,1,2,1,2,3,4,5,6,77,87,1,2,1,2,3,4,5,6,77,87,1,2,1,2,3,4,5,6,77,87]); // V.cache[0] = [0].concat(data.total);
 				V.cache[id] = data.score;
-				V.refreshChart();
-				V.refreshRanking(0);
 				return true;
 			}
 		});
@@ -76,31 +74,30 @@ var Votes = {
 			clr = setTimeout(inloop, 20);
 		})();
 	},
-	"refreshRanking" : function(i) {
+	"refreshRanking" : function() {
 		V=this;
-		if(i >= 40) return false;
 		var l = $('#spaces_section div.rank-list ul');
-		var a = $('li:eq(' + i + ')', l);
-		var ai = parseInt(a.data('team'))
-		var va = V.cache[0][ai];
-		var b = a
-		var bj = ai
-		var vb = va
-		if (va > 0) a.fadeIn();
-		for( j = 0; j < i; j++) {
-			b = $('li:eq(' + j + ')', l);
-			bj = parseInt(b.data('team'));
-			vb = V.cache[0][bj];
-			if(va > vb) break;
-		}
-		if(j == i)
-			V.refreshRanking(i + 1)
-		else {
-			a.slideUp(function() {
-				$(this).remove().insertBefore(b).slideDown(function() {
-					V.refreshRanking(i + 1)
-				});
-			})
+		for (var i = 0; i < Param.teams; i++) {
+			var a = $('li:eq(' + i + ')', l);
+			var ai = parseInt(a.data('team'))
+			var va = V.cache[0][ai];
+			var b = a
+			var bj = ai
+			var vb = va
+			if (va > 0) a.fadeIn();
+			for( j = 0; j < i; j++) {
+				b = $('li:eq(' + j + ')', l);
+				bj = parseInt(b.data('team'));
+				vb = V.cache[0][bj];
+				if(va > vb) break;
+			}
+			if(j < i) {
+				a.slideUp(function() {
+					$(this).remove().insertBefore(b).slideDown(function() {
+					});
+				})
+				return true;
+			}
 		}
 		return false;
 	}
@@ -143,5 +140,7 @@ $(function() {
 		var score = $(this).data('score')
 		Votes.vote(score)
 	})
-	setTimeout(Votes.fetch(), 2000);
+	setTimeout(Votes.fetch(), 5000);
+	setTimeout(Votes.refreshChart(), 1000);
+	setTimeout(Votes.refreshRanking(), 2000);
 });

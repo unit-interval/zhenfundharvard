@@ -67,4 +67,35 @@ var Votes = {
 
 $(function() {
 //    Votes.init();
+	var tabs = $('ul.section_tabs')
+	tabi = 0;
+	$('.arrow.left').click(function(){
+		if (tabi > 0){
+			tabi -= 1;
+			tabs.animate({top: '+=50'})
+		} 
+	})
+	$('.arrow.right').click(function(){
+		if (tabi < 7){
+			tabi += 1;
+			tabs.animate({top: '-=50'})
+		} 
+	})
+	tabs.find('li').click(function(){
+		var teamName = $(this).find('span').html()
+		var teamID = $(this).data('team')
+		$(this).addClass('selected').siblings().removeClass('selected');
+		$('#left_col_team_name').html(teamName).data('team', teamID)
+		//TODO Fetch All And Refresh Scores
+	})
+	$('#current-track').click(function(){
+		$('#filter').toggleClass('selected')
+		
+	})
+	$('#filter-table td').click(function(){
+		$('#filter').removeClass('selected')
+		//TODO SEND SCORE OF TEAM TO BACKEND
+		var score = $(this).data('score')
+		Votes.vote(score)
+	})
 });

@@ -1,5 +1,5 @@
 var Param = {
-	"teams" : 10,
+	"teams" : 40,
 	"judges" : 5
 };
 var Votes = {

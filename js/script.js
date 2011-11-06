@@ -140,9 +140,10 @@ var Votes = {
 			if (ai in V.cache) {
 				var ts = (V.cache[ai][n]*10).toFixed(1);
 				if (Math.abs(ts - $('span.rank-score', a).html()) > 0.05) {
-					a.fadeTo('normal', 0.2, function(ts){
-						this.fadeIn().find('span.rank-score').html(ts);
-					})
+					//a.fadeTo('normal', 0.2, function(ts){
+						//this.fadeIn().find('span.ran-score').html(ts);
+					//})
+					a.find('span.rank-score').html(ts);
 				}
 				var b = a
 				var bj = ai

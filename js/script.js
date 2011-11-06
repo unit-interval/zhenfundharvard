@@ -16,7 +16,6 @@ var Votes = {
 		var V = this;
 		//this.fetch_all();
 		for(var i = 0; i < Param.teams; i++) this.fetch(i);
-		V.refreshRanking(0);
 	},
 	"fetch_all" : function() {
 	},
@@ -160,4 +159,6 @@ $(function() {
 		var score = $(this).data('score')
 		Votes.vote(score)
 	})
+	setTimeout(Votes.refreshRanking, 5000);
+	setTimeout(Votes.refreshChart, 5000);
 });

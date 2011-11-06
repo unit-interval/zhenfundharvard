@@ -145,7 +145,16 @@ $(function() {
 		var score = $(this).data('score')
 		Votes.vote(score)
 	})
-	setTimeout(Votes.fetch(), 5000);
-	setTimeout(Votes.refreshChart(), 1000);
-	setTimeout(Votes.refreshRanking(), 2000);
+	(loop1 = function(){
+		Votes.fetch();
+		setTimeout(loop1, 5000);
+	})()
+	(loop2 = function(){
+		Votes.refreshChart();
+		setTimeout(loop2, 1000);
+	})()
+	(loop3 = function(){
+		Votes.refreshRanking();
+		setTimeout(loop3, 1000);
+	})()
 });

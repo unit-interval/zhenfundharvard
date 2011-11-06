@@ -30,7 +30,7 @@ if($_SESSION['id'])
 <?php if($id) {
 ?>
 								<li class="logout">
-                                <a href="index.php?logout">Log Out ( #<?php echo($id); ?> )</a>
+                                <a href="index.php?logout">#<?php echo($id); ?> Log Out</a>
                                 </li>
 <?php } else {
 ?>

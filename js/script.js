@@ -32,7 +32,7 @@ var Votes = {
                     sum += data.score[i];
                 }
                 s.push(data.score[15]);
-                s.push((sum / (Param.judges -1) + data.score[15]) / 2);
+                s.push((sum / Param.judges + data.score[15]) / 2);
                 V.cache[id] = s;
                 if (id == V.currentTeam)
                     V.refreshChart(s);
@@ -59,7 +59,9 @@ var Votes = {
     "refreshChart": function(scores) {
         var V = this;
         $('div.agenda-item', V.$chart).each(function(i) {
-            $(this).animate({width: scores[i-1]*40-7}, 1000);
+        	var score = scores[i-1]
+        	if (score == 0) score = 1;
+            $(this).animate({width: score*40-7}, 1000);
         });
     }
 };

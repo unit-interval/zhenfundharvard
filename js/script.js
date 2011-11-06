@@ -68,7 +68,7 @@ var Votes = {
 			if(score == 0)
 				score = 1;
 			$(this).animate({
-				width : Math.min(score * 40 - 7,33)
+				width : Math.max(score * 40 - 7,33)
 			});
 		});
 		total = scores[scores.length - 1] * 10

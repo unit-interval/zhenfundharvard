@@ -26,10 +26,10 @@ var Votes = {
         rank.sort(V.sortByScore);
         var s = '';
         for (var i=0; i < rank.length; i++)
-			s = s + "<li data-team='"+rank[i]+"'><span>•</span><label>TEAM"+rank[i]+"</label><span class='rank-score'>"+(V.cache[rank[i]][Param.judges+1]*10).toFixed(1)+"</span></li>"
+			s = s + "<li data-team='"+rank[i]+"'><span>•</span><label>TEAM "+rank[i]+"</label><span class='rank-score'>"+(V.cache[rank[i]][Param.judges+1]*10).toFixed(1)+"</span></li>"
         for (var team=1; team<=Param.teams; team++)
         	if (! (team in V.cache))
-        		s = s + "<li style='display:none' data-team='"+team+"'><span>•</span><label>TEAM"+team+"</label><span class='rank-score'>0.0</span></li>"
+        		s = s + "<li style='display:none' data-team='"+team+"'><span>•</span><label>TEAM "+team+"</label><span class='rank-score'>0.0</span></li>"
         V.$list.html(s);
     },
 	"fetch" : function(id) {
@@ -84,7 +84,8 @@ var Votes = {
 			dataType : 'json',
 			success : function(data) {
 				if(data.success != true)
-					return;
+					return false;
+				$('#filter').removeClass('selected')
 				V.fetch(0);
 			},
             error: function() {
@@ -193,7 +194,6 @@ $(function() {
 		$('#filter').toggleClass('selected')
 	})
 	$('#filter-table td').click(function() {
-		$('#filter').removeClass('selected')
 		Votes.vote($(this).data('score'))
 	})
 	setInterval("Votes.fetch(0)", 2000);

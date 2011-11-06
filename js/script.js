@@ -137,30 +137,31 @@ var Votes = {
 		for (var i = 0; i < Param.teams; i++) {
 			var a = $('li:eq(' + i + ')', l);
 			var ai = a.data('team')
-			if (! ai in V.cache) continue;
-			if (V.cache[ai][n].toFixed(1) - $('span.rank-score', a).html() > 0.01) {
-				a.fadeTo(0.2, function(){
-					$('span.rank-score', a).html(V.cache[ai][n].toFixed(1))
+			if (ai in V.cache) {
+				if (V.cache[ai][n].toFixed(1) - $('span.rank-score', a).html() > 0.01) {
+					a.fadeTo(0.2, function(){
+						$('span.rank-score', a).html(V.cache[ai][n].toFixed(1))
+						a.fadeIn();
+					})
+				}
+				var b = a
+				var bj = ai
+				for( j = 0; j < i; j++) {
+					b = $('li:eq(' + j + ')', l);
+					bj = b.data('team');
+					if(V.sortByScore(ai, bj) > 0) break;
+				}
+				if(j < i) {
+					a.slideUp(function() {
+						$(this).remove().insertBefore(b).slideDown(function() {
+						});
+					})
+					return true;
+				}
+				else if (va > 0) {
 					a.fadeIn();
-				})
-			}
-			var b = a
-			var bj = ai
-			for( j = 0; j < i; j++) {
-				b = $('li:eq(' + j + ')', l);
-				bj = b.data('team');
-				if(V.sortByScore(ai, bj) > 0) break;
-			}
-			if(j < i) {
-				a.slideUp(function() {
-					$(this).remove().insertBefore(b).slideDown(function() {
-					});
-				})
-				return true;
-			}
-			else if (va > 0) {
-				a.fadeIn();
-				return true;
+					return true;
+				}
 			}
 		}
 		return false;

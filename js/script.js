@@ -94,7 +94,7 @@ var Votes = {
 		var V = this
 		var a = $('li:eq(' + i + ')', V.$list);
 		var b = a;
-		var va = V.cache[a.data('team')][Param.teams+1];
+		var va = V.cache[a.data('team')][Param.judges+1];
 		if(i >= Param.teams)
 			return false;
 		if(va == 0) {

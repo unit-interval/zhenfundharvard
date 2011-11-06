@@ -16,7 +16,21 @@ var Votes = {
 		this.fetch(0);
 	},
     "ready": function() {
-    	// TODO show the ranking directly since this is the first time
+		var V = this;
+        var rank = [];
+        var $li;
+        var idx;
+        for (var team in V.cache)
+            rank.push(team);
+        var len = rank.length;
+        rank.sort(V.sortByScore);
+        var s = '';
+        for (var i=0; i < rank.length; i++)
+        	s = s + "<li data-team='"+rank[i]+"'><span>•</span><label>TEAM"+rank[i]+"</label><span class='rank-score'>"+V.cache[rank[i]][Param+1]*10.toFixed(1)+"</span></li>"
+        for (var team=1; team<Param.teams; i++)
+        	if (! team in V.cache)
+        		s = s + "<li style='display:none' data-team='"+i+"'><span>•</span><label>TEAM"+i+"</label><span class='rank-score'>"0.0"</span></li>"
+        V.$list.html(s);
     },
 	"fetch" : function(id) {
 		var V = this;
@@ -102,38 +116,6 @@ var Votes = {
 			setTimeout(inloop, 20);
 		})();
 	},
-    "refreshRanking": function() {
-        var V = this;
-        var rank = [];
-        var $li;
-        var idx;
-        for (var team in V.cache)
-            rank.push(team);
-        var len = rank.length;
-        rank.sort(V.sortByScore);
-        for (var i = 0; i++ < len; ) {
-            team = rank[i];
-            if(V.rank.len <= i) {
-                V.rank.push(team);
-                $li = $('li:eq(' + i + ')', V.$list);
-                $('.rank-list-' + team, V.$list).insertBefore($li).slideDown()
-                    .find('span.rank-score').html(V.cache[team][Param.judges + 1]);
-            } else if(team != V.rank[i]) {
-                idx = V.rank.indexOf(team);
-                if(idx >= 0) {
-                    V.rank.splice(idx, 1);
-                    $('.rank-list-' + team, V.$list).slideUp();
-                }
-                V.rank.splice(i, 0, team);
-                $li = $('li:eq(' + i + ')', V.$list);
-                $('.rank-list-' + team, V.$list).insertBefore($li).slideDown()
-                    .find('span.rank-score').html(V.cache[team][Param.judges + 1]);
-            } else if(team == V.rank[i]) {
-                $('.rank-list-' + team, V.$list)
-                    .find('span.rank-score').html(V.cache[team][Param.judges + 1]);
-            }
-        }
-    },
     "sortByScore": function(a,b) {
         var pos = Param.judges + 1;
         if(this.cache[a][pos] < this.cache[b][pos])
@@ -147,36 +129,40 @@ var Votes = {
         else
             return 0;
     },
-//	"refreshRanking" : function() {
-//		var V = this;
-//		var l = $('#spaces_section div.rank-list ul');
-//		for (var i = 0; i < Param.teams; i++) {
-//			var a = $('li:eq(' + i + ')', l);
-//			var ai = parseInt(a.data('team'))
-//			var va = V.cache[0][ai];
-//			var b = a
-//			var bj = ai
-//			var vb = va
-//			if (va > 0) {
-//				
-//				a.fadeIn();
-//			}
-//			for( j = 0; j < i; j++) {
-//				b = $('li:eq(' + j + ')', l);
-//				bj = parseInt(b.data('team'));
-//				vb = V.cache[0][bj];
-//				if(va > vb) break;
-//			}
-//			if(j < i) {
-//				a.slideUp(function() {
-//					$(this).remove().insertBefore(b).slideDown(function() {
-//					});
-//				})
-//				return true;
-//			}
-//		}
-//		return false;
-//	}
+	"refreshRanking" : function() {
+		var V = this;
+		var l = $('#spaces_section div.rank-list ul');
+		for (var i = 0; i < Param.teams; i++) {
+			if (! (i+1) in V.cache) continue;
+			var a = $('li:eq(' + i + ')', l);
+			var ai = a.data('team')
+			if (V.cache[ai].toFixed(1) - $('span.rank-score', a).html() != 0) {
+				a.fadeTo(0.2, function(){
+					$('span.rank-score', a).html(V.cache[ai].toFixed(1))
+					a.fadeIn();
+				})
+			}
+			var b = a
+			var bj = ai
+			for( j = 0; j < i; j++) {
+				b = $('li:eq(' + j + ')', l);
+				bj = b.data('team');
+				if(V.sortByScore(ai, bj) > 0) break;
+			}
+			if(j < i) {
+				a.slideUp(function() {
+					$(this).remove().insertBefore(b).slideDown(function() {
+					});
+				})
+				return true;
+			}
+			else if (va > 0) {
+				a.fadeIn();
+				return true;
+			}
+		}
+		return false;
+	}
 };
 
 $(function() {
@@ -211,5 +197,5 @@ $(function() {
 		Votes.vote($(this).data('score'))
 	})
 	setInterval(Votes.fetch(0), 2000);
-	setInterval(Votes.refreshRanking(), 1000);
+	setInterval(Votes.refreshRanking(), 2000);
 });

@@ -32,7 +32,7 @@ var Votes = {
                     sum += data.score[i];
                 }
                 s.push(data.score[15]);
-                s.push((sum / (Param.judges -1) + data.score[15]) / 2);
+                s.push((sum / Param.judges + data.score[15]) / 2);
                 V.cache[id] = s;
                 if (id == V.currentTeam)
                     V.refreshChart(s);
@@ -59,7 +59,9 @@ var Votes = {
     "refreshChart": function(scores) {
         var V = this;
         $('div.agenda-item', V.$chart).each(function(i) {
-            $(this).animate({width: scores[i-1]*40-7}, 1000);
+        	var score = scores[i-1]
+        	if (score == 0) score = 1;
+            $(this).animate({width: score*40-7}, 1000);
         });
     }
 };
@@ -67,4 +69,35 @@ var Votes = {
 
 $(function() {
 //    Votes.init();
+	var tabs = $('ul.section_tabs')
+	tabi = 0;
+	$('.arrow.left').click(function(){
+		if (tabi > 0){
+			tabi -= 1;
+			tabs.animate({top: '+=50'})
+		} 
+	})
+	$('.arrow.right').click(function(){
+		if (tabi < 7){
+			tabi += 1;
+			tabs.animate({top: '-=50'})
+		} 
+	})
+	tabs.find('li').click(function(){
+		var teamName = $(this).find('span').html()
+		var teamID = $(this).data('team')
+		$(this).addClass('selected').siblings().removeClass('selected');
+		$('#left_col_team_name').html(teamName).data('team', teamID)
+		//TODO Fetch All And Refresh Scores
+	})
+	$('#current-track').click(function(){
+		$('#filter').toggleClass('selected')
+		
+	})
+	$('#filter-table td').click(function(){
+		$('#filter').removeClass('selected')
+		//TODO SEND SCORE OF TEAM TO BACKEND
+		var score = $(this).data('score')
+		Votes.vote(score)
+	})
 });

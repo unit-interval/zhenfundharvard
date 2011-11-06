@@ -73,7 +73,7 @@ var Votes = {
 		});
 		total = scores[scores.length - 1] * 10
 		$('#info-balloon').animate({
-			left : 117+total/100*(340-117)
+			left : 157+total/100*(340-157)
 		})
 		var rand = $('#info-balloon>h4').html() * 1; ( inloop = function() {
 			if(rand > total) {

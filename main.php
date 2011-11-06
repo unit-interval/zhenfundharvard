@@ -15,7 +15,7 @@ if($_SESSION['id'])
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<title>templates</title>
+		<title>ZhenFund @ Harvard</title>
 		<link href="css/style.css" rel="stylesheet">
 		<script src="js/jquery.js" type="text/javascript"></script>
 		<script src="js/script.js" type="text/javascript"></script>
@@ -350,6 +350,36 @@ if($_SESSION['id'])
 										</li>
 										<li>
 											<span>•</span><label>TEAM 30</label><span class='rank-score'>1.23</span>
+										</li>
+										<li>
+											<span>•</span><label>TEAM 31</label><span class='rank-score'>9.13</span>
+										</li>
+										<li>
+											<span>•</span><label>TEAM 32</label><span class='rank-score'>7.23</span>
+										</li>
+										<li>
+											<span>•</span><label>TEAM 33</label><span class='rank-score'>6.23</span>
+										</li>
+										<li>
+											<span>•</span><label>TEAM 34</label><span class='rank-score'>4.23</span>
+										</li>
+										<li>
+											<span>•</span><label>TEAM 35</label><span class='rank-score'>4.23</span>
+										</li>
+										<li>
+											<span>•</span><label>TEAM 36</label><span class='rank-score'>3.23</span>
+										</li>
+										<li>
+											<span>•</span><label>TEAM 37</label><span class='rank-score'>3.23</span>
+										</li>
+										<li>
+											<span>•</span><label>TEAM 38</label><span class='rank-score'>2.23</span>
+										</li>
+										<li>
+											<span>•</span><label>TEAM 39</label><span class='rank-score'>2.23</span>
+										</li>
+										<li>
+											<span>•</span><label>TEAM 40</label><span class='rank-score'>1.23</span>
 										</li>
 									</ul>
 								</div>

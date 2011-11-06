@@ -13,7 +13,7 @@ var Votes = {
 	},
 	"update" : function() {
 		//        this.fetch_all();
-		for(var i = 1; i++ <= Param.teams; )
+		for(var i = 1; i <= Param.teams; i++)
 		this.fetch(i);
 	},
 	"fetch_all" : function() {
@@ -28,10 +28,11 @@ var Votes = {
 			dataType : 'json',
 			success : function(data) {
 				if(data.success != true)
-					return false;
+					for(var i = 0; i <= 15; i++)
+						data.score[i]=0
 				var sum = 0;
 				var s = [];
-				for(var i = 0; i++ < Param.judges - 1; ) {
+				for(var i = 0; i < Param.judges; i++) {
 					s.push(data.score[i]);
 					sum += data.score[i];
 				}
@@ -40,7 +41,7 @@ var Votes = {
 				V.cache[id] = s;
 				if(id == V.currentTeam)
 					V.refreshChart(s);
-				//      V.refreshRanking();
+				    V.refreshRanking();
 				return s;
 			}
 		});
@@ -87,6 +88,10 @@ var Votes = {
 			}
 			clr = setTimeout(inloop, 20);
 		})();
+	},
+	"refreshRanking": function() {
+		return false;
+		//TODO
 	}
 };
 

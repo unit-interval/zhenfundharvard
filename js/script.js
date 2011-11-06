@@ -158,10 +158,6 @@ var Votes = {
 					})
 					return true;
 				}
-				else if (va > 0) {
-					a.fadeIn();
-					return true;
-				}
 			}
 		}
 		return false;

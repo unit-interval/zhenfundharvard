@@ -57,8 +57,9 @@ if($id > 0) {
         }
         $return['scores'][$team][] = floatval(array_sum($score) / count($score));
     print_r($score);
-    exit;
+    print_r($return);
     }
+    exit;
     $return['success'] = true;
 }
 

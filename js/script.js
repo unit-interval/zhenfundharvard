@@ -120,13 +120,13 @@ var Votes = {
         var pos = Param.judges + 1;
         var V=Votes;
         if(V.cache[a][pos] < V.cache[b][pos])
-            return -1;
+            return 1;
         else if(V.cache[a][pos] > V.cache[b][pos])
-            return 1;
-        else if(V.cache[a][pos - 1] < V.cache[b][pos - 1])
-            return 1;
-        else if(V.cache[a][pos - 1] > V.cache[b][pos - 1])
             return -1;
+        else if(V.cache[a][pos - 1] < V.cache[b][pos - 1])
+            return -1;
+        else if(V.cache[a][pos - 1] > V.cache[b][pos - 1])
+            return 1;
         else
             return 0;
     },

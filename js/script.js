@@ -94,9 +94,9 @@ var Votes = {
 		var V = this
 		var a = $('li:eq(' + i + ')', V.$list);
 		var b = a;
-		var va = V.cache[a.data('team')][Param.judges+1];
-		if(i >= Param.teams)
+		if(parseInt(a.data('team')) >= Param.teams)
 			return false;
+		var va = V.cache[a.data('team')][Param.judges+1];
 		if(va == 0) {
 			a.hide();
 			V.refreshRanking(i + 1)

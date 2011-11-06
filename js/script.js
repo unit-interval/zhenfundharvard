@@ -53,7 +53,7 @@ var Votes = {
 		});
 	},
     "write": function(id, score) {
-        var s = score.slice(0,Param.Judges);
+        var s = score.slice(0,Param.judges);
         var sum = 0;
         for (var i =0; i < Param.judges; i++) sum += score[i];
         s.push(score[15]);

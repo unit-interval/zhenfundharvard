@@ -5,8 +5,9 @@ var Param = {
 var Votes = {
 	"init" : function() {
 		this.cache = {};
-		this.cache[0]=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // 41 * 0
-		for (var i = 0; i <= Param.teams; i++) this.cache[i]=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // 16 * 0
+        this.rank = [];
+//		this.cache[0]=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // 41 * 0
+//		for (var i = 0; i <= Param.teams; i++) this.cache[i]=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // 16 * 0
 			
 		this.currentTeam = 1;
 
@@ -15,9 +16,12 @@ var Votes = {
 
 		this.fetch();
 	},
-	"fetch" : function() {
+    "ready": function() {
+    
+    },
+	"fetch" : function(id) {
 		var V = this;
-		var id=V.currentTeam
+		id = id | V.currentTeam
 		$.ajax({
 			type : "get",
 			data : 'id=' + id,
@@ -25,15 +29,38 @@ var Votes = {
 			cache : false,
 			dataType : 'json',
 			success : function(data) {
-				if(data.success != true) {
-					return false
-				}
-				V.cache[0] = [0].concat([1,2,1,2,3,4,5,6,77,87,1,2,1,2,3,4,5,6,77,87,1,2,1,2,3,4,5,6,77,87,1,2,1,2,3,4,5,6,77,87]); // V.cache[0] = [0].concat(data.total);
-				V.cache[id] = data.score;
-				return true;
-			}
+				if(data.success != true)
+                    return;
+                if(id == 0) {
+                    for (id in data.scores)
+                        V.write(id, data.scores[id]);
+                    V.ready();
+                    return;
+                }
+                V.write(id, data.score);
+                if(id == V.currentTeam)
+                    V.refreshChart();
+                V.refreshRanking();
+
+//				V.cache[0] = [0].concat([1,2,1,2,3,4,5,6,77,87,1,2,1,2,3,4,5,6,77,87,1,2,1,2,3,4,5,6,77,87,1,2,1,2,3,4,5,6,77,87]); // V.cache[0] = [0].concat(data.total);
+//				V.cache[id] = data.score;
+			},
+            error: function() {
+                V.fetch(id);
+            }
 		});
 	},
+    "write": function(id, score) {
+        var s = [];
+        var sum = 0;
+        for (var i =0; i++ < Param.judges - 1; ) {
+            s.push(score[i]);
+            sum += score[i];
+        }
+        s.push(score[15]);
+        s.push((sum / Param.judges + score[15]) / 2);
+        this.cache[id] = s;
+    },
 	"vote" : function(score) {
 		var V = this;
 		$.ajax({
@@ -44,18 +71,19 @@ var Votes = {
 			dataType : 'json',
 			success : function(data) {
 				if(data.success != true)
-					return false;
-				V.fetch(V.currentTeam);
-				return data;
-			}
+					return;
+				V.fetch();
+			},
+            error: function() {
+                V.vote(score);
+            }
 		});
 	},
 	"refreshChart" : function() {
 		var V = this;
-		var id = V.currentTeam;
-		var scores = V.cache[id];
-		var total = V.cache[0][id];
-		scores.push(total);
+		var scores = V.cache[V.currentTeam];
+//		var total = V.cache[0][id];
+//		scores.push(total);
 		$('div.agenda-item', V.$chart).each(function(i) {
 			$(this).animate({
 				width : Math.max(scores[i] * 40 - 7, 33)
@@ -64,49 +92,75 @@ var Votes = {
 		$('#info-balloon').animate({
 			left : 157 + total / 100 * (340 - 157)
 		})
-		var rand = $('#info-balloon>h4').html() * 1; ( inloop = function() {
-			if(rand > total) {
-				$('#info-balloon>h4').html((rand -= 1.1).toFixed(1));
-			} else {
-				$('#info-balloon>h4').html((rand += 1.1).toFixed(1));
-			}
-			if(Math.abs(rand - total) < 2) {
-				$('#info-balloon>h4').html(total.toFixed(1));
-				return 0;
-			}
-			clr = setTimeout(inloop, 20);
-		})();
+//		var rand = $('#info-balloon>h4').html() * 1; ( inloop = function() {
+//			if(rand > total) {
+//				$('#info-balloon>h4').html((rand -= 1.1).toFixed(1));
+//			} else {
+//				$('#info-balloon>h4').html((rand += 1.1).toFixed(1));
+//			}
+//			if(Math.abs(rand - total) < 2) {
+//				$('#info-balloon>h4').html(total.toFixed(1));
+//				return 0;
+//			}
+//			clr = setTimeout(inloop, 20);
+//		})();
 	},
-	"refreshRanking" : function() {
-		V=this;
-		var l = $('#spaces_section div.rank-list ul');
-		for (var i = 0; i < Param.teams; i++) {
-			var a = $('li:eq(' + i + ')', l);
-			var ai = parseInt(a.data('team'))
-			var va = V.cache[0][ai];
-			var b = a
-			var bj = ai
-			var vb = va
-			if (va > 0) {
-				
-				a.fadeIn();
-			}
-			for( j = 0; j < i; j++) {
-				b = $('li:eq(' + j + ')', l);
-				bj = parseInt(b.data('team'));
-				vb = V.cache[0][bj];
-				if(va > vb) break;
-			}
-			if(j < i) {
-				a.slideUp(function() {
-					$(this).remove().insertBefore(b).slideDown(function() {
-					});
-				})
-				return true;
-			}
-		}
-		return false;
-	}
+    "refreshRanking": function() {
+        var rank = [];
+        for (team in this.cache)
+            rank.push(team);
+        var len = rank.length;
+        rank.sort(this.sortByScore);
+        for (var i = 0; i++ < len; ) {
+            if(this.rank.len <= len) {
+                this.rank.push(rank[i]);
+
+            }
+        }
+    },
+    "sortByScore": function(a,b) {
+        var pos = Param.judges + 1;
+        if(this.cache[a][pos] < this.cache[b][pos])
+            return -1;
+        else if(this.cache[a][pos] > this.cache[b][pos])
+            return 1;
+        else if(this.cache[a][pos - 1] < this.cache[b][pos - 1])
+            return 1;
+        else if(this.cache[a][pos - 1] > this.cache[b][pos - 1])
+            return -1;
+        else
+            return 0;
+    },
+//	"refreshRanking" : function() {
+//		var V = this;
+//		var l = $('#spaces_section div.rank-list ul');
+//		for (var i = 0; i < Param.teams; i++) {
+//			var a = $('li:eq(' + i + ')', l);
+//			var ai = parseInt(a.data('team'))
+//			var va = V.cache[0][ai];
+//			var b = a
+//			var bj = ai
+//			var vb = va
+//			if (va > 0) {
+//				
+//				a.fadeIn();
+//			}
+//			for( j = 0; j < i; j++) {
+//				b = $('li:eq(' + j + ')', l);
+//				bj = parseInt(b.data('team'));
+//				vb = V.cache[0][bj];
+//				if(va > vb) break;
+//			}
+//			if(j < i) {
+//				a.slideUp(function() {
+//					$(this).remove().insertBefore(b).slideDown(function() {
+//					});
+//				})
+//				return true;
+//			}
+//		}
+//		return false;
+//	}
 };
 
 $(function() {

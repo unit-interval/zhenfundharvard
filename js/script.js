@@ -142,7 +142,7 @@ var Votes = {
 				if (Math.abs(ts - $('span.rank-score', a).html()) > 0.05) {
 					a.fadeTo('normal', 0.2, function(){
 						$('span.rank-score', this).html(ts)
-						this.fadeIn('normal', 1);
+						this.fadeIn();
 					})
 				}
 				var b = a

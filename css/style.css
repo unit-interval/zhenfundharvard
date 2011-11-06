@@ -1339,6 +1339,7 @@ div.rank-list li {
 	list-style: none;
 	margin-top: 10px;
 	background-color: #EEE;
+	display: none;
 }
 div.rank-list li > span{
     color: #666;
@@ -1450,7 +1451,8 @@ button#submit-vote {
     position: absolute;
     right: 400px;
     top: 87px;
-    z-index: 10;
+    z-index: 100;
+    opacity: 0.95
 }
 #filter.selected table { display: block; }
 #filter-table td {
@@ -1471,4 +1473,35 @@ button#submit-vote {
 }
 #current-track.selected span {
     background-position: left -31px;
+}
+li.logo span{
+	font-size: 36px;
+}
+#Zhen {
+	color: #cbbc9f
+}
+#Fund {
+	color: #999
+}
+div.agenda-row.sum {
+	margin-top: 110px;
+}
+#info-balloon {
+	background: transparent url(/images/agenda-info-balloon.png) no-repeat top left;
+	position: absolute;
+	width: 220px;
+	height: 79px;
+	padding: 10px;
+	z-index: 99;
+	bottom: 80px;
+	left: 277px;
+}
+#info-balloon h4 {
+	font-family: 'Droid Sans', Arial;
+	font-size: 60px;
+	font-weight: normal;
+	color: #5B4F31;
+	margin: 0 0 3px 0;
+	padding: 0;
+	text-align: center;
 }

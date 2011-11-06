@@ -5,9 +5,8 @@ var Param = {
 var Votes = {
 	"init" : function() {
 		this.cache = {};
-		for (var i = 0; i <= 40; i++) this.cache[0][i]=0;
-		for (var i = 0; i <= Param.teams; i++) 
-			for (var j = 0; j <= 15; j++) this.cache[i][j]=0;
+		this.cache[0]=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // 41 * 0
+		for (var i = 0; i <= Param.teams; i++) this.cache[i]=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // 16 * 0
 			
 		this.currentTeam = 1;
 

@@ -29,7 +29,7 @@ var Votes = {
 			s = s + "<li data-team='"+rank[i]+"'><span>•</span><label>TEAM"+rank[i]+"</label><span class='rank-score'>"+(V.cache[rank[i]][Param.judges+1]*10).toFixed(1)+"</span></li>"
         for (var team=1; team<=Param.teams; team++)
         	if (! team in V.cache)
-        		s = s + "<li style='display:none' data-team='"+i+"'><span>•</span><label>TEAM"+i+"</label><span class='rank-score'>0.0</span></li>"
+        		s = s + "<li style='display:none' data-team='"+team+"'><span>•</span><label>TEAM"+team+"</label><span class='rank-score'>0.0</span></li>"
         V.$list.html(s);
     },
 	"fetch" : function(id) {

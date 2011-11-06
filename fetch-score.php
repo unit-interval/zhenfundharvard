@@ -40,17 +40,12 @@ if($id > 0) {
     $scores = array();
     $return['scores'] = array();
 
-    echo '<pre>';
     while($row = $result->fetch_assoc()) {
         if(! isset($scores[$row['team_id']]))
             $scores[$row['team_id']] = array();
         $scores[$row['team_id']][$row['judge_id']] = intval($row['score']);
-        print_r($row);
-        print_r($scores);
     }
-    print_r($scores);
-    var_dump($scores);
-    exit;
+    echo '<pre>';
     foreach($scores as $team => $score) {
         $return['scores'][$team] = array();
         for ($i = 0; $i++ < 15; ) {
@@ -61,6 +56,8 @@ if($id > 0) {
                 $return['scores'][$team][] = 0;
         }
         $return['scores'][$team][] = floatval(array_sum($score) / count($score));
+    print_r($score);
+    exit;
     }
     $return['success'] = true;
 }

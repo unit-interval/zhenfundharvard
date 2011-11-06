@@ -1,6 +1,6 @@
 var Param = {
-	"teams" : "10",
-	"judges" : "5"
+	"teams" : 10,
+	"judges" : 5
 };
 var Votes = {
 	"init" : function() {

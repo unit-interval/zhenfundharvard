@@ -103,7 +103,7 @@ var Votes = {
 		} else {
 			for( j = 0; j < i; j++) {
 				b = $('li:eq(' + j + ')', V.$list);
-				vb = V.cache[b.data('team')][Param.teams+1];
+				vb = V.cache[b.data('team')][Param.judges+1];
 				if(va > vb)
 					break
 			}

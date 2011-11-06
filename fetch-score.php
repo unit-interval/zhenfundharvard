@@ -45,7 +45,6 @@ if($id > 0) {
             $scores[$row['team_id']] = array();
         $scores[$row['team_id']][$row['judge_id']] = intval($row['score']);
     }
-    echo '<pre>';
     foreach($scores as $team => $score) {
         $return['scores'][$team] = array();
         for ($i = 0; $i++ < 15; ) {
@@ -56,10 +55,7 @@ if($id > 0) {
                 $return['scores'][$team][] = 0;
         }
         $return['scores'][$team][] = floatval(array_sum($score) / count($score));
-    print_r($score);
-    print_r($return);
     }
-    exit;
     $return['success'] = true;
 }
 

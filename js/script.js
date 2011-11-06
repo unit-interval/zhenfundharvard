@@ -118,27 +118,29 @@ var Votes = {
 	},
     "sortByScore": function(a,b) {
         var pos = Param.judges + 1;
-        if(this.cache[a][pos] < this.cache[b][pos])
+        var V=this;
+        if(V.cache[a][pos] < V.cache[b][pos])
             return -1;
-        else if(this.cache[a][pos] > this.cache[b][pos])
+        else if(V.cache[a][pos] > V.cache[b][pos])
             return 1;
-        else if(this.cache[a][pos - 1] < this.cache[b][pos - 1])
+        else if(V.cache[a][pos - 1] < V.cache[b][pos - 1])
             return 1;
-        else if(this.cache[a][pos - 1] > this.cache[b][pos - 1])
+        else if(V.cache[a][pos - 1] > V.cache[b][pos - 1])
             return -1;
         else
             return 0;
     },
 	"refreshRanking" : function() {
 		var V = this;
+		var n = Param.judges + 1;
 		var l = $('#spaces_section div.rank-list ul');
 		for (var i = 0; i < Param.teams; i++) {
-			if (! (i+1) in V.cache) continue;
 			var a = $('li:eq(' + i + ')', l);
 			var ai = a.data('team')
-			if (V.cache[ai].toFixed(1) - $('span.rank-score', a).html() != 0) {
+			if (! ai in V.cache) continue;
+			if (V.cache[ai][n].toFixed(1) - $('span.rank-score', a).html() > 0.01) {
 				a.fadeTo(0.2, function(){
-					$('span.rank-score', a).html(V.cache[ai].toFixed(1))
+					$('span.rank-score', a).html(V.cache[ai][n].toFixed(1))
 					a.fadeIn();
 				})
 			}

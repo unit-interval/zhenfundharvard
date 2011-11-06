@@ -141,8 +141,8 @@ var Votes = {
 				var ts = (V.cache[ai][n]*10).toFixed(1);
 				if (Math.abs(ts - $('span.rank-score', a).html()) > 0.05) {
 					a.fadeTo('normal', 0.2, function(){
-						$('span.rank-score', a).html(ts)
-						a.fadeIn();
+						$('span.rank-score', this).html(ts)
+						this.fadeIn('normal', 1);
 					})
 				}
 				var b = a

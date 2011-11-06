@@ -149,7 +149,7 @@ var Votes = {
 				for( j = 0; j < i; j++) {
 					b = $('li:eq(' + j + ')', l);
 					bj = b.data('team');
-					if(V.sortByScore(ai, bj) > 0) break;
+					if(V.sortByScore(ai, bj) < 0) break;
 				}
 				if(j < i) {
 					a.slideUp(function() {

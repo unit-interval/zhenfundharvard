@@ -25,19 +25,13 @@ var Votes = {
             dataType: 'json',
             success: function(data){
                 if(data.success != true) return false;
-                var sum = 0;
-                var s = [];
-                for (var i = 0; i++ < Param.judges -1; ) {
-                    s.push(data.score[i]);
-                    sum += data.score[i];
+                if(id == 0) {
+                    
                 }
-                s.push(data.score[15]);
-                s.push((sum / Param.judges + data.score[15]) / 2);
-                V.cache[id] = s;
+                var s = V.write(id, data.score);
                 if (id == V.currentTeam)
                     V.refreshChart(s);
         //      V.refreshRanking();
-                return s;
             }
         });
     },
@@ -52,7 +46,6 @@ var Votes = {
             success: function(data) {
                 if(data.success != true) return false;
                 V.fetch(V.currentTeam);
-            return data;
             }
         }); 
     },

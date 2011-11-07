@@ -104,7 +104,7 @@ var Votes = {
 	},
     "sortByScore": function(a,b) {
         var pos = Param.judges + 1;
-        var c = this.cache;
+        var c = Votes.cache;
         if(c[a][pos] < c[b][pos])
             return 1;
         else if(c[a][pos] > c[b][pos])

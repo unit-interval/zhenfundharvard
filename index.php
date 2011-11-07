@@ -59,7 +59,7 @@ if($_SESSION['id'])
 								</ul>
 								<div class="main_button">
 									<input id="save_button_login" type="submit" value="Login"/>
-									<a href='main.php'>view results</a>
+									<a href='main.php'>View Results</a>
 								</div>
 							</form>
 						</div>

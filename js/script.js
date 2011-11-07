@@ -136,8 +136,8 @@ var Votes = {
 					if(bj in V.cache && V.sortByScore(ai, bj) < 0) {
 						a.slideUp(function() {
 							$(this).insertBefore(b).slideDown();
-							return;
 						});
+						return;
 					}
 				}
 			}

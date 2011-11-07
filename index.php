@@ -46,6 +46,11 @@ if($_SESSION['id'])
 				<div id="wrap_main">
 					<div id="container_main" class="container clearfix">
 						<div id="main_login" class="large">
+							<ul class="main_field">
+								<li>
+									<h1>Login</h1>
+								</li>
+							</ul>
 							<form action="login.php" id="login" method="post">
 								<ul id="login-password-fields" class="main_field">
 									<li>
@@ -54,8 +59,8 @@ if($_SESSION['id'])
 								</ul>
 								<div class="main_button">
 									<input id="save_button_login" type="submit" value="Login"/>
+									<a href='main.php'>view results</a>
 								</div>
-								<a href='main.php'><small>view results</small></a>
 							</form>
 						</div>
 					</div>

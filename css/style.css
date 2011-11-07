@@ -1510,3 +1510,13 @@ div.agenda-row.sum {
 	padding: 0;
 	text-align: center;
 }
+div.main_button a {
+	float: right;
+	height: 100%;
+	margin: 0;
+	padding: 10px 16px 10px 16px;
+	font-size: 20px;
+	border-radius: 4px;
+	display: block;
+	color: #777;
+}

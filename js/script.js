@@ -143,6 +143,7 @@ var Votes = {
 							$(this).remove();
 							V.refreshRanking(true);
 						});
+						console.log(an, bn);
 						V.refreshing = false;
 						return;
 					}

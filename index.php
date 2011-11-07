@@ -70,7 +70,7 @@ if($_SESSION['id'])
 					<div class="top_row">
 						<div class="links_container">
 							<div class="small_links">
-								&copy; Proudely Powered by <a href='https://www.facebook.com/huangtao.me'>Tao Huang</a>, <a href='https://www.facebook.com/zilinj'>Zilin Jiang</a>, 2011
+								<a href='admin.php' target='_blank'>&copy;</a> Proudely Powered by <a href='https://www.facebook.com/huangtao.me'>Tao Huang</a>, <a href='https://www.facebook.com/zilinj'>Zilin Jiang</a>, 2011
 							</div>
 						</div>
 						<div class="feedback_link_container">

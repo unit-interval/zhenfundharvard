@@ -156,13 +156,13 @@ $(function() {
 	$('.arrow.left').click(function() {
 		if(tabi > 0) {
 			tabi -= 1;
-			$tabs.animate({ top : '+=50'})
+			$tabs.animate({ left: '-=1000'})
 		}
 	})
 	$('.arrow.right').click(function() {
 		if(tabi < Param.teams / 5 - 1) {
 			tabi += 1;
-			$tabs.animate({ top : '-=50' })
+			$tabs.animate({ left: '+=1000' })
 		}
 	})
 	$('li', $tabs).click(function() {

@@ -103,7 +103,7 @@ ul.section_tabs {
 	list-style: none;
 	zoom: 1;
 	position: relative;
-	top: 0px;
+	width: 8000px;
 }
 ul.section_tabs li {
 	list-style: none;

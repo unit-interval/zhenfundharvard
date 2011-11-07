@@ -29,7 +29,7 @@ error_reporting(0);
 
 /** simply redirect users to main page if error occurs */
 function err($msg) {
-    header('Location: /main.php' . $msg);
+    header('Location: /main.php#' . $msg);
     exit;
 }
 

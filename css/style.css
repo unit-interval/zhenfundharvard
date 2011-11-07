@@ -1349,22 +1349,22 @@ div.rank-list li > span{
 div.rank-list li.highlight {
 	background-color: #333;
 }
-div.rank-list li:eq(0) {
+div.rank-list li:nth-of-type(0) {
 	background-color: #D21624;
 }
-div.rank-list li:eq(0) > span {
+div.rank-list li:nth-of-type(0) > span {
 	color: #FFD700;
 }
-div.rank-list li.second {
+div.rank-list li:nth-of-type(1) {
 	background-color: #EBB957;
 }
-div.rank-list li.second > span {
+div.rank-list li:nth-of-type(1) > span {
 	color: #FF6347;
 }
-div.rank-list li.third {
+div.rank-list li:nth-of-type(2) {
 	background-color: #009947;
 }
-div.rank-list li.third > span {
+div.rank-list li:nth-of-type(2) > span {
 	color: #ADFF2F;
 }
 div.rank-list li > label {

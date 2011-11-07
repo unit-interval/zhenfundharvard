@@ -136,10 +136,12 @@ var Votes = {
 					$b = $('li:eq(' + j + ')', l);
 					bn = $b.data('team');
 					if(bn in V.cache && V.sortByScore(an, bn) < 0) {
-						$a.addClass('highlight');
+						//$a.addClass('highlight');
+						$a.fadeTo('slow', 0.33);
 						$b.slideUp(function() {
 							$(this).insertAfter($a).slideDown(function() {
-								$a.removeClass('highlight');
+								//$a.removeClass('highlight');
+								$a.fadeTo('slow', 1);
 							});
 						});
 						V.refreshing = false;

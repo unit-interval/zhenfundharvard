@@ -185,6 +185,6 @@ $(function() {
 		Votes.vote($(this).data('score'))
 	})
 
-	setInterval("Votes.fetch", 5000);
-	setInterval("Votes.refreshRanking", 3000);
+	setInterval(Votes.fetch, 5000);
+	setInterval(Votes.refreshRanking, 3000);
 });

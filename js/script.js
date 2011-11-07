@@ -140,7 +140,7 @@ var Votes = {
 						//$a.fadeTo('slow', 0.33);
 						$c = $b.clone().hide().insertAfter($a);
 						$c.slideDown('slow');
-						$b.slideUp('slow');//, function() {
+						$b.slideUp('slow').remove();//, function() {
 							//$(this).insertAfter($a).slideDown(function() {
 								//$a.removeClass('highlight');
 								//$a.fadeTo('slow', 1);

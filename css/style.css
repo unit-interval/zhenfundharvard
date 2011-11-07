@@ -1348,13 +1348,18 @@ div.rank-list li > span{
 }
 div.rank-list li.highlight {
 	/*border: 1px dashed gray;*/
-	background-color: yellow;
+	background-color: #CCC;
 }
-div.rank-list li:nth-of-type(0) > span {
+/*div.rank-list li:nth-of-type(0) > span {
 	color: #FFD700;
 }
 div.rank-list li:nth-of-type(1) > span {
 	color: #FF6347;
+}*/
+div.rank-list li:nth-child(1), div.rank-list li:nth-child(2), div.rank-list li:nth-child(3),
+div.rank-list li:nth-child(1) span, div.rank-list li:nth-child(2) span, div.rank-list li:nth-child(3) span {
+	background: #156ABF;
+	color: white;
 }
 /*
 div.rank-list li:nth-of-type(0) {

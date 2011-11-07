@@ -136,14 +136,10 @@ var Votes = {
 					$b = $('li:eq(' + j + ')', l);
 					bn = $b.data('team');
 					if(bn in V.cache && V.sortByScore(an, bn) < 0) {
-						//$a.addClass('highlight');
-						//$a.fadeTo('slow', 0.33);
-						$c = $b.clone().hide().insertAfter($a).slideDown('slow');
-						$b.slideUp('slow', function() {
-							//$(this).insertAfter($a).slideDown(function() {
-								//$a.removeClass('highlight');
-								//$a.fadeTo('slow', 1);
-							//});
+						$a.addClass('highlight');
+						$c = $b.clone().hide().insertAfter($a).slideDown(1000);
+						$b.slideUp(1000, function() {
+							$a.removeClass('highlight');
 							$(this).remove();
 							V.refreshRanking(true);
 						});

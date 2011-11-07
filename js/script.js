@@ -122,7 +122,7 @@ var Votes = {
 		V.refreshing = true;
 		var n = Param.judges + 1;
 		var l = V.$list;
-		var $a, $b, an, bn, ts;
+		var $a, $b, $c, an, bn, ts;
 		for (var i = 0; i < Param.teams; i++) {
 			$a = $('li:eq(' + i + ')', l);
 			an = $a.data('team')
@@ -138,13 +138,14 @@ var Votes = {
 					if(bn in V.cache && V.sortByScore(an, bn) < 0) {
 						//$a.addClass('highlight');
 						//$a.fadeTo('slow', 0.33);
+						$c = $b.clone().hide().insertAfter($a).slideDown();
 						$b.slideUp(function() {
-							$(this).insertAfter($a).slideDown(function() {
+							//$(this).insertAfter($a).slideDown(function() {
 								//$a.removeClass('highlight');
 								//$a.fadeTo('slow', 1);
-								V.refreshRanking(true);
-							});
-						});
+							//});
+							V.refreshRanking(true);
+						}).remove();
 						V.refreshing = false;
 						return;
 					}

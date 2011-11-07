@@ -1348,6 +1348,7 @@ div.rank-list li > span{
 }
 div.rank-list li.highlight {
 	border: 1px dashed gray;
+	background-color: yellow;
 }
 div.rank-list li:nth-of-type(0) > span {
 	color: #FFD700;

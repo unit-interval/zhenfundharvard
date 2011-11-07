@@ -143,7 +143,7 @@ var Votes = {
 							$(this).remove();
 							V.refreshRanking(true);
 						});
-						console.log(an, bn);
+						console.log(i, j);
 						V.refreshing = false;
 						return;
 					}
@@ -185,6 +185,6 @@ $(function() {
 		Votes.vote($(this).data('score'))
 	})
 
-	setInterval("Votes.fetch()", 5000);
-	setInterval("Votes.refreshRanking()", 3000);
+	setInterval("Votes.fetch", 5000);
+	setInterval("Votes.refreshRanking", 3000);
 });

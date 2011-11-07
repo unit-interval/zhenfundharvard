@@ -138,8 +138,9 @@ var Votes = {
 					if(bn in V.cache && V.sortByScore(an, bn) < 0) {
 						//$a.addClass('highlight');
 						//$a.fadeTo('slow', 0.33);
-						$c = $b.clone().hide().insertAfter($a).slideDown();
-						$b.slideUp(function() {
+						$c = $b.clone();
+						$c.hide().insertAfter($a).slideDown('slow');
+						$b.slideUp('slow', function() {
 							//$(this).insertAfter($a).slideDown(function() {
 								//$a.removeClass('highlight');
 								//$a.fadeTo('slow', 1);

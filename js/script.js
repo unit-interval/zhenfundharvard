@@ -116,9 +116,9 @@ var Votes = {
         else
             return 0;
     },
-	"refreshRanking" : function(loop) {
+	"refreshRanking" : function() {
 		var V = this;
-		if(V.refreshing && ! loop) return;
+		if(V.refreshing) return;
 		V.refreshing = true;
 		var n = Param.judges + 1;
 		var l = V.$list;
@@ -141,10 +141,10 @@ var Votes = {
 						$b.slideUp(1000, function() {
 							$a.removeClass('highlight');
 							$(this).remove();
-							V.refreshRanking(true);
+							V.refreshing = false;
+							V.refreshRanking();
 						});
 						console.log(i, j);
-						V.refreshing = false;
 						return;
 					}
 				}

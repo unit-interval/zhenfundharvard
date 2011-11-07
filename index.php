@@ -55,7 +55,7 @@ if($_SESSION['id'])
 								<div class="main_button">
 									<input id="save_button_login" type="submit" value="Login"/>
 								</div>
-								<a href='main.php'>view results</a>
+								<a href='main.php'><small>view results</small></a>
 							</form>
 						</div>
 					</div>

@@ -132,7 +132,7 @@ var Votes = {
 					$a.find('span.rank-score').html(ts);
 					$a.fadeIn();
 				}
-				if(i == 0) return;
+				if(i == 0) continue;
 				j = i - 1;
 				$b = $('li:eq(' + j + ')', l);
 				bn = $b.data('team');

@@ -135,7 +135,7 @@ var Votes = {
 					bj = b.data('team');
 					if(bj in V.cache && V.sortByScore(ai, bj) < 0) {
 						a.slideUp(function() {
-							$(this).insertBefore(b).slideDown();
+							$(this).insertBefore(b).slideDown(function() {});
 						});
 					}
 				}

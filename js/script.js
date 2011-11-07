@@ -136,7 +136,7 @@ var Votes = {
 				j = i - 1;
 				$b = $('li:eq(' + j + ')', l);
 				bn = $b.data('team');
-				if(bn in V.cache && V.sortByScore(an, bn) < 0) {
+				if(!(bn in V.cache) || V.sortByScore(an, bn) < 0) {
 					$a.addClass('highlight');
 					$c = $b.clone().hide().insertAfter($a).slideDown(1000);
 					$b.slideUp(1000, function() {

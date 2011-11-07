@@ -14,10 +14,10 @@ define('SESSNAME', 'bostonsess');
 $start_including = true;
 
 /** instance dependent values */
-define('DB_HOST', 'db01-share');
-define('DB_USER', 'Custom App-10575');
-define('DB_PASS', 'top-down');
-define('DB_NAME', 'pb612-phpfogapp-com');
+define('DB_HOST', 'localhost');
+define('DB_USER', '');
+define('DB_PASS', '');
+define('DB_NAME', '');
 
 //define('ADMIN_PW', 'solong');
 //define('SALT_PW', 'RubyOnRails');

@@ -138,15 +138,15 @@ var Votes = {
 					if(bn in V.cache && V.sortByScore(an, bn) < 0) {
 						//$a.addClass('highlight');
 						//$a.fadeTo('slow', 0.33);
-						$c = $b.clone().hide().insertAfter($a);
-						$c.slideDown('slow');
-						$b.slideUp('slow').remove();//, function() {
+						$c = $b.clone().hide().insertAfter($a).slideDown('slow');
+						$b.slideUp('slow', function() {
 							//$(this).insertAfter($a).slideDown(function() {
 								//$a.removeClass('highlight');
 								//$a.fadeTo('slow', 1);
 							//});
-							//V.refreshRanking(true);
-						//}).remove();
+							$(this).remove();
+							V.refreshRanking(true);
+						});
 						V.refreshing = false;
 						return;
 					}
@@ -189,5 +189,5 @@ $(function() {
 	})
 
 	setInterval("Votes.fetch()", 5000);
-	setInterval("Votes.refreshRanking()", 3000);
+	setInterval("Votes.refreshRanking()", 10000);
 });

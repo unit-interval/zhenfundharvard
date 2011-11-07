@@ -118,30 +118,37 @@ var Votes = {
     },
 	"refreshRanking" : function() {
 		var V = this;
+		if(V.refreshing) return;
+		V.refreshing = true;
 		var n = Param.judges + 1;
 		var l = V.$list;
-		var a, b, ai, bj, ts;
+		var $a, $b, an, bn, ts;
 		for (var i = 0; i < Param.teams; i++) {
-			a = $('li:eq(' + i + ')', l);
-			ai = a.data('team')
-			if (ai in V.cache) {
-				var ts = (V.cache[ai][n]*10).toFixed(1);
-				if (Math.abs(ts - $('span.rank-score', a).html()) > 0.05) {
-					a.find('span.rank-score').html(ts);
-					a.fadeIn();
+			$a = $('li:eq(' + i + ')', l);
+			an = $a.data('team')
+			if (an in V.cache) {
+				var ts = (V.cache[an][n]*10).toFixed(1);
+				if (Math.abs(ts - $('span.rank-score', $a).html()) > 0.05) {
+					$a.find('span.rank-score').html(ts);
+					$a.fadeIn();
 				}
 				for( j = i - 1; j >= 0; j--) {
-					b = $('li:eq(' + j + ')', l);
-					bj = b.data('team');
-					if(bj in V.cache && V.sortByScore(ai, bj) < 0) {
-						a.slideUp(function() {
-							$(this).insertBefore(b).slideDown();
+					$b = $('li:eq(' + j + ')', l);
+					bn = $b.data('team');
+					if(bn in V.cache && V.sortByScore(an, bn) < 0) {
+						$a.addClass('highlight');
+						$b.slideUp(function() {
+							$(this).insertAfter($a).slideDown(function() {
+								$a.removeClass('highlight');
+							});
 						});
+						V.refreshing = false;
 						return;
 					}
 				}
 			}
 		}
+		V.refreshing = false;
 	}
 };
 
@@ -177,5 +184,5 @@ $(function() {
 	})
 
 	setInterval("Votes.fetch()", 5000);
-	setInterval("Votes.refreshRanking()", 2000);
+	setInterval("Votes.refreshRanking()", 1000);
 });

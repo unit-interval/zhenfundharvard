@@ -1346,10 +1346,13 @@ div.rank-list li > span{
     line-height: 30px;
     font-family: arial;
 }
-div.rank-list li.first {
+div.rank-list li.highlight {
+	background-color: #333;
+}
+div.rank-list li:eq(0) {
 	background-color: #D21624;
 }
-div.rank-list li.first > span {
+div.rank-list li:eq(0) > span {
 	color: #FFD700;
 }
 div.rank-list li.second {

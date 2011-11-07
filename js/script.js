@@ -116,9 +116,9 @@ var Votes = {
         else
             return 0;
     },
-	"refreshRanking" : function() {
+	"refreshRanking" : function(loop) {
 		var V = this;
-		if(V.refreshing) return;
+		if(! loop && V.refreshing) return;
 		V.refreshing = true;
 		var n = Param.judges + 1;
 		var l = V.$list;
@@ -137,11 +137,12 @@ var Votes = {
 					bn = $b.data('team');
 					if(bn in V.cache && V.sortByScore(an, bn) < 0) {
 						//$a.addClass('highlight');
-						$a.fadeTo('slow', 0.33);
+						//$a.fadeTo('slow', 0.33);
 						$b.slideUp(function() {
 							$(this).insertAfter($a).slideDown(function() {
 								//$a.removeClass('highlight');
-								$a.fadeTo('slow', 1);
+								//$a.fadeTo('slow', 1);
+								V.refreshRanking(true);
 							});
 						});
 						V.refreshing = false;

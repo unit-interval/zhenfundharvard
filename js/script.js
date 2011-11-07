@@ -120,32 +120,27 @@ var Votes = {
 		var V = this;
 		var n = Param.judges + 1;
 		var l = V.$list;
+		var a, b, ai, bj, ts;
 		for (var i = 0; i < Param.teams; i++) {
-			var a = $('li:eq(' + i + ')', l);
-			var ai = a.data('team')
+			a = $('li:eq(' + i + ')', l);
+			ai = a.data('team')
 			if (ai in V.cache) {
 				var ts = (V.cache[ai][n]*10).toFixed(1);
 				if (Math.abs(ts - $('span.rank-score', a).html()) > 0.05) {
 					a.find('span.rank-score').html(ts);
 					a.fadeIn();
 				}
-				var b = a
-				var bj = ai
-				for( j = 0; j < i; j++) {
+				for( j = i - 1; j >= 0; j--) {
 					b = $('li:eq(' + j + ')', l);
 					bj = b.data('team');
-					if(bj in V.cache && V.sortByScore(ai, bj) < 0) break;
-				}
-				if(j < i) {
-					a.slideUp(function() {
-						$(this).remove().insertBefore(b).slideDown(function() {
+					if(bj in V.cache && V.sortByScore(ai, bj) < 0) {
+						a.slideUp(function() {
+							$(this).insertBefore(b).slideDown();
 						});
-					})
-					return true;
+					}
 				}
 			}
 		}
-		return false;
 	}
 };
 
@@ -180,6 +175,6 @@ $(function() {
 		Votes.vote($(this).data('score'))
 	})
 
-	setInterval("Votes.fetch()", 2000);
+	setInterval("Votes.fetch()", 5000);
 	setInterval("Votes.refreshRanking()", 2000);
 });

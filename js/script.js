@@ -118,7 +118,7 @@ var Votes = {
     },
 	"refreshRanking" : function(loop) {
 		var V = this;
-		if(! loop && V.refreshing) return;
+		if(V.refreshing && ! loop) return;
 		V.refreshing = true;
 		var n = Param.judges + 1;
 		var l = V.$list;
@@ -185,5 +185,5 @@ $(function() {
 	})
 
 	setInterval("Votes.fetch()", 5000);
-	setInterval("Votes.refreshRanking()", 10000);
+	setInterval("Votes.refreshRanking()", 3000);
 });

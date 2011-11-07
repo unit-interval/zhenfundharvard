@@ -5,64 +5,49 @@ var Param = {
 var Votes = {
 	"init" : function() {
 		this.cache = {};
-        this.rank = [];
-        this.once = true;
-			
 		this.currentTeam = 1;
 
 		this.$chart = $('#spaces_section div.left_col');
 		this.$list = $('#spaces_section div.rank-list ul');
 
-		this.fetch(0);
+		this.fetch();
 	},
     "ready": function() {
 		var V = this;
         var rank = [];
+        var s = '';
         var $li;
         var idx;
         for (var team in V.cache)
             rank.push(team);
         var len = rank.length;
         rank.sort(V.sortByScore);
-        var s = '';
-        for (var i=0; i < rank.length; i++)
+        for (var i=0; i < len; i++)
 			s = s + "<li data-team='"+rank[i]+"'><span>•</span><label>TEAM "+rank[i]+"</label><span class='rank-score'>"+(V.cache[rank[i]][Param.judges+1]*10).toFixed(1)+"</span></li>"
         for (var team=1; team<=Param.teams; team++)
         	if (! (team in V.cache))
         		s = s + "<li style='display:none' data-team='"+team+"'><span>•</span><label>TEAM "+team+"</label><span class='rank-score'>0.0</span></li>"
         V.$list.html(s);
+		return true;
     },
-	"fetch" : function(id) {
+	"fetch" : function() {
 		var V = this;
-//		id = id | V.currentTeam
 		$.ajax({
 			type : "get",
-			data : 'id=' + id,
+			data : 'id=0',
 			url : 'fetch-score.php',
 			cache : false,
 			dataType : 'json',
 			success : function(data) {
 				if(data.success != true)
                     return false;
-//                if(id == 0) {
-                for (id in data.scores)
+                for (var id in data.scores)
                     V.write(id, data.scores[id]);
-                if (V.once) {
-                	V.once = false;
-                	V.ready();
-                }
+				V.once = V.once || V.ready();
                 V.refreshChart();
-                return true;
-//                }
-//                V.write(id, data.score);
-//                if(id == V.currentTeam)
-//                    V.refreshChart();
-
-//				V.cache[0] = [0].concat([1,2,1,2,3,4,5,6,77,87,1,2,1,2,3,4,5,6,77,87,1,2,1,2,3,4,5,6,77,87,1,2,1,2,3,4,5,6,77,87]); // V.cache[0] = [0].concat(data.total);
-//				V.cache[id] = data.score;
 			},
             error: function() {
-                V.fetch(id);
+                V.fetch();
             }
 		});
 	},
@@ -119,14 +104,14 @@ var Votes = {
 	},
     "sortByScore": function(a,b) {
         var pos = Param.judges + 1;
-        var V=Votes;
-        if(V.cache[a][pos] < V.cache[b][pos])
+        var c = this.cache;
+        if(s[a][pos] < s[b][pos])
             return 1;
-        else if(V.cache[a][pos] > V.cache[b][pos])
+        else if(s[a][pos] > s[b][pos])
             return -1;
-        else if(V.cache[a][pos - 1] < V.cache[b][pos - 1])
+        else if(s[a][pos - 1] < s[b][pos - 1])
             return -1;
-        else if(V.cache[a][pos - 1] > V.cache[b][pos - 1])
+        else if(s[a][pos - 1] > s[b][pos - 1])
             return 1;
         else
             return 0;
@@ -166,21 +151,21 @@ var Votes = {
 
 $(function() {
 	Votes.init();
-	var tabs = $('ul.section_tabs')
+	var $tabs = $('ul.section_tabs')
 	tabi = 0;
 	$('.arrow.left').click(function() {
 		if(tabi > 0) {
 			tabi -= 1;
-			tabs.animate({ top : '+=50'})
+			$tabs.animate({ top : '+=50'})
 		}
 	})
 	$('.arrow.right').click(function() {
 		if(tabi < Param.teams / 5 - 1) {
 			tabi += 1;
-			tabs.animate({ top : '-=50' })
+			$tabs.animate({ top : '-=50' })
 		}
 	})
-	tabs.find('li').click(function() {
+	$('li', $tabs).click(function() {
 		var teamName = $(this).find('span').html()
 		var teamID = $(this).data('team')
 		$(this).addClass('selected').siblings().removeClass('selected');
@@ -194,6 +179,7 @@ $(function() {
 	$('#filter-table td').click(function() {
 		Votes.vote($(this).data('score'))
 	})
-	setInterval("Votes.fetch(0)", 2000);
+
+	setInterval("Votes.fetch()", 2000);
 	setInterval("Votes.refreshRanking()", 2000);
 });

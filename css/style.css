@@ -1347,7 +1347,7 @@ div.rank-list li > span{
     font-family: arial;
 }
 div.rank-list li.highlight {
-	border: 1px dashed gray;
+	/*border: 1px dashed gray;*/
 	background-color: yellow;
 }
 div.rank-list li:nth-of-type(0) > span {

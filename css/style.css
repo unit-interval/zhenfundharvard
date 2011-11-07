@@ -1349,17 +1349,18 @@ div.rank-list li > span{
 div.rank-list li.highlight {
 	background-color: #333;
 }
-div.rank-list li:nth-of-type(0) {
-	background-color: #D21624;
-}
 div.rank-list li:nth-of-type(0) > span {
 	color: #FFD700;
 }
-div.rank-list li:nth-of-type(1) {
-	background-color: #EBB957;
-}
 div.rank-list li:nth-of-type(1) > span {
 	color: #FF6347;
+}
+/*
+div.rank-list li:nth-of-type(0) {
+	background-color: #D21624;
+}
+div.rank-list li:nth-of-type(1) {
+	background-color: #EBB957;
 }
 div.rank-list li:nth-of-type(2) {
 	background-color: #009947;
@@ -1367,6 +1368,7 @@ div.rank-list li:nth-of-type(2) {
 div.rank-list li:nth-of-type(2) > span {
 	color: #ADFF2F;
 }
+*/
 div.rank-list li > label {
 	line-height: 32px;
 	vertical-align: top;

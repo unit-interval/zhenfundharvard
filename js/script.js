@@ -187,5 +187,5 @@ $(function() {
 	})
 
 	setInterval("Votes.fetch()", 5000);
-	setInterval("Votes.refreshRanking()", 1000);
+	setInterval("Votes.refreshRanking()", 10000);
 });

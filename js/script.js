@@ -134,16 +134,18 @@ var Votes = {
 					$a.addClass('highlight');
 					$a.fadeIn(1000, function(){
 						$a.removeClass('highlight');
-						V.refreshing = false;						
+						V.refreshing = false;
 						V.refreshRanking();
 					});
 					return false;
 				}
-				if(i == 0) continue;
-				j = i - 1;
-				$b = $('li:eq(' + j + ')', l);
-				bn = $b.data('team');
-				if(!(bn in V.cache) || V.sortByScore(an, bn) < 0) {
+				for (j = i-1; j >= 0; j--) {
+					$b = $('li:eq(' + j + ')', l);
+					bn = $b.data('team');
+					if (bn in V.cache) break;
+				}
+				if (j<0) continue;
+				if(V.sortByScore(an, bn) < 0) {
 					$a.addClass('highlight');
 					$c = $b.clone().hide().insertAfter($a).slideDown(1000);
 					$b.slideUp(1000, function() {

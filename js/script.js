@@ -119,7 +119,7 @@ var Votes = {
     },
 	"refreshRanking" : function() {
 		var V = this;
-		if(V.refreshing) return;
+		if(V.refreshing) return false;
 		V.refreshing = true;
 		var n = Param.judges + 1;
 		var l = V.$list;
@@ -131,7 +131,12 @@ var Votes = {
 				var ts = (V.cache[an][n]*10).toFixed(1);
 				if (Math.abs(ts - $('span.rank-score', $a).html()) > 0.05) {
 					$a.find('span.rank-score').html(ts);
-					$a.fadeIn();
+					$a.addClass('highlight');
+					$a.fadeIn(1000, function(){
+						$a.removeClass('highlight');
+						V.refreshing = false;						
+						V.refreshRanking();
+					});
 					return false;
 				}
 				if(i == 0) continue;

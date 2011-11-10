@@ -246,7 +246,7 @@ if($_SESSION['id']) {
 									</div>
 								</div>
 								<div id="info-balloon">
-									<h4>10.0</h4>
+									<h4>0.0</h4>
 								</div>
 							</div>
 							<div class="right_col">

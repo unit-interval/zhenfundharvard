@@ -49,7 +49,7 @@ body {
 }
 .make_hcenter {
 	overflow: hidden;
-	width: 1000px;
+	width: 990px;
 	height: 50px;
 	margin: 0 auto;
 	text-align: left
@@ -1498,7 +1498,7 @@ div.agenda-row.sum {
 	height: 79px;
 	padding: 10px;
 	z-index: 99;
-	bottom: 80px;
+	bottom: 160px;
 	left: 277px;
 }
 #info-balloon h4 {

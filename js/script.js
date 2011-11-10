@@ -183,6 +183,8 @@ $(function() {
 		$('#left_col_team_name').html(teamName).data('team', teamID)
 		Votes.currentTeam = teamID;
 		Votes.fetch(0);
+		var left = Math.max(-950, Math.min(0, -(teamID-3)*190))
+		$tabs.animate({ left: left})
 	})
 	$('#current-track').click(function() {
 		$('#filter').toggleClass('selected')

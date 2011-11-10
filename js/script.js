@@ -132,6 +132,7 @@ var Votes = {
 				if (Math.abs(ts - $('span.rank-score', $a).html()) > 0.05) {
 					$a.find('span.rank-score').html(ts);
 					$a.fadeIn();
+					return false;
 				}
 				if(i == 0) continue;
 				j = i - 1;
@@ -146,7 +147,7 @@ var Votes = {
 						V.refreshing = false;
 						V.refreshRanking();
 					});
-					return;
+					return false;
 				}
 			}
 		}

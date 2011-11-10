@@ -168,11 +168,11 @@ $(function() {
 		$tabs.animate({ left: (1-i)*190})
 	}
 	$('.arrow.left').click(function() {
-		tabi = Math.min(1, tabi-5);
+		tabi = Math.max(1, tabi-5);
 		moveTab(tabi);
 	})
 	$('.arrow.right').click(function() {
-		tabi = Math.max(Param.teams-4, tabi+5);
+		tabi = Math.min(Param.teams-4, tabi+5);
 		moveTab(tabi);
 	})
 	$('li', $tabs).click(function() {

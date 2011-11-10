@@ -1,6 +1,7 @@
 var Param = {
 	"teams" : 40,
-	"judges" : 5
+	"judges" : 3,
+	"ratio": 0.8
 };
 var Votes = {
 	"init" : function() {
@@ -56,7 +57,7 @@ var Votes = {
         var sum = 0;
         for (var i =0; i < Param.judges; i++) sum += score[i];
         s.push(score[15]);
-        s.push((sum / Param.judges + score[15]) / 2);
+        s.push(sum / Param.judges * Param.ratio + score[15] * (1 - Param.ratio));
         this.cache[id] = s;
     },
 	"vote" : function(score) {

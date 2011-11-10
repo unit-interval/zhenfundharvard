@@ -163,18 +163,17 @@ var Votes = {
 $(function() {
 	Votes.init();
 	var $tabs = $('ul.section_tabs')
-	tabi = 0;
+	tabi = 1;
+	function moveTab(i){
+		$tabs.animate({ left: (1-i)*190})
+	}
 	$('.arrow.left').click(function() {
-		if(tabi > 0) {
-			tabi -= 1;
-			$tabs.animate({ left: '+=950'})
-		}
+		tabi = Math.min(1, tabi-5);
+		moveTab(tabi);
 	})
 	$('.arrow.right').click(function() {
-		if(tabi < Param.teams / 5 - 1) {
-			tabi += 1;
-			$tabs.animate({ left: '-=950' })
-		}
+		tabi = Math.max(Param.teams-4, tabi+5);
+		moveTab(tabi);
 	})
 	$('li', $tabs).click(function() {
 		var teamName = $(this).find('span').html()
@@ -183,8 +182,8 @@ $(function() {
 		$('#left_col_team_name').html(teamName).data('team', teamID)
 		Votes.currentTeam = teamID;
 		Votes.fetch(0);
-		var left = Math.max(-35*950, Math.min(0, -(teamID-3)*190))
-		$tabs.animate({ left: left})
+		tabi = Math.min(Param.teams-4, Math.max(1, teamID-2))
+		moveTab(tabi);
 	})
 	$('#current-track').click(function() {
 		$('#filter').toggleClass('selected')

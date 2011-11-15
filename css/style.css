@@ -817,7 +817,8 @@ body > header, #app > header, #dashboard_header {
 }
 #top_nav {
 	height: 60px;
-	overflow: hidden
+	overflow: hidden;
+	background: url(/images/iweekend-header-bgd.png)
 }
 #top_nav ul {
 	list-style: none;

@@ -8,16 +8,16 @@ define('DIR_ROOT', dirname(__FILE__));
 //define('DIR_CTRL', DIR_INC . '/controllers');
 
 /** cookie session name */
-define('SESSNAME', 'bostonsess');
+define('SESSNAME', 'iweekendSESS');
 
 /** make inc files not accessible directly */
 $start_including = true;
 
 /** instance dependent values */
 define('DB_HOST', 'localhost');
-define('DB_USER', 'proj_zhenfund');
-define('DB_PASS', 'f8JTUQvWaRx4CAWJ');
-define('DB_NAME', 'proj_zhenfund');
+define('DB_USER', 'proj_iweekend');
+define('DB_PASS', 'tNtZ5HWBevYwXx3U');
+define('DB_NAME', 'proj_iweekend');
 
 //define('ADMIN_PW', 'solong');
 //define('SALT_PW', 'RubyOnRails');

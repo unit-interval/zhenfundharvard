@@ -145,7 +145,7 @@ var Votes = {
 					});
 					return false;
 				}
-				for (j = i-1; j >= 0; j--) {
+				for (var j = i-1; j >= 0; j--) {
 					$b = $('li:eq(' + j + ')', l);
 					bn = $b.data('team');
 					if (bn in V.cache) break;

@@ -166,17 +166,6 @@ $(function() {
 	Votes.init();
 	var $tabs = $('ul.section_tabs')
 	tabi = 1;
-	function moveTab(i){
-		$tabs.animate({ left: (1-i)*190})
-	}
-	$('.arrow.left').click(function() {
-		tabi = Math.max(1, tabi-5);
-		moveTab(tabi);
-	})
-	$('.arrow.right').click(function() {
-		tabi = Math.min(Param.teams-4, tabi+5);
-		moveTab(tabi);
-	})
 	$('li', $tabs).click(function() {
 		var teamName = $(this).find('span').html()
 		var teamID = $(this).data('team')
@@ -184,8 +173,6 @@ $(function() {
 		$('#left_col_team_name').html(teamName).data('team', teamID)
 		Votes.currentTeam = teamID;
 		Votes.fetch(0);
-		tabi = Math.min(Param.teams-4, Math.max(1, teamID-2))
-		moveTab(tabi);
 	})
 	$('#current-track').click(function() {
 		$('#filter').toggleClass('selected')

@@ -54,7 +54,6 @@ if($_SESSION['id']) {
 			<div class="cf" id="wrap">
 				<div id="bottom_panel">
 					<div id="section_tabs_container">
-						<div class="arrow left"></div>
 						<div class="inner make_hcenter">
 							<ul class="section_tabs">
 								<li class="selected" data-team="1">
@@ -75,111 +74,8 @@ if($_SESSION['id']) {
 								<li data-team="6">
 									<span>TEAM 6</span>
 								</li>
-								<li data-team="7">
-									<span>TEAM 7</span>
-								</li>
-								<li data-team="8">
-									<span>TEAM 8</span>
-								</li>
-								<li data-team="9">
-									<span>TEAM 9</span>
-								</li>
-								<li data-team="10">
-									<span>TEAM 10</span>
-								</li>
-								<li data-team="11">
-									<span>TEAM 11</span>
-								</li>
-								<li data-team="12">
-									<span>TEAM 12</span>
-								</li>
-								<li data-team="13">
-									<span>TEAM 13</span>
-								</li>
-								<li data-team="14">
-									<span>TEAM 14</span>
-								</li>
-								<li data-team="15">
-									<span>TEAM 15</span>
-								</li>
-								<li data-team="16">
-									<span>TEAM 16</span>
-								</li>
-								<li data-team="17">
-									<span>TEAM 17</span>
-								</li>
-								<li data-team="18">
-									<span>TEAM 18</span>
-								</li>
-								<li data-team="19">
-									<span>TEAM 19</span>
-								</li>
-								<li data-team="20">
-									<span>TEAM 20</span>
-								</li>
-								<li data-team="21">
-									<span>TEAM 21</span>
-								</li>
-								<li data-team="22">
-									<span>TEAM 22</span>
-								</li>
-								<li data-team="23">
-									<span>TEAM 23</span>
-								</li>
-								<li data-team="24">
-									<span>TEAM 24</span>
-								</li>
-								<li data-team="25">
-									<span>TEAM 25</span>
-								</li>
-								<li data-team="26">
-									<span>TEAM 26</span>
-								</li>
-								<li data-team="27">
-									<span>TEAM 27</span>
-								</li>
-								<li data-team="28">
-									<span>TEAM 28</span>
-								</li>
-								<li data-team="29">
-									<span>TEAM 29</span>
-								</li>
-								<li data-team="30">
-									<span>TEAM 30</span>
-								</li>
-								<li data-team="31">
-									<span>TEAM 31</span>
-								</li>
-								<li data-team="32">
-									<span>TEAM 32</span>
-								</li>
-								<li data-team="33">
-									<span>TEAM 33</span>
-								</li>
-								<li data-team="34">
-									<span>TEAM 34</span>
-								</li>
-								<li data-team="35">
-									<span>TEAM 35</span>
-								</li>
-								<li data-team="36">
-									<span>TEAM 36</span>
-								</li>
-								<li data-team="37">
-									<span>TEAM 37</span>
-								</li>
-								<li data-team="38">
-									<span>TEAM 38</span>
-								</li>
-								<li data-team="39">
-									<span>TEAM 39</span>
-								</li>
-								<li data-team="40">
-									<span>TEAM 40</span>
-								</li>
 							</ul>
 						</div>
-						<div class="arrow right"></div>
 					</div>
 					<div class="make_hcenter" id="sections_container">
 						<div class="section cf" id="spaces_section">

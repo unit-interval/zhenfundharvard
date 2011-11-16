@@ -7,7 +7,7 @@
             <input type='submit' name='do' value='reset' />
         </form>
 <?php
-if($_POST['passphrase'] == 'gew') {
+if($_POST['passphrase'] == 'encap') {
     include './config.php';
     include './database.php';
 

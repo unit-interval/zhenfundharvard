@@ -153,7 +153,7 @@ var Votes = {
 				if (j<0) continue;
 				if(V.sortByScore(an, bn) < 0) {
 					$a.addClass('highlight');
-					$c = $b.clone(true).hide().insertAfter($a).slideDown(1000);
+					$c = $b.clone().data('team', $b.data('team')).hide().insertAfter($a).slideDown(1000);
 					$b.slideUp(1000, function() {
 						$a.removeClass('highlight');
 						$(this).remove();

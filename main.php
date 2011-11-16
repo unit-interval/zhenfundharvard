@@ -19,7 +19,7 @@ if($_SESSION['id']) {
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<title>ZhenFund @ Harvard</title>
+		<title>iWeekend Beijing Autumn 2011</title>
 		<link href="css/style.css" rel="stylesheet">
 		<script src="js/jquery.js" type="text/javascript"></script>
 		<script src="js/script.js" type="text/javascript"></script>

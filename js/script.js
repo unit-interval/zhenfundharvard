@@ -16,19 +16,25 @@ var Votes = {
     "ready": function() {
 		var V = this;
         var rank = [];
-        var s = '';
-        var $li;
-        var idx;
+        var $li = $("<li><span>•</span><label></label><span class='rank-score'></span></li>");
+        var $s;
         for (var team in V.cache)
             rank.push(team);
         var len = rank.length;
         rank.sort(V.sortByScore);
-        for (var i=0; i < len; i++)
-			s = s + "<li data-team='"+rank[i]+"'><span>•</span><label>TEAM "+rank[i]+"</label><span class='rank-score'>"+(V.cache[rank[i]][Param.judges+1]*10).toFixed(1)+"</span></li>"
+        for (var i=0; i < len; i++) {
+            $s = $li.clone().data('team', rank[i]).appendTo(V.$list)
+                .find('label').html('TEAM ' + rank[i]).end()
+                .find('span.rank-score').html((V.cache[rank[i]][Param.judges + 1] * 10).toFixed(1));
+//			$s = s + "<li data-team='"+rank[i]+"'><span>•</span><label>TEAM "+rank[i]+"</label><span class='rank-score'>"+(V.cache[rank[i]][Param.judges+1]*10).toFixed(1)+"</span></li>"
+        }
         for (var team=1; team<=Param.teams; team++)
         	if (! (team in V.cache))
-        		s = s + "<li style='display:none' data-team='"+team+"'><span>•</span><label>TEAM "+team+"</label><span class='rank-score'>0.0</span></li>"
-        V.$list.html(s);
+                $s = $li.clone().data('team', team).addClass('hidden').appendTo(V.$list)
+                    .find('label').html('TEAM ' + team).end()
+                    .find('span.rank-score').html('0.0');
+//        		s = s + "<li style='display:none' data-team='"+team+"'><span>•</span><label>TEAM "+team+"</label><span class='rank-score'>0.0</span></li>"
+//      V.$list.html(s);
 		return true;
     },
 	"fetch" : function() {

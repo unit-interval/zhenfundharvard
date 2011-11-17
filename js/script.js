@@ -1,5 +1,5 @@
 var Param = {
-	"teams" : 40,
+	"teams" : 5,
 	"judges" : 3,
 	"ratio": 0.8
 };
@@ -24,7 +24,7 @@ var Votes = {
         rank.sort(V.sortByScore);
         for (var i=0; i < len; i++) {
             $s = $li.clone().data('team', rank[i]).appendTo(V.$list)
-                .find('label').html('TEAM ' + rank[i]).end()
+                .find('label').html('TEAM ' + rank[i]).end()`
                 .find('span.rank-score').html((V.cache[rank[i]][Param.judges + 1] * 10).toFixed(1));
 //			$s = s + "<li data-team='"+rank[i]+"'><span>• TEAM "+rank[i]+"</span><span class='rank-score'>"+(V.cache[rank[i]][Param.judges+1]*10).toFixed(1)+"</span></li>"
         }

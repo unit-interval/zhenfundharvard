@@ -41,8 +41,8 @@ var Votes = {
     "ranking_animation": function(t){
     	var V=this;
     	var i=0;
-    	V.$list.each(function(this){
-    		if (!$(this).hasClass('hidden')) {
+    	V.$list.find('li').each(function(){
+    		if (!$(this).eq(i).hasClass('hidden')) {
     			$(this).animate({ 'margin-top': i*80 }, t);
     			i++;
     		}

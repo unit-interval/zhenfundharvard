@@ -35,7 +35,7 @@ var Votes = {
                     .find('span.rank-score').html('0.0');
 //        		s = s + "<li style='display:none' data-team='"+team+"'><span>• TEAM "+team+"</span><span class='rank-score'>0.0</span></li>"
 //      V.$list.html(s);
-		ranking_animation(0);
+		V.ranking_animation(0);
 		return true;
     },
     "ranking_animation": function(t){
@@ -43,7 +43,7 @@ var Votes = {
     	var i=0;
     	V.$list.each(function(){
     		if (!$(this).hasClass('hidden')) {
-    			$(this).animate({ 'margin-top': i*80 });
+    			$(this).animate({ 'margin-top': i*80 }, t);
     			i++;
     		}
     	})

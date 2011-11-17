@@ -128,11 +128,12 @@ ul.section_tabs li {
 	border-radius: 5px
 }
 ul.section_tabs li:hover {
-	background-color: #d4d2cf
+	background-color: #92D8EF;
+	color: white;
 }
 ul.section_tabs li.selected {
-	background-color: #7a7978;
-	color: #fff
+	background-color: #4EB3D5;
+	color: white;
 }
 ul.section_tabs li .icon {
 	width: 31px;
@@ -802,8 +803,9 @@ body > header, #app > header, #dashboard_header {
 }
 #top_nav ul {
 	list-style: none;
-	margin: 0;
-	padding: 0
+	padding: 0;
+	width: 1000px;
+	margin: 0 auto;
 }
 #top_nav ul li {
 	list-style: none;
@@ -812,22 +814,24 @@ body > header, #app > header, #dashboard_header {
 	margin: 0
 }
 #top_nav ul li a {
+	border-right: none;
+	border-right: 1px solid #686868;
+	border-left: 1px solid #686868;
+	height: 30px;
 	display: block;
-	height: 20px;
-	line-height: 20px;
+	padding: 0 .85em;
+	margin: 0;
+	letter-spacing: normal;
+	line-height: 1;
+	font: normal 13px/28px Arial,Helvetica,sans-serif;
+	color: #DDD;
+	text-shadow: #555 0 -1px 0;
 	text-decoration: none;
-	padding: 20px 13px;
-	color: #d9d2c8;
-	border-left: 2px solid transparent;
-	border-right: 2px solid transparent
-}
-#top_nav ul li a:before {
-	width: 20px;
-	height: 20px;
-	float: left;
 }
 #top_nav ul li a:hover {
-	color: #ffdd68
+	background: #555;
+	background: -moz-linear-gradient(bottom,#555,#3e3e3e);
+	background: -webkit-gradient(linear,left bottom,left top,from(#555),to(#3e3e3e));
 }
 #top_nav ul li a.active {
 	border-right-color: #666;
@@ -835,7 +839,15 @@ body > header, #app > header, #dashboard_header {
 	color: #282828
 }
 #top_nav ul li.login, #top_nav ul li.logout, #top_nav ul li.sign_up {
-	float: right
+	float: right;
+	background: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	z-index: 99999;
+	height: auto;
+	width: auto;
+	position: static;
 }
 #top_nav ul li.logout a, #top_nav ul li.sign_up a {
 	padding-right: 0

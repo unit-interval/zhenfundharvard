@@ -1333,7 +1333,7 @@ div.rank-list ul {
 }
 div.rank-list li {
 	font-size: 12px;
-	padding-left: 7px;
+	padding: 0px 12px;
 	list-style: none;
 	margin-top: 10px;
 	background-color: #4EB3D5;
@@ -1369,9 +1369,8 @@ div.rank-list li:nth-of-type(2) > span {
 */
 div.rank-list li > label {
 	line-height: 32px;
-	vertical-align: top;
 	padding-left: 6px;
-	font-weight: bold;
+	font-size: 36px;
 }
 div.rank-list li > span.rank-score {
 	float: right;
@@ -1516,4 +1515,20 @@ div.main_button a {
 	border-radius: 4px;
 	display: block;
 	text-decoration: none;
+}
+div.bullet_square {
+	background-color: #4EB3D5;
+	-webkit-border-radius: 0 0 0 6px;
+	-moz-border-radius: 0 0 0 6px;
+	border-radius: 0 0 0 6px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	height: 42px;
+	width: 42px;
+	position: absolute;
+	margin-top: 19px;
+	margin-left: -33px;
 }

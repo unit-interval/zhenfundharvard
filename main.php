@@ -142,7 +142,7 @@ if($_SESSION['id']) {
 								</div>
 							</div>
 							<div class="right_col">
-								<h3>TOP TEN</h3>
+								<h3>RANKING</h3>
 								<div class="rank-list">
 									<ul>
 									</ul>

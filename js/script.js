@@ -16,7 +16,7 @@ var Votes = {
     "ready": function() {
 		var V = this;
         var rank = [];
-        var $li = $("<li><span>•</span><label></label><span class='rank-score'></span></li>");
+        var $li = $("<li><span>•</span><label></label><span class='rank-score'></span><div class='bullet_square'></div></li>");
         var $s;
         for (var team in V.cache)
             rank.push(team);

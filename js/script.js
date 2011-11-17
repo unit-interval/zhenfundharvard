@@ -1,5 +1,5 @@
 var Param = {
-	"teams" : 40,
+	"teams" : 5,
 	"judges" : 3,
 	"ratio": 0.8
 };
@@ -35,7 +35,18 @@ var Votes = {
                     .find('span.rank-score').html('0.0');
 //        		s = s + "<li style='display:none' data-team='"+team+"'><span>• TEAM "+team+"</span><span class='rank-score'>0.0</span></li>"
 //      V.$list.html(s);
+		ranking_animation(0);
 		return true;
+    },
+    "ranking_animation": function(t){
+    	var V=this;
+    	var i=0;
+    	V.$list.each(function(){
+    		if (!$(this).hasClass('hidden')) {
+    			$(this).animate({ 'margin-top': i*80 });
+    			i++;
+    		}
+    	})
     },
 	"fetch" : function() {
 		var V = this;

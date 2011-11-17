@@ -1350,7 +1350,7 @@ div.rank-list li > span{
 	position: relative;
 	z-index: 1;
 }
-div.rank-list li.highlight {
+div.rank-list li.highlight, div.rank-list li.highlight div.bullet_square {
 	/*border: 1px dashed gray;*/
 	background-color: #92D8EF;
 }

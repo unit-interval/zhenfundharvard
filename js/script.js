@@ -97,7 +97,7 @@ var Votes = {
 		$('div.agenda-item', V.$chart).each(function(i) {
 			$(this).animate({ width : Math.max(scores[i] * 40 - 7, 33) });
 		});
-		$('#info-balloon').animate({ left : Math.floor(148 + total / 100 * (340 - 148)) })
+		$('#info-balloon').animate({ left : Math.floor(93 + total / 100 * (340 - 148)) })
 		var rand = $('#info-balloon>h4').html() * 1.0;
 		( inloop = function() {
 			if(Math.abs(rand - total) < 1) {

@@ -1491,12 +1491,12 @@ div.agenda-row.sum {
 }
 #info-balloon {
 	background: transparent url(/images/agenda-info-balloon.png) no-repeat top left;
-	position: absolute;
+	position: relative;
 	width: 220px;
 	height: 79px;
 	padding: 10px;
 	z-index: 99;
-	bottom: 160px;
+	bottom: 130px;
 	left: 148px;
 }
 #info-balloon h4 {

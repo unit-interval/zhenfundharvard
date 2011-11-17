@@ -205,6 +205,13 @@ ul.section_tabs .mobile_tab.selected .icon {
 	-o-box-shadow: 0 0 5px #666;
 	box-shadow: 0 0 5px #666
 }
+#sections_container:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
 #sections_container .section {
 	margin: 0 55px
 }

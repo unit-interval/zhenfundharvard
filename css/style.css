@@ -1327,7 +1327,7 @@ div.agenda-row.ivy div.agenda-item {
 div.rank-list ul {
 	padding-top: 1px;
 	font-size: 12px;
-	color: white;
+	color: #333;
 	height: 430px;
 	overflow: hidden;
 }
@@ -1336,12 +1336,14 @@ div.rank-list li {
 	padding: 0px 12px;
 	list-style: none;
 	margin-top: 10px;
-	background-color: #4EB3D5;
+	background-color: #C0DEED;
 }
 div.rank-list li > span{
-    font-size: 36px;
-    line-height: 60px;
-    font-family: arial;
+	font-size: 36px;
+	line-height: 60px;
+	font-family: arial;
+	position: relative;
+	z-index: 1;
 }
 div.rank-list li.highlight {
 	/*border: 1px dashed gray;*/
@@ -1517,7 +1519,7 @@ div.main_button a {
 	text-decoration: none;
 }
 div.bullet_square {
-	background-color: #4EB3D5;
+	background-color: #C0DEED;
 	-webkit-border-radius: 0 0 0 6px;
 	-moz-border-radius: 0 0 0 6px;
 	border-radius: 0 0 0 6px;

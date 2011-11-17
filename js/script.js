@@ -16,19 +16,25 @@ var Votes = {
     "ready": function() {
 		var V = this;
         var rank = [];
-        var s = '';
-        var $li;
-        var idx;
+        var $li = $("<li><span>•</span><label></label><span class='rank-score'></span></li>");
+        var $s;
         for (var team in V.cache)
             rank.push(team);
         var len = rank.length;
         rank.sort(V.sortByScore);
-        for (var i=0; i < len; i++)
-			s = s + "<li data-team='"+rank[i]+"'><span>•</span><label>TEAM "+rank[i]+"</label><span class='rank-score'>"+(V.cache[rank[i]][Param.judges+1]*10).toFixed(1)+"</span></li>"
+        for (var i=0; i < len; i++) {
+            $s = $li.clone().data('team', rank[i]).appendTo(V.$list)
+                .find('label').html('TEAM ' + rank[i]).end()
+                .find('span.rank-score').html((V.cache[rank[i]][Param.judges + 1] * 10).toFixed(1));
+//			$s = s + "<li data-team='"+rank[i]+"'><span>•</span><label>TEAM "+rank[i]+"</label><span class='rank-score'>"+(V.cache[rank[i]][Param.judges+1]*10).toFixed(1)+"</span></li>"
+        }
         for (var team=1; team<=Param.teams; team++)
         	if (! (team in V.cache))
-        		s = s + "<li style='display:none' data-team='"+team+"'><span>•</span><label>TEAM "+team+"</label><span class='rank-score'>0.0</span></li>"
-        V.$list.html(s);
+                $s = $li.clone().data('team', team).addClass('hidden').appendTo(V.$list)
+                    .find('label').html('TEAM ' + team).end()
+                    .find('span.rank-score').html('0.0');
+//        		s = s + "<li style='display:none' data-team='"+team+"'><span>•</span><label>TEAM "+team+"</label><span class='rank-score'>0.0</span></li>"
+//      V.$list.html(s);
 		return true;
     },
 	"fetch" : function() {
@@ -139,7 +145,7 @@ var Votes = {
 					});
 					return false;
 				}
-				for (j = i-1; j >= 0; j--) {
+				for (var j = i-1; j >= 0; j--) {
 					$b = $('li:eq(' + j + ')', l);
 					bn = $b.data('team');
 					if (bn in V.cache) break;
@@ -147,7 +153,7 @@ var Votes = {
 				if (j<0) continue;
 				if(V.sortByScore(an, bn) < 0) {
 					$a.addClass('highlight');
-					$c = $b.clone().hide().insertAfter($a).slideDown(1000);
+					$c = $b.clone().data('team', bn).hide().insertAfter($a).slideDown(1000);
 					$b.slideUp(1000, function() {
 						$a.removeClass('highlight');
 						$(this).remove();
@@ -166,17 +172,6 @@ $(function() {
 	Votes.init();
 	var $tabs = $('ul.section_tabs')
 	tabi = 1;
-	function moveTab(i){
-		$tabs.animate({ left: (1-i)*190})
-	}
-	$('.arrow.left').click(function() {
-		tabi = Math.max(1, tabi-5);
-		moveTab(tabi);
-	})
-	$('.arrow.right').click(function() {
-		tabi = Math.min(Param.teams-4, tabi+5);
-		moveTab(tabi);
-	})
 	$('li', $tabs).click(function() {
 		var teamName = $(this).find('span').html()
 		var teamID = $(this).data('team')
@@ -184,8 +179,6 @@ $(function() {
 		$('#left_col_team_name').html(teamName).data('team', teamID)
 		Votes.currentTeam = teamID;
 		Votes.fetch(0);
-		tabi = Math.min(Param.teams-4, Math.max(1, teamID-2))
-		moveTab(tabi);
 	})
 	$('#current-track').click(function() {
 		$('#filter').toggleClass('selected')

@@ -244,41 +244,6 @@ ul.section_tabs .mobile_tab.selected .icon {
 #sections_container .three_cols .col.last {
 	margin-right: 0
 }
-#spaces_section .row_with_img {
-	margin: 0 0 20px 0
-}
-#spaces_section .row_with_img .img {
-	width: 70px;
-	height: 70px;
-	float: left;
-	margin-right: 20px
-}
-#spaces_section .row_with_img p {
-	float: left;
-	width: 250px
-}
-#spaces_section .right_col img {
-	margin: 0 40px 0 0
-}
-#control_section h3 {
-	margin-bottom: 25px
-}
-#mobile_section .download_section {
-	margin-top: 70px
-}
-#mobile_section .download_section .links a {
-	margin: 0 42px 0 0;
-	color: #ee8c00;
-	font-weight: bold;
-	font-size: 18px;
-	text-decoration: none;
-	display: inline-block;
-	width: 104px;
-	text-align: center
-}
-#mobile_section .right_col img {
-	margin: 0 135px 0 0
-}
 #main {
 	min-height: 300px;
 	padding-bottom: 50px
@@ -955,7 +920,7 @@ html, body {
 	left: 0
 }
 #footer_wrap {
-	width: 1000px;
+	width: 950px;
 	margin: 0 auto;
 	text-align: left
 }

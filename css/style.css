@@ -204,7 +204,7 @@ ul.section_tabs .mobile_tab.selected .icon {
 	-o-box-shadow: 0 0 5px #666;
 	box-shadow: 0 0 5px #666
 }
-#sections_container:after {
+div.right_col:after {
     content: ".";
     display: block;
     height: 0;

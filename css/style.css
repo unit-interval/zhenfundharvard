@@ -1339,6 +1339,9 @@ div.rank-list li {
 	background-color: #C0DEED;
 	width: 278px;
 	position: absolute;
+	-webkit-border-radius: 0 6px 6px 0;
+	-moz-border-radius: 0 6px 6px 0;
+	border-radius: 0 6px 6px 0;
 }
 div.rank-list li > span{
 	font-size: 36px;
@@ -1501,7 +1504,7 @@ div.agenda-row.sum {
 	padding: 10px;
 	z-index: 99;
 	bottom: 130px;
-	left: 148px;
+	left: 93px;
 }
 #info-balloon h4 {
 	font-family: 'Droid Sans', Arial;

@@ -1373,6 +1373,8 @@ div.rank-list li > label {
 	line-height: 32px;
 	padding-left: 6px;
 	font-size: 36px;
+	position: relative;
+	z-index: 1;
 }
 div.rank-list li > span.rank-score {
 	float: right;

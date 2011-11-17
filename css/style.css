@@ -918,7 +918,6 @@ body > header, #app > header, #dashboard_header {
 #app > header #header_wrap {
 	width: 100%;
 	height: 60px;
-	background: #900
 }
 #app > header #logo_container {
 	width: 100%;
@@ -949,7 +948,7 @@ html, body {
 }
 #app > footer {
 	height: 130px;
-	background-color: #900;
+	background-color: #92D8EF;
 	width: 100%;
 	position: absolute;
 	bottom: 0;
@@ -998,7 +997,7 @@ html, body {
 	margin: 0 15px 0 0
 }
 #footer_wrap .links_container .small_links a {
-	color: #d9d2c8;
+	color: white;
 	font-size: 13px;
 	margin: 0
 }
@@ -1263,7 +1262,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav
 	display: block
 }
 .small_links {
-	color: #D9D2C8;
+	color: white;
 	font-size: 13px;
 }
 div.agenda-header {
@@ -1519,6 +1518,5 @@ div.main_button a {
 	font-size: 20px;
 	border-radius: 4px;
 	display: block;
-	color: #777;
 	text-decoration: none;
 }

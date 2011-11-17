@@ -112,9 +112,6 @@ div#login-box form button {
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
-	color: #3e342b;
-	background: -moz-linear-gradient(top, rgba(255,255,255,0.6), rgba(200,200,200,0.6));
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.6)), to(rgba(200,200,200,0.6)));
 }
 div#login-box div.form-button a {
 	color: #3e342b;
@@ -750,22 +747,8 @@ ul.main_field li.bad {
 	color: #801B1B;
 	font-size: 12px;
 }
-span#remember_me_text {
-	color: #3E342B;
-}
-div#signup div.main_button a {
-	color: #3e342b;
-	padding-top: 5px;
-	display: block;
-	margin-left: 60px;
-}
-div#signup div#valid_hostname {
-	clear: both;
-	margin-bottom: 16px;
-	margin-left: 0;
-}
 div#main_login form input[type='submit'], div#forgot form input[type='submit'], div#reset form input[type='submit'],
-.main_button > a {
+div.main_button a {
 	float: left;
 	height: 100%;
 	margin: 0;
@@ -816,7 +799,6 @@ div#error_messages_div div.errorExplanation, div#signup div.errorExplanation {
 	font-size: 10px;
 }
 #topnav.mainpage a, a:active, a:visited {
-	color: #3E342B;
 	text-decoration: none;
 }
 #topnav.mainpage a:hover {

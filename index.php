@@ -30,7 +30,7 @@ if($_SESSION['id'])
 	<body>
 		<div id='app'>
 			<header class="cf">
-				<div id="top_nav"></div>
+				<nav id="top_nav"></nav>
 				<div id="header_wrap">
 				</div>
 			</header>

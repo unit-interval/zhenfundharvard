@@ -27,23 +27,23 @@ if($_SESSION['id']) {
 	<body>
 		<div id='app'>
 			<header class="cf">
-				<div id="header_wrap">
-					<div class="make_hcenter">
-						<nav id="top_nav">
-                            <ul>
+				<nav id="top_nav">
+                    <ul>
 <?php if($id) {
 ?>
-								<li class="logout">
-                                <a href="index.php?logout">#<?php echo($id); ?> Log Out</a>
-                                </li>
+						<li class="logout">
+                        <a href="index.php?logout">#<?php echo($id); ?> Log Out</a>
+                        </li>
 <?php } else {
 ?>
-								<li class="login">
-									<a href="index.php">Log In</a>
-								</li>
+						<li class="login">
+							<a href="index.php">Log In</a>
+						</li>
 <?php } ?>
-							</ul>
-						</nav>
+					</ul>
+				</nav>
+				<div id="header_wrap">
+					<div class="make_hcenter">
 					</div>
 				</div>
 			</header>

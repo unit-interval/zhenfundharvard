@@ -126,6 +126,11 @@ div#main_login {
 #wrap_main {
 	min-height: 100%;
 	width: 100%;
+	background-color: #C0DEED;
+	background-image: url('http://www.libragold.com/blog/wp-content/uploads/2011/09/bg1.png');
+	background-repeat: repeat-x;
+	background-position: top left;
+	background-attachment: fixed;
 }
 div#signup {
 	color: #666;
@@ -326,7 +331,7 @@ div#signup div#facebook_signup #connect_fb {
 	margin-bottom: 10px;
 }
 div#main_login {
-	background: #D1EEF7;
+	background: white;
 	color: #666;
 	position: relative;
 	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -808,5 +813,5 @@ div#error_messages_div div.errorExplanation, div#signup div.errorExplanation {
 	text-decoration: none;
 }
 #container_main {
-	margin-top: 50px;
+
 }

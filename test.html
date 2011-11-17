@@ -1,39 +1,246 @@
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>iWeekend Beijing Autumn 2011</title>
 		<link href="css/style.css" rel="stylesheet">
-		<link href="css/login.css" rel="stylesheet">
 	</head>
 	<body screen_capture_injected="true">
 		<div id="app">
 			<header class="cf">
-				<div id="top_nav"></div>
 				<div id="header_wrap">
-				</div>
-			</header>
-			<div id="wrap" class="clearfix">
-				<div id="wrap_main">
-					<div id="container_main" class="container clearfix">
-						<div id="main_login" class="large">
-							<ul class="main_field">
-								<li>
-									<h1>Login</h1>
+					<div class="make_hcenter">
+						<nav id="top_nav">
+							<ul>
+								<li class="login">
+									<a href="index.php">Log In</a>
 								</li>
 							</ul>
-							<form action="login.php" id="login" method="post">
-								<ul id="login-password-fields" class="main_field">
-									<li>
-										<input class="form-text large" id="user_password" placeholder="Password" maxlength="20" name="passwd" size="8" type="password">
-									</li>
-								</ul>
-								<div class="main_button">
-									<input id="save_button_login" type="submit" value="Login">
-									<a href="main.php">View Results</a>
+						</nav>
+					</div>
+				</div>
+			</header>
+			<div class="cf" id="wrap">
+				<div id="bottom_panel">
+					<div id="section_tabs_container">
+						<div class="inner make_hcenter">
+							<ul class="section_tabs">
+								<li class="selected" data-team="1">
+									<span>TEAM 1</span>
+								</li>
+								<li data-team="2">
+									<span>TEAM 2</span>
+								</li>
+								<li data-team="3">
+									<span>TEAM 3</span>
+								</li>
+								<li data-team="4">
+									<span>TEAM 4</span>
+								</li>
+								<li data-team="5">
+									<span>TEAM 5</span>
+								</li>
+								<li data-team="6">
+									<span>TEAM 6</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="make_hcenter" id="sections_container">
+						<div class="section cf" id="spaces_section">
+							<div class="left_col">
+								<h3>VOTE FOR <span id="left_col_team_name" data-team="1">TEAM 1</span></h3>
+								<div id="filter" class="hidden">
+									<span id="current-track" href="#all-tracks"><span>VOTE</span></span>
+									<table id="filter-table">
+										<tbody>
+											<tr>
+												<td data-score="1">1</td>
+												<td data-score="2">2</td>
+												<td data-score="3">3</td>
+											</tr>
+											<tr>
+												<td data-score="4">4</td>
+												<td data-score="5">5</td>
+												<td data-score="6">6</td>
+											</tr>
+											<tr>
+												<td data-score="7">7</td>
+												<td data-score="8">8</td>
+												<td data-score="9">9</td>
+											</tr>
+											<tr>
+												<th></th>
+												<td data-score="10">10</td>
+												<th></th>
+											</tr>
+										</tbody>
+									</table>
 								</div>
-							</form>
+								<div class="agenda-header">
+									<span class="schedule-hour">0</span><span class="schedule-hour">1</span><span class="schedule-hour">2</span><span class="schedule-hour">3</span><span class="schedule-hour">4</span><span class="schedule-hour">5</span><span class="schedule-hour">6</span><span class="schedule-hour">7</span><span class="schedule-hour">8</span><span class="schedule-hour">9</span><span class="schedule-hour">10</span>
+								</div>
+								<div class="agenda-row">
+									<label>Xu Xiaoping</label>
+									<div class="agenda-item" style="width: 193px; ">
+										<span>•</span>
+									</div>
+								</div>
+								<div class="agenda-row alt">
+									<label>Zhou Kui</label>
+									<div class="agenda-item" style="width: 33px; ">
+										<span>•</span>
+									</div>
+								</div>
+								<div class="agenda-row">
+									<label>Wang Qiang</label>
+									<div class="agenda-item" style="width: 33px; ">
+										<span>•</span>
+									</div>
+								</div>
+								<div class="agenda-row alt ivy">
+									<label>Ivy League</label>
+									<div class="agenda-item" style="width: 33px; ">
+										<span>•</span>
+									</div>
+								</div>
+								<div class="agenda-row sum">
+									<label>Total</label>
+									<div class="agenda-item" style="width: 57px; ">
+										<span>•</span>
+									</div>
+								</div>
+								<div id="info-balloon" style="left: 178px; ">
+									<h4>16.0</h4>
+								</div>
+							</div>
+							<div class="right_col">
+								<h3>TOP TEN</h3>
+								<div class="rank-list">
+									<ul>
+										<li>
+											<span>•</span><label>TEAM 5</label><span class="rank-score">29.3</span>
+										</li>
+										<li>
+											<span>•</span><label>TEAM 4</label><span class="rank-score">24.0</span>
+										</li>
+										<li>
+											<span>•</span><label>TEAM 1</label><span class="rank-score">16.0</span>
+										</li>
+										<li>
+											<span>•</span><label>TEAM 2</label><span class="rank-score">13.3</span>
+										</li>
+										<li>
+											<span>•</span><label>TEAM 3</label><span class="rank-score">13.3</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 6</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 7</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 8</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 9</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 10</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 11</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 12</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 13</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 14</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 15</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 16</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 17</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 18</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 19</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 20</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 21</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 22</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 23</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 24</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 25</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 26</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 27</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 28</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 29</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 30</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 31</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 32</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 33</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 34</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 35</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 36</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 37</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 38</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 39</label><span class="rank-score">0.0</span>
+										</li>
+										<li class="hidden">
+											<span>•</span><label>TEAM 40</label><span class="rank-score">0.0</span>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

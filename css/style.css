@@ -1337,6 +1337,8 @@ div.rank-list li {
 	list-style: none;
 	margin-top: 10px;
 	background-color: #C0DEED;
+	width: 278px;
+	position: absolute;
 }
 div.rank-list li > span{
 	font-size: 36px;

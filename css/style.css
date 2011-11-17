@@ -128,8 +128,8 @@ ul.section_tabs li {
 	border-radius: 5px
 }
 ul.section_tabs li:hover {
-	background-color: #92D8EF;
-	color: white;
+	background-color: #C0DEED;
+	color: gray;
 }
 ul.section_tabs li.selected {
 	background-color: #4EB3D5;
@@ -850,7 +850,7 @@ body > header, #app > header, #dashboard_header {
 	position: static;
 }
 #top_nav ul li.logout a, #top_nav ul li.sign_up a {
-	padding-right: 0
+
 }
 #top_nav ul li.reader a:before {
 	background-position: -97px -69px

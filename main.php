@@ -145,6 +145,11 @@ if($_SESSION['id']) {
 								<h3>RANKING</h3>
 								<div class="rank-list">
 									<ul>
+										<li><span>• TEAM 1</span><label></label><span class='rank-score'></span><div class='bullet_square'></div></li>
+										<li><span>• TEAM 2</span><label></label><span class='rank-score'></span><div class='bullet_square'></div></li>
+										<li><span>• TEAM 3</span><label></label><span class='rank-score'></span><div class='bullet_square'></div></li>
+										<li><span>• TEAM 4</span><label></label><span class='rank-score'></span><div class='bullet_square'></div></li>
+										<li><span>• TEAM 5</span><label></label><span class='rank-score'></span><div class='bullet_square'></div></li>
 									</ul>
 								</div>
 							</div>

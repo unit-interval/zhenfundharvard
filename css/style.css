@@ -1333,7 +1333,7 @@ div.rank-list ul {
 }
 div.rank-list li {
 	font-size: 12px;
-	padding: 0px 12px;
+	padding: 0 12px 0 0;
 	list-style: none;
 	margin-top: 10px;
 	background-color: #C0DEED;
@@ -1532,5 +1532,5 @@ div.bullet_square {
 	width: 42px;
 	position: absolute;
 	margin-top: -51px;
-	margin-left: -33px;
+	margin-left: -22px;
 }

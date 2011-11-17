@@ -81,7 +81,8 @@ body {
 	margin-top: 7px
 }
 #bottom_panel {
-	background: url(/images/lower_bg.png) #f2eee6 repeat-x 0px -1px;
+	background-image: url(/images/bg1.png);
+	background-repeat: repeat-x;
 	padding-bottom: 50px
 }
 #section_tabs_container {

@@ -43,7 +43,7 @@ var Votes = {
     	var i=0;
     	V.$list.find('li').each(function(){
     		if (!$(this).eq(i).hasClass('hidden')) {
-    			$(this).animate({ 'margin-top': i*80 }, t);
+    			$(this).animate({ 'margin-top': i*75 }, t);
     			i++;
     		}
     	})

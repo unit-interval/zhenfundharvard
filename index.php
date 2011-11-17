@@ -34,9 +34,6 @@ if($_SESSION['id'])
 					<div class="make_hcenter">
 						<div id="top_nav">
 							<ul>
-							    <li class="logo">
-									<a href="http://www.zhenfund.com/"><span id="Zhen">Zhen</span><span id="Fund">Fund</span> @ Harvard</a>
-								</li>
 							</ul>
 						</div>
 					</div>

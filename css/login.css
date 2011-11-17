@@ -747,8 +747,7 @@ ul.main_field li.bad {
 	color: #801B1B;
 	font-size: 12px;
 }
-div#main_login form input[type='submit'], div#forgot form input[type='submit'], div#reset form input[type='submit'],
-div.main_button a {
+div#main_login form input[type='submit'], div#forgot form input[type='submit'], div#reset form input[type='submit'], div.main_button a {
 	float: left;
 	height: 100%;
 	margin: 0;
@@ -761,6 +760,9 @@ div.main_button a {
 	text-align: left;
 	color: white;
 	background: #4EB3D5
+}
+div.main_button a {
+	float: right;
 }
 div#main_login div.main_button, div#forgot div.main_button, div#signup div.main_button, div#reset div.main_button {
 	padding-top: 20px;

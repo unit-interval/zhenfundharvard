@@ -29,6 +29,9 @@ if($_SESSION['id']) {
 			<header class="cf">
 				<nav id="top_nav">
                     <ul>
+                    	<li id="fullscreen">
+                    		<a href='#'>Full Screen</a>
+                    	</li>
 <?php if($id) {
 ?>
 						<li class="logout">

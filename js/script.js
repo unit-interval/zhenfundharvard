@@ -154,12 +154,12 @@ var Votes = {
 					$a.removeClass('hidden');
 				}
 				else {
-					for (var j = i-1; j >= 0; j--) {
+					for (var j = 0; j < i; j++) {
 						$b = $('li:eq(' + j + ')', l);
 						bn = $b.data('team');
 						if (bn in V.cache && V.sortByScore(an, bn) < 0) break;						
 					}
-					if (j >= 0) {
+					if (j < i) {
 						$a.remove().insertBefore($b);
 					}
 				}

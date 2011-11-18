@@ -150,7 +150,7 @@ var Votes = {
 			$a = $('li:eq(' + i + ')', l);
 			an = $a.data('team')
 			if (an in V.cache) {
-				$('span.rank-score', $a).html(V.cache[an]) * 1.0;
+				$('span.rank-score', $a).html(V.cache[an]*1.0);
 				if ($a.hasClass('hidden'))
 					$a.removeClass('hidden');
 				for (var j = 0; j < i; j++) {

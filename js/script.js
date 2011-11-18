@@ -160,7 +160,7 @@ var Votes = {
 						if (V.sortByScore(an, bn) < 0) break;						
 					}
 					if (j >= 0) {
-						$a.remove().insertBefore($a);
+						$a.remove().insertBefore($b);
 					}
 				}
 			}

@@ -1,3 +1,16 @@
+<?php
+
+include './config.php';
+include './database.php';
+
+session_name(SESSNAME);
+session_start();
+
+if($_POST['passphrase'] == ADMIN_PW) {
+	$_SESSION['admin'] = true;
+	$admin_once = true;
+}
+?>
 <html>
     <body>
         <form action='admin.php' method='post'>
@@ -6,12 +19,9 @@
             <input type='submit' name='do' value='votes' />
             <input type='submit' name='do' value='reset' />
         </form>
+		<hr />
 <?php
 if($_POST['passphrase'] == 'gew') {
-    include './config.php';
-    include './database.php';
-
-    echo '<hr />';
     if($_POST['do'] == 'reset') {
         $db->query("truncate `votes`");
         echo "<p>successifully trancated table 'votes'.</p>";

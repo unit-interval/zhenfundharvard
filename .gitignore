@@ -1,3 +1,5 @@
 tmp/
 .DS_Store
 *.swp
+config.local.php.example
+

@@ -42,8 +42,8 @@ var Votes = {
     	var V=this;
     	var i=0;
     	if (V.refreshing > 0) return false;
-    	V.$list.find('li').each(function(){
-    		if (!$(this).eq(i).hasClass('hidden')) {
+    	$('li',V.$list).each(function(){
+    		if (!$(this).hasClass('hidden')) {
     			V.refreshing++;
     			$(this).animate({ 'margin-top': i*75+10 }, t, function() {
     				V.refreshing--;

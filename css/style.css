@@ -914,8 +914,8 @@ body > header, #app > header, #dashboard_header {
 	background: white
 }
 #app > header #header_wrap {
-	height: 147px;
-	margin-top: 9px;
+	height: 163px;
+	margin-top: 40px;
 }
 #app > header #logo_container {
 	width: 100%;

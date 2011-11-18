@@ -161,7 +161,7 @@ var Votes = {
 					else $('span.rank-score', $a).html((rand += 1.1).toFixed(1));
 					setTimeout(inloop, 20);
 				})();
-				if ($a.hasClass('hidden')) {
+				if ($a.hasClass('hidden'))
 					$a.removeClass('hidden');
 				for (var j = 0; j < i; j++) {
 					$b = $('li:eq(' + j + ')', l);

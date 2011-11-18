@@ -230,6 +230,10 @@ $(function() {
 	$('#filter-table td').click(function() {
 		Votes.vote($(this).data('score'))
 	})
+	$('#fullscreen').click(function(){
+		$('header.cf').slideUp();
+		return false;
+	})
 
 	setInterval("Votes.fetch()", 5000);
 	setInterval("Votes.refreshRanking()", 3000);

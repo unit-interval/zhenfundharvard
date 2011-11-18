@@ -154,7 +154,6 @@ if($_SESSION['id']) {
 									</ul>
 								</div>
 							</div>
-							<div class='clearfix'></div>
 						</div>
 					</div>
 				</div>

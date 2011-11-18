@@ -67,7 +67,6 @@ div.header h1 {
 div.header h1 a {
 	height: 137px;
 	width: 138px;
-	background: url(/images/switch/posterous_logo.png) center center;
 }
 div#login-box {
 	position: absolute;
@@ -112,9 +111,6 @@ div#login-box form button {
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
-	color: #3e342b;
-	background: -moz-linear-gradient(top, rgba(255,255,255,0.6), rgba(200,200,200,0.6));
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.6)), to(rgba(200,200,200,0.6)));
 }
 div#login-box div.form-button a {
 	color: #3e342b;
@@ -129,6 +125,8 @@ div#main_login {
 #wrap_main {
 	min-height: 100%;
 	width: 100%;
+	background-image: url(/images/bg1.png);
+	background-repeat: repeat-x;
 }
 div#signup {
 	color: #666;
@@ -329,7 +327,7 @@ div#signup div#facebook_signup #connect_fb {
 	margin-bottom: 10px;
 }
 div#main_login {
-	background: #F9F4B8 url(/images/bg-signup.jpg) center bottom repeat-x;
+	background: white;
 	color: #666;
 	position: relative;
 	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -392,7 +390,7 @@ div#main_login form div.form-field-large {
 }
 div#main_login form input.form-text, div#main_login form input.form-password {
 	font-size: 14px;
-	border: 1px solid #CBBE79;
+	border: 1px solid #4EB3D5;
 }
 div#main_login form label {
 	position: absolute;
@@ -750,21 +748,7 @@ ul.main_field li.bad {
 	color: #801B1B;
 	font-size: 12px;
 }
-span#remember_me_text {
-	color: #3E342B;
-}
-div#signup div.main_button a {
-	color: #3e342b;
-	padding-top: 5px;
-	display: block;
-	margin-left: 60px;
-}
-div#signup div#valid_hostname {
-	clear: both;
-	margin-bottom: 16px;
-	margin-left: 0;
-}
-div#main_login form input[type='submit'], div#forgot form input[type='submit'], div#reset form input[type='submit'] {
+div#main_login form input[type='submit'], div#forgot form input[type='submit'], div#reset form input[type='submit'], div.main_button a {
 	float: left;
 	height: 100%;
 	margin: 0;
@@ -775,16 +759,14 @@ div#main_login form input[type='submit'], div#forgot form input[type='submit'], 
 	border-radius: 4px;
 	display: block;
 	text-align: left;
-	border: 1px solid #CBBE79;
-	color: #777;
-	background: -moz-linear-gradient(top, rgba(255,255,255,0.9), rgba(200,200,200,0.9)), #eee;
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.9)), to(rgba(200,200,200,0.9))), #eee;
-	filter: progid
-	: DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80FFFFFF', endColorstr='#00FFFFFF');
-	filter: progid
-	: DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80FFFFFF', endColorstr='#00FFFFFF');
+	color: white;
+	background: #4EB3D5
+}
+div.main_button a {
+	float: right;
 }
 div#main_login div.main_button, div#forgot div.main_button, div#signup div.main_button, div#reset div.main_button {
+	padding-top: 20px;
 	float: left;
 	width: 100%;
 }
@@ -820,7 +802,6 @@ div#error_messages_div div.errorExplanation, div#signup div.errorExplanation {
 	font-size: 10px;
 }
 #topnav.mainpage a, a:active, a:visited {
-	color: #3E342B;
 	text-decoration: none;
 }
 #topnav.mainpage a:hover {
@@ -828,5 +809,5 @@ div#error_messages_div div.errorExplanation, div#signup div.errorExplanation {
 	text-decoration: none;
 }
 #container_main {
-	margin-top: 100px;
+	padding-top: 50px;
 }

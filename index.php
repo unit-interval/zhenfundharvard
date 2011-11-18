@@ -23,23 +23,15 @@ if($_SESSION['id'])
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<title>ZhenFund @ Harvard</title>
+		<title>iWeekend Beijing Autumn 2011</title>
 		<link href="css/style.css" rel="stylesheet">
 		<link href="css/login.css" rel="stylesheet">
 	</head>
 	<body>
 		<div id='app'>
 			<header class="cf">
+				<nav id="top_nav"></nav>
 				<div id="header_wrap">
-					<div class="make_hcenter">
-						<div id="top_nav">
-							<ul>
-							    <li class="logo">
-									<a href="http://www.zhenfund.com/"><span id="Zhen">Zhen</span><span id="Fund">Fund</span> @ Harvard</a>
-								</li>
-							</ul>
-						</div>
-					</div>
 				</div>
 			</header>
 			<div id="wrap" class="clearfix">
@@ -73,9 +65,6 @@ if($_SESSION['id'])
 							<div class="small_links">
 								<a href='admin.php' target='_blank'>&copy;</a> Proudely Powered by <a href='https://huangtao.me/'>Tao Huang</a>, <a href='https://www.facebook.com/zilinj'>Zilin Jiang</a>, 2011
 							</div>
-						</div>
-						<div class="feedback_link_container">
-							<a href="http://www.cmu.edu/">Carnegie Mellon University</a>
 						</div>
 					</div>
 				</div>

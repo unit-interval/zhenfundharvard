@@ -15,9 +15,9 @@ $start_including = true;
 
 /** instance dependent values */
 define('DB_HOST', 'localhost');
-define('DB_USER', 'proj_mit_chief');
-define('DB_PASS', 'BNA6yS6VMLMp9rZB');
-define('DB_NAME', 'proj_mit_chief');
+define('DB_USER', 'proj_iweekend');
+define('DB_PASS', 'tNtZ5HWBevYwXx3U');
+define('DB_NAME', 'proj_iweekend');
 
 //define('ADMIN_PW', 'solong');
 //define('SALT_PW', 'RubyOnRails');

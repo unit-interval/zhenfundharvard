@@ -17,6 +17,7 @@ if($_POST['passphrase'] == ADMIN_PW) {
             <input type='password' name='passphrase' /><br />
             <input type='submit' name='do' value='show' />
             <input type='submit' name='do' value='votes' />
+            <input type='submit' name='do' value='console' /> | 
             <input type='submit' name='do' value='reset' />
         </form>
 		<hr />
@@ -45,7 +46,7 @@ if($_POST['do'] == 'reset') {
     echo "</tbody></table>";
 } elseif($_POST['do'] == 'console') {
     $html = "<form id='matrix'><table><thead><tr>";
-    for($i = 1; $i <= NUM_TEAM; $i++)
+    for($i = 1; $i <= NUM_TEAMS; $i++)
         $html .= "<td>Team $i</td>";
     $html .= "</tr></thead><tbody";
     //"</table>";

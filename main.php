@@ -19,7 +19,7 @@ if($_SESSION['id']) {
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<title>iWeekend Beijing Autumn 2011</title>
+		<title>MIT-CHIEF 2011</title>
 		<link href="css/style.css" rel="stylesheet">
 		<script src="js/jquery.js" type="text/javascript"></script>
 		<script src="js/script.js" type="text/javascript"></script>
@@ -165,6 +165,9 @@ if($_SESSION['id']) {
 							<div class="small_links">
 								<a href='admin.php' target='_blank'>&copy;</a> Proudely Powered by <a href='https://huangtao.me/'>Tao Huang</a>, <a href='https://www.facebook.com/zilinj'>Zilin Jiang</a>, 2011
 							</div>
+						</div>
+						<div class="feedback_link_container">
+							<a href="http://www.cmu.edu/">Carnegie Mellon University</a>
 						</div>
 					</div>
 				</div>

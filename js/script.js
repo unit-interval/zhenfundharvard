@@ -144,9 +144,10 @@ var Votes = {
 	"refreshRanking" : function() {
 		var V = this;
 		var $a, $b;
+		var l = V.$list;
 		if (V.refreshing > 0) return false;
 		for (var i = 0; i < Param.teams; i++) {
-			$a = $('li:eq(' + i + ')', V.$list);
+			$a = $('li:eq(' + i + ')', l);
 			an = $a.data('team')
 			if (an in V.cache) {
 				if ($a.hasClass('hidden')) {

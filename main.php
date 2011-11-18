@@ -111,61 +111,61 @@ if($_SESSION['id']) {
 									<span class="schedule-hour">0</span><span class="schedule-hour">1</span><span class="schedule-hour">2</span><span class="schedule-hour">3</span><span class="schedule-hour">4</span><span class="schedule-hour">5</span><span class="schedule-hour">6</span><span class="schedule-hour">7</span><span class="schedule-hour">8</span><span class="schedule-hour">9</span><span class="schedule-hour">10</span>
 								</div>
 								<div class="agenda-row">
-									<label>Judge 1</label>
+									<label>Xiaojun Li</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row alt">
-									<label>Judge 2</label>
+									<label>Hai Liu</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row">
-									<label>Judge 3</label>
+									<label>Madge Meyer</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row alt">
-									<label>Judge 4</label>
+									<label>Elizabeth G. Riley</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row">
-									<label>Judge 5</label>
+									<label>Roger Xie</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row alt">
-									<label>Judge 6</label>
+									<label>Xiaoping Xu</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row">
-									<label>Judge 7</label>
+									<label>Zhengzhong Xu</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row alt">
-									<label>Judge 8</label>
+									<label>Jiehe Yan</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row">
-									<label>Judge 9</label>
+									<label>Wei Zhang</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row alt ivy">
-									<label>Public</label>
+									<label>Bussiness Plan</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>

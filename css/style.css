@@ -769,6 +769,7 @@ body > header, #app > header, #dashboard_header {
 	margin: 0 auto;
 	text-align: left;
 	background: url(../images/iweekend-header-bgd.png) no-repeat;
+	background-size: 100%;
 }
 #logo {
 	height: 30px;
@@ -932,7 +933,6 @@ body > header, #app > header, #dashboard_header {
 	position: absolute;
 	width: 440px;
 	height: 130px;
-	background: url(/images/marketing/logo.png?1315784060) no-repeat
 }
 html, body {
 	height: 100%

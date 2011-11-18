@@ -162,7 +162,8 @@ var Votes = {
 						break;
 				}
 				if (j < i) {
-					$a.remove().insertBefore($b);
+					var tt = $a.data('team');
+					$a.remove().insertBefore($b).data('team',tt);
 				}
 			}
 		}

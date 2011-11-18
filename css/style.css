@@ -192,7 +192,7 @@ ul.section_tabs .mobile_tab.selected .icon {
 	position: relative;
 	padding: 50px 0 40px;
 	width: 1000px;
-	height: 650px;
+	height: 550px;
 	margin: -10px auto 0;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -1284,7 +1284,7 @@ div.agenda-row {
     width: 521px;
     color: #343434;
 	font: 13px arial;
-	margin-top: 10px;
+	margin-top: 0px;
 }
 div.alt {
     background: transparent url(/images/agenda-row-alt-bg.png) repeat-x 200px bottom;

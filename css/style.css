@@ -204,13 +204,6 @@ ul.section_tabs .mobile_tab.selected .icon {
 	-o-box-shadow: 0 0 5px #666;
 	box-shadow: 0 0 5px #666
 }
-div.right_col:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
 #sections_container .section {
 	margin: 0 55px
 }
@@ -1546,4 +1539,7 @@ div.bullet_square {
 	position: absolute;
 	margin-top: -51px;
 	margin-left: -22px;
+}
+.clearfix{
+	clear: both;
 }

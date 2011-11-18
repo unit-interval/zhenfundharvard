@@ -41,10 +41,17 @@ var Votes = {
     "ranking_animation": function(t){
     	var V=this;
     	var i=0;
+    	if (V.refreshing > 0) return false;
     	V.$list.find('li').each(function(){
     		if (!$(this).eq(i).hasClass('hidden')) {
-    			$(this).animate({ 'margin-top': i*75+10 }, t);
+    			V.refreshing++;
+    			$(this).animate({ 'margin-top': i*75+10 }, t, function() {
+    				V.refreshing--;
+    			});
     			i++;
+    		}
+    		else {
+    			$(this).animate({ 'margin-top': Param.teams * 75 + 10 }, 0);
     		}
     	})
     },
@@ -136,6 +143,29 @@ var Votes = {
     },
 	"refreshRanking" : function() {
 		var V = this;
+		var $a, $b;
+		if (V.refreshing > 0) return false;
+		for (var i = 0; i < Param.teams; i++) {
+			$a = $('li:eq(' + i + ')', l);
+			an = $a.data('team')
+			if (an in V.cache) {
+				if ($a.hasClass('hidden')) {
+					$a.removeClass('hidden');
+				}
+				else {
+					for (var j = i-1; j >= 0; j--) {
+						$b = $('li:eq(' + j + ')', l);
+						bn = $b.data('team');
+						if (V.sortByScore(an, bn) < 0) break;						
+					}
+					if (j >= 0) {
+						$a.remove().insertBefore($a);
+					}
+				}
+			}
+		}
+		V.ranking_animation(1000);
+/*		var V = this;
 		if(V.refreshing) return false;
 		V.refreshing = true;
 		var n = Param.judges + 1;
@@ -150,7 +180,7 @@ var Votes = {
 					$a.find('span.rank-score').html(ts);
 					$a.addClass('highlight');
 					$a.fadeIn(1000, function(){
-						$a.removeClass('highlight');
+						$a.removeClass('highlight').removeClass('hidden');
 						V.refreshing = false;
 						V.refreshRanking();
 					});
@@ -175,7 +205,7 @@ var Votes = {
 				}
 			}
 		}
-		V.refreshing = false;
+		V.refreshing = false;*/
 	}
 };
 

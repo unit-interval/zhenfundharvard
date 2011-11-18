@@ -1,7 +1,7 @@
 var Param = {
-	"teams" : 5,
-	"judges" : 4,
-	"ratio": 0.8
+	"teams" : 6,
+	"judges" : 9,
+	"ratio": 0.5
 };
 var Votes = {
 	"init" : function() {

@@ -150,18 +150,27 @@ var Votes = {
 			$a = $('li:eq(' + i + ')', l);
 			an = $a.data('team')
 			if (an in V.cache) {
+				var total = V.cache[an];
+				var rand = $('span.rank-score', $a).html() * 1.0;
+				( inloop = function() {
+					if(Math.abs(rand - total) < 1) {
+						$('span.rank-score', $a).html(total.toFixed(1));
+						return 0;
+					}
+					if(rand > total) $('span.rank-score', $a).html((rand -= 1.1).toFixed(1));
+					else $('span.rank-score', $a).html((rand += 1.1).toFixed(1));
+					setTimeout(inloop, 20);
+				})();
 				if ($a.hasClass('hidden')) {
 					$a.removeClass('hidden');
+				for (var j = 0; j < i; j++) {
+					$b = $('li:eq(' + j + ')', l);
+					bn = $b.data('team');
+					if (bn in V.cache && V.sortByScore(an, bn) < 0) 
+						break;
 				}
-				else {
-					for (var j = 0; j < i; j++) {
-						$b = $('li:eq(' + j + ')', l);
-						bn = $b.data('team');
-						if (bn in V.cache && V.sortByScore(an, bn) < 0) break;						
-					}
-					if (j < i) {
-						$a.remove().insertBefore($b);
-					}
+				if (j < i) {
+					$a.remove().insertBefore($b);
 				}
 			}
 		}

@@ -7,6 +7,7 @@ var Votes = {
 	"init" : function() {
 		this.cache = {};
 		this.currentTeam = 1;
+		this.refreshing = 0;
 
 		this.$chart = $('#spaces_section div.left_col');
 		this.$list = $('#spaces_section div.rank-list ul');
@@ -41,6 +42,7 @@ var Votes = {
     "ranking_animation": function(t){
     	var V=this;
     	var i=0;
+    	V.refreshing = 0;
     	if (V.refreshing > 0) return false;
     	$('li',V.$list).each(function(){
     		if (!$(this).hasClass('hidden')) {

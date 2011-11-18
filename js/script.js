@@ -146,7 +146,7 @@ var Votes = {
 		var $a, $b;
 		if (V.refreshing > 0) return false;
 		for (var i = 0; i < Param.teams; i++) {
-			$a = $('li:eq(' + i + ')', l);
+			$a = $('li:eq(' + i + ')', V.$list);
 			an = $a.data('team')
 			if (an in V.cache) {
 				if ($a.hasClass('hidden')) {

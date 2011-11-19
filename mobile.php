@@ -32,8 +32,7 @@ if($_SESSION['id']) {
         $db->query($query);
 ?>
                     <form action='mobile.php' method='get'>
-                        <label>Successfully Submitted.</label><br />
-                        <input type='submit' value='Go Back' />
+                        <input type='submit' value='Successfully Submitted (Back)' />
                     </form>
 <?php
     } elseif($_GET['t']) {

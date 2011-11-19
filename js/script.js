@@ -2,7 +2,7 @@ var Param = {
 	"teams" : 5,
 	"judges" : 4,
 	"ratio": 0.3,
-    "names" : ["", "我来也", "起步动力", "InPeople", "Zen Garden", "吃有谱"],
+    "names" : ["", "我来也", "起步动力", "INpeople", "Zen Garden", "吃有谱"],
     "font" : [0, 32, 32, 32, 32, 32],
 };
 var Votes = {

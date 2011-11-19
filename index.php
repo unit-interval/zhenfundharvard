@@ -63,8 +63,11 @@ if($_SESSION['id'])
 					<div class="top_row">
 						<div class="links_container">
 							<div class="small_links">
-								<a href='admin.php' target='_blank'>&copy;</a> Proudly Powered by <a href='http://huangtao.me/'>Tao Huang</a>, <a href='https://www.facebook.com/zilinj'>Zilin Jiang</a>, 2011
+								<a href='admin.php' target='_blank'>&copy;</a> Proudly Powered by <a href='http://huangtao.me/'>Tao Huang</a>, <a href='https://www.facebook.com/zilinj'>Zilin Jiang</a>, 2011 - <a href='mobile'>Mobile Site</a>
 							</div>
+						</div>
+						<div class="feedback_link_container">
+							<a href="http://www.cmu.edu/">Carnegie Mellon University</a>
 						</div>
 					</div>
 				</div>

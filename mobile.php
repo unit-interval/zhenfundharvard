@@ -13,7 +13,7 @@ $_SESSION['mobile'] = true;
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-		<title>iWeekend Beijing Autumn 2011</title>
+		<title>MIT-CHIEF 2011</title>
 		<link href="./css/mobile.css" rel="stylesheet" type="text/css">
 	</head>
 	<body id="index" screen_capture_injected="true">
@@ -71,3 +71,13 @@ if($_SESSION['id']) {
 }
 
 ?>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-content">
+				© Proudly Powered by <a href="http://huangtao.me/">Tao Huang</a>, <a href="https://www.facebook.com/zilinj">Zilin Jiang</a>, 2011
+			</div>
+		</div>
+	</body>
+</html>

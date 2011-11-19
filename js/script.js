@@ -225,13 +225,13 @@ $(function() {
 		$('#left_col_team_name').html(teamName).data('team', teamID)
 		Votes.currentTeam = teamID;
 		Votes.fetch(0);
-	})
+	})[0].click();
 	$('#current-track').click(function() {
 		$('#filter').toggleClass('selected')
-	})
+	});
 	$('#filter-table td').click(function() {
 		Votes.vote($(this).data('score'))
-	})
+	});
 
 	setInterval("Votes.fetch()", 5000);
 	setInterval("Votes.refreshRanking()", 3000);

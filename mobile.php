@@ -13,7 +13,7 @@ $_SESSION['mobile'] = true;
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-		<title>MIT-CHIEF 2011</title>
+		<title>iWeekend Beijing Autumn 2011</title>
 		<link href="./css/mobile.css" rel="stylesheet" type="text/css">
 	</head>
 	<body id="index" screen_capture_injected="true">

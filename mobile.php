@@ -76,7 +76,8 @@ if($_SESSION['id']) {
 		</div>
 		<div id="footer">
 			<div id="footer-content">
-				© Proudly Powered by <a href="http://huangtao.me/">Tao Huang</a>, <a href="https://www.facebook.com/zilinj">Zilin Jiang</a>, 2011
+				<div>© Proudly Powered by <a href="http://huangtao.me/">Tao Huang</a>, <a href="https://www.facebook.com/zilinj">Zilin Jiang</a>, 2011</div>
+				<div><a href="/">View Full Site</a></div>
 			</div>
 		</div>
 	</body>

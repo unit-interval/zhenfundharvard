@@ -1,7 +1,7 @@
 var Param = {
 	"teams" : 5,
 	"judges" : 4,
-	"ratio": 0.8,
+	"ratio": 0.3,
     "names" : ["", "X Report", "Initial Momentum", "InPeople", "Zen Garden", "吃有谱"],
     "font" : [0, 36, 24, 36, 32, 32],
 };

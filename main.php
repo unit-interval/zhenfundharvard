@@ -108,25 +108,25 @@ if($_SESSION['id']) {
 									<span class="schedule-hour">0</span><span class="schedule-hour">1</span><span class="schedule-hour">2</span><span class="schedule-hour">3</span><span class="schedule-hour">4</span><span class="schedule-hour">5</span><span class="schedule-hour">6</span><span class="schedule-hour">7</span><span class="schedule-hour">8</span><span class="schedule-hour">9</span><span class="schedule-hour">10</span>
 								</div>
 								<div class="agenda-row">
-									<label>Judge 1</label>
+									<label>Mentor 1</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row alt">
-									<label>Judge 2</label>
+									<label>Mentor 2</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row">
-									<label>Judge 3</label>
+									<label>Mentor 3</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row alt">
-									<label>Judge 4</label>
+									<label>Mentor 4</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>

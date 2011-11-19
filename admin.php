@@ -6,6 +6,13 @@ include './database.php';
 session_name(SESSNAME);
 session_start();
 
+function update_score() {
+    echo '<pre>';
+    print_r($_POST);
+    echo '</pre>';
+    exit;
+}
+
 if($_POST['passphrase'] == ADMIN_PW) {
 	$_SESSION['admin'] = true;
 	$admin_once = true;
@@ -49,6 +56,9 @@ if($_POST['do'] == 'reset') {
     $result->free();
     echo "</tbody></table>";
 } elseif($_POST['do'] == 'console') {
+    if($_POST['form'] == 'update')
+        update_score();
+
     $query = "select * from `votes` where `judge_id` > 99";
     $result = $db->query($query);
     $r = array();
@@ -61,7 +71,10 @@ if($_POST['do'] == 'reset') {
     }
     $result->free();
 
-    $html = "<form id='matrix'><table><thead><tr><td>Judge #</td>";
+    $html = "<form action='admin.php' method='post'>
+        <input type='submit' name='form' value='update' /><br />
+        <input type='hidden' name='do' value='console' />
+        <table><thead><tr><td>Judge #</td>";
     for($i = 1; $i <= NUM_TEAMS; $i++)
         $html .= "<td>Team $i</td>";
     $html .= "</tr></thead>\n<tbody>";

@@ -89,8 +89,10 @@ if($_POST['do'] == 'reset') {
         for($j = 1; $j <= NUM_TEAMS; $j++)
             $html .= "<td><input type='text' name='$i-$j' value='{$r[$i][$j]}' /></td>";
         $html .= "</tr>\n";
-        if($i == NUM_JUDGES)
+        if($i == NUM_JUDGES) {
+            $html .= "<hr />\n";
             $i = 100;
+        }
     }
     $html .= "</tbody></table></form>";
     echo "$html";

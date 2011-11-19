@@ -30,8 +30,13 @@ if($_SESSION['id']) {
         $query = "insert into `votes` values ({$_POST['team_id']}, {$_SESSION['id']}, {$_POST['score']})
             on duplicate key update `score` = {$_POST['score']}";
         $db->query($query);
-    }
-    if($_GET['t']) {
+?>
+                    <form action='mobile.php' method='get'>
+                        <label>Successfully Submitted.</label><br />
+                        <input type='submit' value='Go Back' />
+                    </form>
+<?php
+    } elseif($_GET['t']) {
         $team_id = $_GET['t'];
 ?>
 					<form id="vote" action="mobile.php" id="login" method="post">

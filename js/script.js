@@ -1,6 +1,6 @@
 var Param = {
 	"teams" : 6,
-	"judges" : 9,
+	"judges" : 8,
 	"ratio": 0.5
 };
 var Votes = {

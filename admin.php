@@ -7,8 +7,20 @@ session_name(SESSNAME);
 session_start();
 
 function update_score() {
+    unset($_POST['do']);
+    unset($_POST['form']);
+    foreach($_POST as $k => $v) {
+        if(! $v)
+            continue;
+        $judge = substr($k,0,3);
+        $team = substr($k,4);
+        $query = "insert into `votes` values ($team, $judge, $v)
+            on duplicate key update `score` = $v";
+        echo "$query";
+    }
     echo '<pre>';
     print_r($_POST);
+    var_dump($_POST);
     echo '</pre>';
     exit;
 }

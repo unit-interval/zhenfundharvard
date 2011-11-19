@@ -21,7 +21,10 @@ if($_POST['passwd']) {
     $result->free();
 }
 
-header('Location: index.php');
+if($_SESSION['mobile'])
+    header('Location: mobile.php');
+else
+    header('Location: index.php');
 exit;
 
 ?>

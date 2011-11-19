@@ -22,6 +22,10 @@ if($_POST['passphrase'] == ADMIN_PW) {
         </form>
 		<hr />
 <?php
+if(! $_SESSION['admin']) {
+    echo 'not authenticated.';
+    exit;
+}
 if($_POST['do'] == 'reset') {
     if($admin_once) {
         $db->query("truncate `votes`");
@@ -64,7 +68,7 @@ if($_POST['do'] == 'reset') {
     for($i = 101; $i < 131; $i++) {
         $html .= "<tr><td>$i</td>";
         for($j = 1; $j <= NUM_TEAMS; $j++)
-            $html .= "<td><input type='text' name='$i-$j' value='$r[$i][$j]' /></td>";
+            $html .= "<td><input type='text' name='$i-$j' value='{$r[$i][$j]}' /></td>";
         $html .= "</tr>\n";
     }
     $html .= "</tbody></table></form>";

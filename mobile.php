@@ -57,7 +57,7 @@ if($_SESSION['id']) {
 ?>
 					<ul id="nav">
 						<li><a href="mobile.php?t=1">我来也</a></li>
-						<li><a href="mobile.php?t=2">Initial Momentum</a></li>
+						<li><a href="mobile.php?t=2">起步动力</a></li>
 						<li><a href="mobile.php?t=3">InPeople</a></li>
 						<li><a href="mobile.php?t=4">Zen Garden</a></li>
 						<li><a href="mobile.php?t=5">吃有谱</a></li>

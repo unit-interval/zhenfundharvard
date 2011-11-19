@@ -76,7 +76,7 @@ if($_SESSION['id']) {
 					<div class="make_hcenter" id="sections_container">
 						<div class="section cf" id="spaces_section">
 							<div class="left_col">
-								<h3>VOTE FOR <span id="left_col_team_name" data-team='1'>TEAM 1</span></h3>
+								<h3><span id="left_col_team_name" data-team='1'>TEAM 1</span></h3>
 								<div id='filter'<?php echo $vote_switch;?>>
 									<span id="current-track" href="#all-tracks"><span>VOTE</span></span>
 									<table id="filter-table">
@@ -132,7 +132,7 @@ if($_SESSION['id']) {
 									</div>
 								</div>
 								<div class="agenda-row alt ivy">
-									<label>Public</label>
+									<label>Audience</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>

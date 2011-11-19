@@ -1,7 +1,9 @@
 var Param = {
 	"teams" : 5,
 	"judges" : 4,
-	"ratio": 0.8
+	"ratio": 0.8,
+    "names" : ["X Report", "Initial Momentum", "Zen Garden", "InPeople", "吃有谱"],
+    "font" : [36, 24, 32, 36, 32],
 };
 var Votes = {
 	"init" : function() {
@@ -25,14 +27,14 @@ var Votes = {
         rank.sort(V.sortByScore);
         for (var i=0; i < len; i++) {
             $s = $li.clone().data('team', rank[i]).appendTo(V.$list)
-                .find('label').html('TEAM ' + rank[i]).end()
+                .find('label').html(Param.names[rank[i]]).css("font-size", Param.font[rank[i]]).end()
                 .find('span.rank-score').html((V.cache[rank[i]][Param.judges + 1] * 10).toFixed(1));
 //			$s = s + "<li data-team='"+rank[i]+"'><span>• TEAM "+rank[i]+"</span><span class='rank-score'>"+(V.cache[rank[i]][Param.judges+1]*10).toFixed(1)+"</span></li>"
         }
         for (var team=1; team<=Param.teams; team++)
         	if (! (team in V.cache))
                 $s = $li.clone().data('team', team).addClass('hidden').appendTo(V.$list)
-                    .find('label').html('TEAM ' + team).end()
+                    .find('label').html(Param.names[team]).css("font-size", Param.font[team]).end()
                     .find('span.rank-score').html('0.0');
 //        		s = s + "<li style='display:none' data-team='"+team+"'><span>• TEAM "+team+"</span><span class='rank-score'>0.0</span></li>"
 //      V.$list.html(s);
@@ -217,8 +219,8 @@ $(function() {
 	var $tabs = $('ul.section_tabs')
 	tabi = 1;
 	$('li', $tabs).click(function() {
-		var teamName = $(this).find('span').html()
-		var teamID = $(this).data('team')
+		var teamID = $(this).data('team');
+		var teamName = Param.names[teamID];
 		$(this).addClass('selected').siblings().removeClass('selected');
 		$('#left_col_team_name').html(teamName).data('team', teamID)
 		Votes.currentTeam = teamID;

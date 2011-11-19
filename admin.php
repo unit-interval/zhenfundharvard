@@ -16,13 +16,8 @@ function update_score() {
         $team = substr($k,4);
         $query = "insert into `votes` values ($team, $judge, $v)
             on duplicate key update `score` = $v";
-        echo "$query";
+        $db->query($query);
     }
-    echo '<pre>';
-    print_r($_POST);
-    var_dump($_POST);
-    echo '</pre>';
-    exit;
 }
 
 if($_POST['passphrase'] == ADMIN_PW) {

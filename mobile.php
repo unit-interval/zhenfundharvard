@@ -61,7 +61,6 @@ if($_SESSION['id']) {
 						<li><a href="mobile.php?t=3">TEAM 3</a></li>
 						<li><a href="mobile.php?t=4">TEAM 4</a></li>
 						<li><a href="mobile.php?t=5">TEAM 5</a></li>
-						<li><a href="mobile.php?t=6">TEAM 6</a></li>
 					</ul>
 <?php
     }

@@ -125,13 +125,13 @@ if($_SESSION['id']) {
 										<span>•</span>
 									</div>
 								</div>
-								<div class="agenda-row">
+								<div class="agenda-row alt">
 									<label>Judge 4</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
-								<div class="agenda-row alt ivy">
+								<div class="agenda-row ivy">
 									<label>Audience</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>

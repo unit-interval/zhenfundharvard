@@ -225,7 +225,8 @@ $(function() {
 		$('#left_col_team_name').html(teamName).data('team', teamID)
 		Votes.currentTeam = teamID;
 		Votes.fetch(0);
-	})[0].click();
+	})
+    $('li:eq(0)', $tabs).click();
 	$('#current-track').click(function() {
 		$('#filter').toggleClass('selected')
 	});

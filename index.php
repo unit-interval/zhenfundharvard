@@ -66,9 +66,6 @@ if($_SESSION['id'])
 								<a href='admin.php' target='_blank'>&copy;</a> Proudly Powered by <a href='https://huangtao.me/'>Tao Huang</a>, <a href='https://www.facebook.com/zilinj'>Zilin Jiang</a>, 2011
 							</div>
 						</div>
-						<div class="feedback_link_container">
-							<a href="http://www.cmu.edu/">Carnegie Mellon University</a>
-						</div>
 					</div>
 				</div>
 			</footer>

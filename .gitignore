@@ -1,2 +1,7 @@
 tmp/
+*/.DS_Store
+.DS_Store
+*.swo
 *.swp
+config.local.php
+

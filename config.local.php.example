@@ -1,0 +1,18 @@
+<?php
+
+/** variables */
+define('NUM_JUDGES', 3);
+define('NUM_TEAMS', 5);
+define('WEIGHT_JUDGES', 0.5);
+
+/** database */
+define('DB_HOST', 'localhost');
+define('DB_USER', '');
+define('DB_PASS', '');
+define('DB_NAME', '');
+
+/** admin passwd */
+define('ADMIN_PW', 'passwd');
+
+$local_settings = true;
+

@@ -56,11 +56,11 @@ if($_SESSION['id']) {
     } else {
 ?>
 					<ul id="nav">
-						<li><a href="mobile.php?t=1">TEAM 1</a></li>
-						<li><a href="mobile.php?t=2">TEAM 2</a></li>
-						<li><a href="mobile.php?t=3">TEAM 3</a></li>
-						<li><a href="mobile.php?t=4">TEAM 4</a></li>
-						<li><a href="mobile.php?t=5">TEAM 5</a></li>
+						<li><a href="mobile.php?t=1">X Report</a></li>
+						<li><a href="mobile.php?t=2">Initial Momentum</a></li>
+						<li><a href="mobile.php?t=3">InPeople</a></li>
+						<li><a href="mobile.php?t=4">Zen Garden</a></li>
+						<li><a href="mobile.php?t=5">吃有谱</a></li>
 					</ul>
 <?php
     }

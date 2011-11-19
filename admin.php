@@ -7,6 +7,7 @@ session_name(SESSNAME);
 session_start();
 
 function update_score() {
+    global $db;
     unset($_POST['do']);
     unset($_POST['form']);
     foreach($_POST as $k => $v) {
@@ -72,9 +73,7 @@ if($_POST['do'] == 'reset') {
     while($row = $result->fetch_assoc()) {
         if(! isset($r[$row['judge_id']]))
             $r[$row['judge_id']] = array();
-        if(! isset($r[$row['judge_id']][$row['team_id']]))
-            $r[$row['judge_id']][$row['team_id']] = array();
-        $r[$row['judge_id']][$row['team_id']][] = $row['score'];
+        $r[$row['judge_id']][$row['team_id']] = $row['score'];
     }
     $result->free();
 

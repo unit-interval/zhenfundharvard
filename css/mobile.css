@@ -204,7 +204,7 @@ h2 {
 #content input[type="hidden"] {
 	width: 100%;
 	border: 0px solid white;
-    background: transparent url(../images/nav-button-bg.png) repeat-x top left;
+    background: transparent url(/images/nav-button-bg.png) repeat-x top left;
     color: #fff;
     display: block;
     font-family: 'Droid Sans', arial;

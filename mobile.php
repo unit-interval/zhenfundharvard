@@ -20,7 +20,7 @@ $_SESSION['mobile'] = true;
 		<div id="wrapper">
 			<div id="container">
 				<div id="header">
-					<img width="100%" src="images/iweekend-header-bgd.png" />
+					<img width="100%" src="/images/iweekend-header-bgd.png" />
 				</div>
 				<div id="content">
 <?php

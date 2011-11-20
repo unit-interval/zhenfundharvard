@@ -235,6 +235,6 @@ $(function() {
 		return false;
 	})
 
-	setInterval("Votes.fetch()", 5000);
-	setInterval("Votes.refreshRanking()", 3000);
+	setInterval("Votes.fetch()", 15000);
+	setInterval("Votes.refreshRanking()", 5000);
 });

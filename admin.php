@@ -13,8 +13,9 @@ function update_score() {
     foreach($_POST as $k => $v) {
         if(! $v)
             continue;
-        $judge = substr($k,0,3);
-        $team = substr($k,4);
+        $pos = strpos($k, '-');
+        $judge = substr($k, 0, $pos);
+        $team = substr($k, $pos + 1);
         $query = "insert into `votes` values ($team, $judge, $v)
             on duplicate key update `score` = $v";
         $db->query($query);
@@ -67,7 +68,7 @@ if($_POST['do'] == 'reset') {
     if($_POST['form'] == 'update')
         update_score();
 
-    $query = "select * from `votes` where `judge_id` > 99";
+    $query = "select * from `votes` where `judge_id` < 16 or`judge_id` > 99";
     $result = $db->query($query);
     $r = array();
     while($row = $result->fetch_assoc()) {
@@ -84,11 +85,13 @@ if($_POST['do'] == 'reset') {
     for($i = 1; $i <= NUM_TEAMS; $i++)
         $html .= "<td>Team $i</td>";
     $html .= "</tr></thead>\n<tbody>";
-    for($i = 101; $i < 131; $i++) {
+    for($i = 1; $i < 131; $i++) {
         $html .= "<tr><td>$i</td>";
         for($j = 1; $j <= NUM_TEAMS; $j++)
             $html .= "<td><input type='text' name='$i-$j' value='{$r[$i][$j]}' /></td>";
         $html .= "</tr>\n";
+        if($i == NUM_JUDGES)
+            $i = 100;
     }
     $html .= "</tbody></table></form>";
     echo "$html";

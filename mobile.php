@@ -30,8 +30,12 @@ if($_SESSION['id']) {
         $query = "insert into `votes` values ({$_POST['team_id']}, {$_SESSION['id']}, {$_POST['score']})
             on duplicate key update `score` = {$_POST['score']}";
         $db->query($query);
-    }
-    if($_GET['t']) {
+?>
+                    <form action='mobile.php' method='get'>
+                        <input type='submit' value='Succeeded. (Back)' />
+                    </form>
+<?php
+    } elseif($_GET['t']) {
         $team_id = $_GET['t'];
 ?>
 					<form id="vote" action="mobile.php" id="login" method="post">
@@ -76,7 +80,8 @@ if($_SESSION['id']) {
 		</div>
 		<div id="footer">
 			<div id="footer-content">
-				© Proudly Powered by <a href="http://huangtao.me/">Tao Huang</a>, <a href="https://www.facebook.com/zilinj">Zilin Jiang</a>, 2011
+				<div>© Proudly Powered by <a href="http://huangtao.me/">Tao Huang</a>, <a href="https://www.facebook.com/zilinj">Zilin Jiang</a>, 2011</div>
+				<div><a href="index.php">View Full Site</a></div>
 			</div>
 		</div>
 	</body>

@@ -26,7 +26,7 @@ var Votes = {
         for (var i=0; i < len; i++) {
             $s = $li.clone().data('team', rank[i]).appendTo(V.$list)
                 .find('label').html('TEAM ' + rank[i]).end()
-                .find('span.rank-score').html((V.cache[rank[i]][Param.judges + 1] * 10).toFixed(1));
+                .find('span.rank-score').html((V.cache[rank[i]][Param.judges + 1] * 10).toFixed(2));
 //			$s = s + "<li data-team='"+rank[i]+"'><span>• TEAM "+rank[i]+"</span><span class='rank-score'>"+(V.cache[rank[i]][Param.judges+1]*10).toFixed(1)+"</span></li>"
         }
         for (var team=1; team<=Param.teams; team++)
@@ -121,11 +121,11 @@ var Votes = {
 		var rand = $('#info-balloon>h4').html() * 1.0;
 		( inloop = function() {
 			if(Math.abs(rand - total) < 1) {
-				$('#info-balloon>h4').html(total.toFixed(1));
+				$('#info-balloon>h4').html(total.toFixed(2));
 				return 0;
 			}
-			if(rand > total) $('#info-balloon>h4').html((rand -= 1.1).toFixed(1));
-			else $('#info-balloon>h4').html((rand += 1.1).toFixed(1));
+			if(rand > total) $('#info-balloon>h4').html((rand -= 1.1).toFixed(2));
+			else $('#info-balloon>h4').html((rand += 1.1).toFixed(2));
 			setTimeout(inloop, 20);
 		})();
 	},
@@ -152,7 +152,7 @@ var Votes = {
 			$a = $('li:eq(' + i + ')', l);
 			an = $a.data('team')
 			if (an in V.cache) {
-				$('span.rank-score', $a).html((V.cache[an][Param.judges + 1]*10).toFixed(1));
+				$('span.rank-score', $a).html((V.cache[an][Param.judges + 1]*10).toFixed(2));
 				if ($a.hasClass('hidden'))
 					$a.removeClass('hidden');
 				for (var j = 0; j < i; j++) {

@@ -5,7 +5,7 @@ define('DIR_ROOT', dirname(__FILE__));
 //define('DIR_INC', DIR_ROOT . '/inc');
 
 /** cookie session name */
-define('SESSNAME', 'iweekendSESS');
+define('SESSNAME', 'MITChiefSESS');
 
 /** make inc files not accessible directly */
 $start_including = true;

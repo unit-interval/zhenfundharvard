@@ -13,14 +13,14 @@ $_SESSION['mobile'] = true;
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-		<title>MIT-CHIEF 2011</title>
+		<title>MIT-CHIEF 2012</title>
 		<link href="./css/mobile.css" rel="stylesheet" type="text/css">
 	</head>
 	<body id="index" screen_capture_injected="true">
 		<div id="wrapper">
 			<div id="container">
 				<div id="header">
-					<img width="100%" src="/images/iweekend-header-bgd.png" />
+<!-- 					<img width="100%" src="/images/iweekend-header-bgd.png" />	-->
 				</div>
 				<div id="content">
 <?php
@@ -40,14 +40,23 @@ if($_SESSION['id']) {
 ?>
 					<form id="vote" action="mobile.php" id="login" method="post">
 						<input type="submit" name="score" value="1"/>
+						<input type="submit" name="score" value="1.5"/>
 						<input type="submit" name="score" value="2"/>
+						<input type="submit" name="score" value="2.5"/>
 						<input type="submit" name="score" value="3"/>
+						<input type="submit" name="score" value="3.5"/>
 						<input type="submit" name="score" value="4"/>
+						<input type="submit" name="score" value="4.5"/>
 						<input type="submit" name="score" value="5"/>
+						<input type="submit" name="score" value="5.5"/>
 						<input type="submit" name="score" value="6"/>
+						<input type="submit" name="score" value="6.5"/>
 						<input type="submit" name="score" value="7"/>
+						<input type="submit" name="score" value="7.5"/>
 						<input type="submit" name="score" value="8"/>
+						<input type="submit" name="score" value="8.5"/>
 						<input type="submit" name="score" value="9"/>
+						<input type="submit" name="score" value="9.5"/>
 						<input class="inv" type="submit" value="<"/>
 						<input type="submit" name="score" value="10"/>
                         <input type="hidden" name="team_id" value="<?php echo($team_id); ?>" />
@@ -80,7 +89,7 @@ if($_SESSION['id']) {
 		</div>
 		<div id="footer">
 			<div id="footer-content">
-				<div>© Proudly Powered by <a href="http://huangtao.me/">Tao Huang</a>, <a href="https://www.facebook.com/zilinj">Zilin Jiang</a>, 2011</div>
+				<div>&copy; Proudly Powered by <a href="http://huangtao.me/">Tao Huang</a>, <a href="https://www.facebook.com/zilinj">Zilin Jiang</a>, 2012</div>
 				<div><a href="index.php">View Full Site</a></div>
 			</div>
 		</div>

@@ -19,7 +19,7 @@ if($_SESSION['id']) {
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<title>MIT-CHIEF 2011</title>
+		<title>MIT-CHIEF 2012</title>
 		<link href="css/style.css" rel="stylesheet">
 		<script src="js/jquery.js" type="text/javascript"></script>
 		<script src="js/script.js" type="text/javascript"></script>
@@ -111,55 +111,49 @@ if($_SESSION['id']) {
 									<span class="schedule-hour">0</span><span class="schedule-hour">1</span><span class="schedule-hour">2</span><span class="schedule-hour">3</span><span class="schedule-hour">4</span><span class="schedule-hour">5</span><span class="schedule-hour">6</span><span class="schedule-hour">7</span><span class="schedule-hour">8</span><span class="schedule-hour">9</span><span class="schedule-hour">10</span>
 								</div>
 								<div class="agenda-row">
-									<label>Daotian Fu</label>
-									<div class="agenda-item" style="width: 33px; ">
-										<span>•</span>
-									</div>
-								</div>
-								<div class="agenda-row alt">
 									<label>Xiaojun Li</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
-								<div class="agenda-row">
-									<label>Hai Liu</label>
-									<div class="agenda-item" style="width: 33px; ">
-										<span>•</span>
-									</div>
-								</div>
 								<div class="agenda-row alt">
-									<label>Madge Meyer</label>
+									<label>Alan Song</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row">
-									<label>Elizabeth G Riley</label>
+									<label>Weijie Yun</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row alt">
-									<label>Xiaoping Xu</label>
+									<label>Stephen Tang</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row">
-									<label>Zhengzhong Xu</label>
+									<label>Yajun Xu</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row alt">
-									<label>Wei Zhang</label>
+									<label>William Aulet</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
 								</div>
-								<div class="agenda-row ivy">
-									<label>Bussiness Plan</label>
+								<div class="agenda-row">
+									<label>Edward Roberts</label>
+									<div class="agenda-item" style="width: 33px; ">
+										<span>•</span>
+									</div>
+								</div>
+								<div class="agenda-row alt">
+									<label>Fiona Murray</label>
 									<div class="agenda-item" style="width: 33px; ">
 										<span>•</span>
 									</div>
@@ -190,11 +184,8 @@ if($_SESSION['id']) {
 					<div class="top_row">
 						<div class="links_container">
 							<div class="small_links">
-								<a href='admin.php' target='_blank'>&copy;</a> Proudly Powered by <a href='http://huangtao.me/'>Tao Huang</a>, <a href='https://www.facebook.com/zilinj'>Zilin Jiang</a>, 2011 - <a href='mobile.php'>Mobile Site</a>
+								<a href='admin.php' target='_blank'>&copy;</a> Proudly Powered by <a href='http://huangtao.me/'>Tao Huang</a>, <a href='https://www.facebook.com/zilinj'>Zilin Jiang</a>, 2012 - <a href='mobile.php'>Mobile Site</a>
 							</div>
-						</div>
-						<div class="feedback_link_container">
-							<a href="http://www.cmu.edu/">Carnegie Mellon University</a>
 						</div>
 					</div>
 				</div>
@@ -202,4 +193,3 @@ if($_SESSION['id']) {
 		</div>
 	</body>
 </html>
-

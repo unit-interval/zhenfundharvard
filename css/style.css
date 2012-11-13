@@ -945,7 +945,6 @@ html, body {
 	padding-bottom: 130px
 }
 #app > footer {
-	height: 130px;
 	background-color: #92D8EF;
 	width: 100%;
 	position: absolute;

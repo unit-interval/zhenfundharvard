@@ -30,4 +30,3 @@ $db->query($query);
 $return['success'] = true;
 echo json_encode($return);
 exit;
-

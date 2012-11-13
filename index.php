@@ -23,7 +23,7 @@ if($_SESSION['id'])
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<title>MIT-CHIEF 2011</title>
+		<title>MIT-CHIEF 2012</title>
 		<link href="css/style.css" rel="stylesheet">
 		<link href="css/login.css" rel="stylesheet">
 	</head>
@@ -63,11 +63,8 @@ if($_SESSION['id'])
 					<div class="top_row">
 						<div class="links_container">
 							<div class="small_links">
-								<a href='admin.php' target='_blank'>&copy;</a> Proudly Powered by <a href='http://huangtao.me/'>Tao Huang</a>, <a href='https://www.facebook.com/zilinj'>Zilin Jiang</a>, 2011 - <a href='mobile.php'>Mobile Site</a>
+								<a href='admin.php' target='_blank'>&copy;</a> Proudly Powered by <a href='http://huangtao.me/'>Tao Huang</a>, <a href='https://www.facebook.com/zilinj'>Zilin Jiang</a>, 2012 - <a href='mobile.php'>Mobile Site</a>
 							</div>
-						</div>
-						<div class="feedback_link_container">
-							<a href="http://www.cmu.edu/">Carnegie Mellon University</a>
 						</div>
 					</div>
 				</div>
@@ -75,4 +72,3 @@ if($_SESSION['id'])
 		</div>
 	</body>
 </html>
-

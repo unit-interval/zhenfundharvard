@@ -43,6 +43,3 @@ class mysqli_ext extends mysqli {
 
 /** prepare the global variable $db for database queries */
 $db = new mysqli_ext();
-
-
-

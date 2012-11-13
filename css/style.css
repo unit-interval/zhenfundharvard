@@ -15,15 +15,12 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, code, img, ol, ul,
 	padding: 0;
 	border: 0;
 	outline: 0;
-	font-family: "Helvetica Neue", "Arial", "Liberation Sans", sans-serif;
+	font-family: "Helvetica Neue", sans-serif;
 	font-size: 100%;
 	vertical-align: baseline
 }
 body {
-	font-family: "Helvetica Neue", "Arial", "Liberation Sans", sans-serif;
 	margin: 0
-}
-body {
 	background: #C0DEED;
 }
 #top_panel {
@@ -62,7 +59,6 @@ body {
 	width: 500px
 }
 .signup_container h2 {
-	font-family: "AlternateGothicFSNo3", Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	font-size: 40px;
 	line-height: 1.1em;
@@ -209,7 +205,6 @@ ul.section_tabs .mobile_tab.selected .icon {
 	margin: 0 55px
 }
 #sections_container h3 {
-	font-family: "AlternateGothicFSNo3", Helvetica, Arial, sans-serif;
 	font-size: 38px;
 	font-weight: normal;
 	margin: 0 0 5px 0;
@@ -254,7 +249,6 @@ ul.section_tabs .mobile_tab.selected .icon {
 	padding-bottom: 50px
 }
 #main h1 {
-	font-family: "AlternateGothicFSNo3", Helvetica, Arial, sans-serif;
 	font-size: 42px;
 	font-weight: normal;
 	color: #333;
@@ -357,7 +351,6 @@ ul.section_tabs .mobile_tab.selected .icon {
 	margin-bottom: 40px
 }
 #mobile_page h4 {
-	font-family: "AlternateGothicFSNo3", Helvetica, Arial, sans-serif;
 	font-size: 41px;
 	font-weight: normal;
 	color: #ee8c00;
@@ -487,13 +480,11 @@ ul.section_tabs .mobile_tab.selected .icon {
 }
 #jobs_container h1 {
 	color: #333;
-	font-family: "AlternateGothicFSNo3", sans-serif;
 	font-size: 42px
 }
 #jobs_container h2 {
 	color: #333;
 	font-weight: normal;
-	font-family: "AlternateGothicFSNo3", sans-serif;
 	font-size: 32px;
 	margin: 0 0 5px
 }
@@ -1083,7 +1074,6 @@ html, body {
 	margin-bottom: 50px
 }
 #faq_page .signup_now_container h2 {
-	font-family: "AlternateGothicFSNo3", Helvetica, Arial, sans-serif;
 	font-size: 34px;
 	margin-bottom: 0
 }
@@ -1287,12 +1277,12 @@ div.alt {
     background: transparent url(/images/agenda-row-alt-bg.png) repeat-x 200px bottom;
 }
 div.agenda-row label {
-    line-height: 30px;
-    background: #FFF;
-    width: 110px;
-    display: inline-block;
-    font-family: 'Droid Sans', Arial;
-    padding-left: 10px;
+	line-height: 30px;
+	background: #FFF;
+	width: 100px;
+	display: inline-block;
+	text-align: right;
+	padding-right: 20px;
 }
 div.agenda-row div.agenda-item {
     position: absolute;
@@ -1308,7 +1298,6 @@ div.agenda-row div.agenda-item span {
     color: #6da4d9;
     font-size: 36px;
     line-height: 30px;
-    font-family: arial;
 }
 div.agenda-row.sum div.agenda-item span {
     color: #EE8C00
@@ -1343,7 +1332,6 @@ div.rank-list li {
 div.rank-list li > span{
 	font-size: 36px;
 	line-height: 60px;
-	font-family: arial;
 	position: relative;
 	z-index: 1;
 }
@@ -1504,7 +1492,6 @@ div.agenda-row.sum {
 	left: 93px;
 }
 #info-balloon h4 {
-	font-family: 'Droid Sans', Arial;
 	font-size: 60px;
 	font-weight: normal;
 	color: #5B4F31;

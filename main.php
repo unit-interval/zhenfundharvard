@@ -80,7 +80,7 @@ if($_SESSION['id']) {
 						<div class="section cf" id="spaces_section">
 							<div class="left_col">
 								<h3>VOTE FOR <span id="left_col_team_name" data-team='1'>TEAM 1</span></h3>
-								<div id='filter'<?php echo $vote_switch;?>>
+								<div id='filter'<?php echo $vote_switch;?> style="display: none">
 									<span id="current-track" href="#all-tracks"><span>VOTE</span></span>
 									<table id="filter-table">
 										<tbody>

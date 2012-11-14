@@ -943,7 +943,7 @@ html, body {
 #footer_wrap {
 	width: 950px;
 	margin: 0 auto;
-	text-align: left
+	text-align: left;
 }
 #footer_wrap a {
 	text-decoration: none;

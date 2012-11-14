@@ -39,26 +39,26 @@ if($_SESSION['id']) {
         $team_id = $_GET['t'];
 ?>
 					<form id="vote" action="mobile.php" id="login" method="post">
-						<input type="submit" name="score" value="1"/>
-						<input type="submit" name="score" value="1.5"/>
-						<input type="submit" name="score" value="2"/>
-						<input type="submit" name="score" value="2.5"/>
-						<input type="submit" name="score" value="3"/>
-						<input type="submit" name="score" value="3.5"/>
-						<input type="submit" name="score" value="4"/>
-						<input type="submit" name="score" value="4.5"/>
-						<input type="submit" name="score" value="5"/>
-						<input type="submit" name="score" value="5.5"/>
-						<input type="submit" name="score" value="6"/>
-						<input type="submit" name="score" value="6.5"/>
-						<input type="submit" name="score" value="7"/>
-						<input type="submit" name="score" value="7.5"/>
-						<input type="submit" name="score" value="8"/>
-						<input type="submit" name="score" value="8.5"/>
-						<input type="submit" name="score" value="9"/>
-						<input type="submit" name="score" value="9.5"/>
-						<input class="inv" type="submit" value="<"/>
 						<input type="submit" name="score" value="10"/>
+						<input type="submit" name="score" value="15"/>
+						<input type="submit" name="score" value="20"/>
+						<input type="submit" name="score" value="25"/>
+						<input type="submit" name="score" value="30"/>
+						<input type="submit" name="score" value="35"/>
+						<input type="submit" name="score" value="40"/>
+						<input type="submit" name="score" value="45"/>
+						<input type="submit" name="score" value="50"/>
+						<input type="submit" name="score" value="55"/>
+						<input type="submit" name="score" value="60"/>
+						<input type="submit" name="score" value="65"/>
+						<input type="submit" name="score" value="70"/>
+						<input type="submit" name="score" value="75"/>
+						<input type="submit" name="score" value="80"/>
+						<input type="submit" name="score" value="85"/>
+						<input type="submit" name="score" value="90"/>
+						<input type="submit" name="score" value="95"/>
+						<input class="inv" type="submit" value="<"/>
+						<input type="submit" name="score" value="100"/>
                         <input type="hidden" name="team_id" value="<?php echo($team_id); ?>" />
 					</form>
 <?php

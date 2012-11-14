@@ -113,9 +113,9 @@ var Votes = {
 			scores = V.cache[V.currentTeam]; 
 		else
 			for (var i = 0; i < n + 2; i++) scores.push(0);
-		var total = scores[n+1] * 10;
+		var total = scores[n+1];
 		$('div.agenda-item', V.$chart).each(function(i) {
-			$(this).animate({ width : Math.max(scores[i] * 40 - 7, 33) });
+			$(this).animate({ width : Math.max(scores[i] * 4 - 7, 33) });
 		});
 		$('#info-balloon').animate({ left : Math.floor(93 + total / 100 * (340 - 148)) })
 		var rand = $('#info-balloon>h4').html() * 1.0;

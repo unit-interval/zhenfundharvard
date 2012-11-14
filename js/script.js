@@ -82,8 +82,8 @@ var Votes = {
         var s = score.slice(0,Param.judges);
         var sum = 0;
         for (var i =0; i < Param.judges; i++) sum += score[i];
-//        s.push(score[15]);
-        s.push(sum / Param.judges) // * Param.ratio) + score[15] * (1 - Param.ratio));
+        s.push(score[15]);
+        s.push(sum / Param.judges * Param.ratio + score[15] * (1 - Param.ratio));
         this.cache[id] = s;
     },
 	"vote" : function(score) {
@@ -117,6 +117,7 @@ var Votes = {
 		$('div.agenda-item', V.$chart).each(function(i) {
 			$(this).animate({ width : Math.max(scores[i] * 4 - 7, 33) });
 		});
+		$('div.agenda-row.sum .agenda-item').animate({ width : Math.max(scores[n+1] * 4 - 7, 33) });
 		$('#info-balloon').animate({ left : Math.floor(93 + total / 100 * (340 - 148)) })
 		var rand = $('#info-balloon>h4').html() * 1.0;
 		( inloop = function() {

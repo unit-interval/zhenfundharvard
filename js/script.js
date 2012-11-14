@@ -115,7 +115,7 @@ var Votes = {
 			for (var i = 0; i < n + 2; i++) scores.push(0);
 		var total = scores[n+1];
 		$('div.agenda-item', V.$chart).each(function(i) {
-			if i < n {
+			if (i < n) {
 				$(this).animate({ width : Math.max(scores[i] * 4 - 7, 33) });	
 			}
 		});

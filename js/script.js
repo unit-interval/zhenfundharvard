@@ -26,7 +26,7 @@ var Votes = {
         for (var i=0; i < len; i++) {
             $s = $li.clone().data('team', rank[i]).appendTo(V.$list)
                 .find('label').html('TEAM ' + rank[i]).end()
-                .find('span.rank-score').html((V.cache[rank[i]][Param.judges + 1] * 10).toFixed(2));
+                .find('span.rank-score').html((V.cache[rank[i]][Param.judges + 1]).toFixed(2));
 //			$s = s + "<li data-team='"+rank[i]+"'><span>• TEAM "+rank[i]+"</span><span class='rank-score'>"+(V.cache[rank[i]][Param.judges+1]*10).toFixed(1)+"</span></li>"
         }
         for (var team=1; team<=Param.teams; team++)

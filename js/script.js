@@ -82,8 +82,8 @@ var Votes = {
         var s = score.slice(0,Param.judges);
         var sum = 0;
         for (var i =0; i < Param.judges; i++) sum += score[i];
-        s.push(score[15]);
-        s.push(sum / Param.judges * Param.ratio + score[15] * (1 - Param.ratio));
+//        s.push(score[15]);
+        s.push(sum / Param.judges) // * Param.ratio) + score[15] * (1 - Param.ratio));
         this.cache[id] = s;
     },
 	"vote" : function(score) {

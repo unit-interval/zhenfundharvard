@@ -115,7 +115,9 @@ var Votes = {
 			for (var i = 0; i < n + 2; i++) scores.push(0);
 		var total = scores[n+1];
 		$('div.agenda-item', V.$chart).each(function(i) {
-			$(this).animate({ width : Math.max(scores[i] * 4 - 7, 33) });
+			if i < n {
+				$(this).animate({ width : Math.max(scores[i] * 4 - 7, 33) });	
+			}
 		});
 		$('div.agenda-row.sum .agenda-item').animate({ width : Math.max(scores[n+1] * 4 - 7, 33) });
 		$('#info-balloon').animate({ left : Math.floor(93 + total / 100 * (340 - 148)) })

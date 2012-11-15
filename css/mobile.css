@@ -175,7 +175,7 @@ h2 {
 #index #content #nav li#nav-full-site {
     margin: 0.75em 0 0;
 }
-#content input#user_password {
+#content input#user_password, #content input#user_name {
 	border: 1px solid #AAA;
 	font-size: inherit;
 	width: 100%;

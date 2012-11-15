@@ -38,6 +38,7 @@ if($_SESSION['id']) {
     } elseif($_GET['t']) {
         $team_id = $_GET['t'];
 ?>
+					<div class="instruction">You are voting for TEAM <?php echo($team_id)?>. Please select a score below.</div>
 					<form id="vote" action="mobile.php" id="login" method="post">
 						<input type="submit" name="score" value="10"/>
 						<input type="submit" name="score" value="15"/>

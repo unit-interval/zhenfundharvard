@@ -195,7 +195,8 @@ h2 {
 }
 #index #content #nav li a,
 #content input[type="submit"],
-#content input[type="hidden"] {
+#content input[type="hidden"],
+.instruction {
 	width: 100%;
 	border: 0px solid white;
     background: transparent url(/images/nav-button-bg.png) repeat-x top left;

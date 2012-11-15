@@ -81,9 +81,16 @@ var Votes = {
     "write": function(id, score) {
         var s = score.slice(0,Param.judges);
         var sum = 0;
-        for (var i =0; i < Param.judges; i++) sum += score[i];
+				var min = 100;
+				var max = 0;
+        for (var i =0; i < Param.judges; i++) {
+					sum += score[i];
+					if (score[i] < min) min = score[i]
+					if (score[i] > max) max = score[i]
+				}
+				var avg = (sum - max - min) / (Param.judges - 2)
         s.push(score[15]);
-        s.push(sum / Param.judges * Param.ratio + score[15] * (1 - Param.ratio));
+        s.push(avg * Param.ratio + score[15] * (1 - Param.ratio));
         this.cache[id] = s;
     },
 	"vote" : function(score) {
@@ -119,7 +126,7 @@ var Votes = {
 				$(this).animate({ width : Math.max(scores[i] * 4 - 7, 33) });	
 			}
 		});
-		$('div.agenda-row.sum .agenda-item').animate({ width : Math.max(scores[n+1] * 4 - 7, 33) });
+		$('div.agenda-row.sum .agenda-item').animate({ width : Math.max(total * 4 - 7, 33) });
 		$('#info-balloon').animate({ left : Math.floor(93 + total / 100 * (340 - 148)) })
 		var rand = $('#info-balloon>h4').html() * 1.0;
 		( inloop = function() {

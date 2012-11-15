@@ -65,6 +65,7 @@ if($_SESSION['id']) {
 <?php
     } else {
 ?>
+<div class="instruction">MIT-CHIEF 2012<br>Please select a team to vote.</div>
 					<ul id="nav">
 						<li><a href="mobile.php?t=1">TEAM 1</a></li>
 						<li><a href="mobile.php?t=2">TEAM 2</a></li>

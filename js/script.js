@@ -127,7 +127,7 @@ var Votes = {
 			}
 		});
 		$('div.agenda-row.sum .agenda-item').animate({ width : Math.max(total * 4, 0) });
-		$('#info-balloon').animate({ left : Math.floor(93 + total / 100 * (340 - 148)) })
+		$('#info-balloon').animate({ left : Math.floor(90 + total / 100 * (340 - 148)) })
 		var rand = $('#info-balloon>h4').html() * 1.0;
 		( inloop = function() {
 			if(Math.abs(rand - total) < 1) {

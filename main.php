@@ -6,12 +6,9 @@ session_name(SESSNAME);
 session_start();
 
 $id = false;
-$vote_switch = ' class="hidden"';
 if($_SESSION['id']) {
 	$id = $_SESSION['id'];
-	$vote_switch = '';
 }
-
 
 ?>
 <!DOCTYPE html>
@@ -80,7 +77,7 @@ if($_SESSION['id']) {
 						<div class="section cf" id="spaces_section">
 							<div class="left_col">
 								<h3>VOTE FOR <span id="left_col_team_name" data-team='1'>TEAM 1</span></h3>
-								<div id='filter'<?php echo $vote_switch;?> style="display: none">
+								<div id='filter' class='<?php if (! $id) { ?>hidden<?php } ?>'>
 									<span id="current-track" href="#all-tracks"><span>VOTE</span></span>
 									<table id="filter-table">
 										<tbody>

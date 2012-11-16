@@ -123,10 +123,10 @@ var Votes = {
 		var total = scores[n+1];
 		$('div.agenda-item', V.$chart).each(function(i) {
 			if (i < n) {
-				$(this).animate({ width : Math.max(scores[i] * 4 - 7, 0) });	
+				$(this).animate({ width : Math.max(scores[i] * 4, 0) });	
 			}
 		});
-		$('div.agenda-row.sum .agenda-item').animate({ width : Math.max(total * 4 - 7, 0) });
+		$('div.agenda-row.sum .agenda-item').animate({ width : Math.max(total * 4, 0) });
 		$('#info-balloon').animate({ left : Math.floor(93 + total / 100 * (340 - 148)) })
 		var rand = $('#info-balloon>h4').html() * 1.0;
 		( inloop = function() {

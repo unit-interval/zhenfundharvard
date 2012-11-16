@@ -120,13 +120,11 @@ if($_SESSION['id']) {
 								<div class="agenda-row">
 									<label>Weijie Yun</label>
 									<div class="agenda-item">
-										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row alt">
 									<label>Stephen Tang</label>
 									<div class="agenda-item">
-										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row">
@@ -137,7 +135,6 @@ if($_SESSION['id']) {
 								<div class="agenda-row alt">
 									<label>William Aulet</label>
 									<div class="agenda-item">
-										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row">

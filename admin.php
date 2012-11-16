@@ -85,14 +85,22 @@ if($_POST['do'] == 'reset') {
     for($i = 1; $i <= NUM_TEAMS; $i++)
         $html .= "<td>Team $i</td>";
     $html .= "</tr></thead>\n<tbody>";
-    for($i = 1; $i < 131; $i++) {
+    for($i = 1; $i <= NUM_JUDGES; $i++) {
         $html .= "<tr><td>$i</td>";
         for($j = 1; $j <= NUM_TEAMS; $j++)
             $html .= "<td><input type='text' name='$i-$j' value='{$r[$i][$j]}' /></td>";
         $html .= "</tr>\n";
-        if($i == NUM_JUDGES)
-            $i = 100;
     }
+    /*
+     * audience
+     *
+    for($i = 100; $i <= 110; $i++) {
+        $html .= "<tr><td>$i</td>";
+        for($j = 1; $j <= NUM_TEAMS; $j++)
+            $html .= "<td><input type='text' name='$i-$j' value='{$r[$i][$j]}' /></td>";
+        $html .= "</tr>\n";
+    }
+    */
     $html .= "</tbody></table></form>";
     echo "$html";
 }

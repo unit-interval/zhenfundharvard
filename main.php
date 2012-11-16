@@ -113,55 +113,49 @@ if($_SESSION['id']) {
 								<div class="agenda-row">
 									<label>Xiaojun Li</label>
 									<div class="agenda-item" style="width: 33px; ">
-										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row alt">
 									<label>Alan Song</label>
-									<div class="agenda-item" style="width: 33px; ">
-										<span>•</span>
+									<div class="agenda-item">
 									</div>
 								</div>
 								<div class="agenda-row">
 									<label>Weijie Yun</label>
-									<div class="agenda-item" style="width: 33px; ">
+									<div class="agenda-item">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row alt">
 									<label>Stephen Tang</label>
-									<div class="agenda-item" style="width: 33px; ">
+									<div class="agenda-item">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row">
 									<label>Yajun Xu</label>
-									<div class="agenda-item" style="width: 33px; ">
-										<span>•</span>
+									<div class="agenda-item">
 									</div>
 								</div>
 								<div class="agenda-row alt">
 									<label>William Aulet</label>
-									<div class="agenda-item" style="width: 33px; ">
+									<div class="agenda-item">
 										<span>•</span>
 									</div>
 								</div>
 								<div class="agenda-row">
 									<label>Edward Roberts</label>
-									<div class="agenda-item" style="width: 33px; ">
-										<span>•</span>
+									<div class="agenda-item">
 									</div>
 								</div>
 								<div class="agenda-row alt">
 									<label>Fiona Murray</label>
-									<div class="agenda-item" style="width: 33px; ">
-										<span>•</span>
+									<div class="agenda-item">
 									</div>
 								</div>
 								<div class="agenda-row alt sum">
 									<label>Total</label>
-									<div class="agenda-item" style="width: 33px; ">
-										<span>•</span>
+									<div class="agenda-item">
 									</div>
 								</div>
 								<div id="info-balloon">

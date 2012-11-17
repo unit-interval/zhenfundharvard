@@ -82,30 +82,45 @@ if($_SESSION['id']) {
 									<table id="filter-table">
 										<tbody>
 											<tr>
-												<td data-score='1'>1</td>
-												<td data-score='2'>2</td>
-												<td data-score='3'>3</td>
+												<td data-score='10'>10</td>
+												<td data-score='15'>15</td>
+												<td data-score='20'>20</td>
 											</tr>
 											<tr>
-												<td data-score='4'>4</td>
-												<td data-score='5'>5</td>
-												<td data-score='6'>6</td>
+												<td data-score='25'>25</td>
+												<td data-score='30'>30</td>
+												<td data-score='30'>35</td>
 											</tr>
 											<tr>
-												<td data-score='7'>7</td>
-												<td data-score='8'>8</td>
-												<td data-score='9'>9</td>
+												<td data-score='40'>40</td>
+												<td data-score='45'>45</td>
+												<td data-score='50'>50</td>
+											</tr>
+											<tr>
+												<td data-score='55'>55</td>
+												<td data-score='60'>60</td>
+												<td data-score='65'>65</td>
+											</tr>
+											<tr>
+												<td data-score='70'>70</td>
+												<td data-score='75'>75</td>
+												<td data-score='80'>80</td>
+											</tr>
+											<tr>
+												<td data-score='85'>85</td>
+												<td data-score='90'>90</td>
+												<td data-score='95'>95</td>
 											</tr>
 											<tr>
 												<th></th>
-												<td data-score='10'>10</td>
+												<td data-score='100'>100</td>
 												<th></th>
 											</tr>
 										</tbody>
 									</table>
 								</div>
 								<div class="agenda-header">
-									<span class="schedule-hour">0</span><span class="schedule-hour">1</span><span class="schedule-hour">2</span><span class="schedule-hour">3</span><span class="schedule-hour">4</span><span class="schedule-hour">5</span><span class="schedule-hour">6</span><span class="schedule-hour">7</span><span class="schedule-hour">8</span><span class="schedule-hour">9</span><span class="schedule-hour">10</span>
+									<span class="schedule-hour">0</span><span class="schedule-hour">10</span><span class="schedule-hour">20</span><span class="schedule-hour">30</span><span class="schedule-hour">40</span><span class="schedule-hour">50</span><span class="schedule-hour">60</span><span class="schedule-hour">70</span><span class="schedule-hour">80</span><span class="schedule-hour">90</span><span class="schedule-hour">100</span>
 								</div>
 								<div class="agenda-row">
 									<label>Xiaojun Li</label>

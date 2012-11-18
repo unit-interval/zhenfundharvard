@@ -1,6 +1,6 @@
 var Param = {
 	"teams" : 6,
-	"judges" : 8,
+	"judges" : 7,
 	"ratio": 1
 };
 var Votes = {
@@ -81,14 +81,15 @@ var Votes = {
     "write": function(id, score) {
         var s = score.slice(0,Param.judges);
         var sum = 0;
-				var min = 100;
-				var max = 0;
+//				var min = 100;
+//				var max = 0;
         for (var i =0; i < Param.judges; i++) {
 					sum += score[i];
-					if (score[i] < min) min = score[i]
-					if (score[i] > max) max = score[i]
+//					if (score[i] < min) min = score[i]
+//					if (score[i] > max) max = score[i]
 				}
-				var avg = (sum - max - min) / (Param.judges - 2)
+//				var avg = (sum - max - min) / (Param.judges - 2)
+				var avg = sum / Param.judges
         s.push(score[15]);
         s.push(avg * Param.ratio + score[15] * (1 - Param.ratio));
         this.cache[id] = s;

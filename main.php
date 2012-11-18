@@ -147,11 +147,6 @@ if($_SESSION['id']) {
 									<div class="agenda-item">
 									</div>
 								</div>
-								<div class="agenda-row alt">
-									<label>William Aulet</label>
-									<div class="agenda-item">
-									</div>
-								</div>
 								<div class="agenda-row">
 									<label>Edward Roberts</label>
 									<div class="agenda-item">
